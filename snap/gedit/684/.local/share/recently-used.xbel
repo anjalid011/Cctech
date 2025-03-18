@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/anjali_dongare/snap/gedit/684/Desktop/line.c" added="2025-03-17T12:46:35.311555Z" modified="2025-03-17T12:51:32.156416Z" visited="2025-03-17T12:46:35.311556Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-csrc"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-17T12:51:32.156414Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/anjali_dongare/snap/gedit/684/Desktop/line.cpp" added="2025-03-17T12:46:59.747139Z" modified="2025-03-17T12:51:22.584644Z" visited="2025-03-17T12:46:59.747140Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-c++src"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-17T12:51:22.584642Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/anjali_dongare/snap/gedit/684/gnuplot_example.cpp" added="2025-03-18T05:20:45.741609Z" modified="2025-03-18T05:20:46.036001Z" visited="2025-03-18T05:20:45.741610Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-18T05:20:46.036000Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/anjali_dongare/gnuplot_example.cpp" added="2025-03-18T05:23:18.072803Z" modified="2025-03-18T05:26:52.975793Z" visited="2025-03-18T05:23:18.072803Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-c++src"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-18T05:26:52.975792Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/anjali_dongare/graph.cpp" added="2025-03-18T05:51:28.468082Z" modified="2025-03-18T08:17:44.985386Z" visited="2025-03-18T05:51:28.468083Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-c++src"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-18T08:17:44.985385Z" count="13"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/anjali_dongare/snap/gedit/684/Makefile" added="2025-03-18T07:11:56.610258Z" modified="2025-03-18T07:23:17.637155Z" visited="2025-03-18T07:11:56.610258Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-makefile"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-18T07:23:17.637154Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/anjali_dongare/Makefile" added="2025-03-18T07:12:12.971295Z" modified="2025-03-18T08:18:09.131153Z" visited="2025-03-18T07:12:12.971296Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-makefile"/>
+        <bookmark:applications>
+          <bookmark:application name="gedit" exec="&apos;gedit %u&apos;" modified="2025-03-18T08:18:09.131152Z" count="6"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
