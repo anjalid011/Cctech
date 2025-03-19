@@ -3,10 +3,10 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall
 
 # Output executable file
-TARGET = graph
+TARGET = test
 
 # Source file
-SRC = graph.cpp
+SRC = test.cpp
 
 # Object files
 OBJ = $(SRC:.cpp=.o)
