@@ -9,7 +9,7 @@ Cuboid::Cuboid(double x, double y, double z, double side)
     : x(x), y(y), z(z), width(side), height(side), depth(side), isCube(true) {}
 
 void Cuboid::draw() const {
-    std::ofstream pointsFile("geometry/scripts/cuboid.txt");
+    std::ofstream pointsFile(".././geometry/scripts/cuboid.txt");
     FILE *gnuplot = popen("gnuplot -persist", "w");
 
     if (!pointsFile) {
@@ -59,7 +59,7 @@ void Cuboid::draw() const {
     fprintf(gnuplot, "set ylabel 'Y-axis'\n");
     fprintf(gnuplot, "set zlabel 'Z-axis'\n");
     fprintf(gnuplot, "set view 60, 30\n");
-    fprintf(gnuplot, "splot 'geometry/scripts/cuboid.txt' using 1:2:3 with lines lw 2 title '%s'\n",
+    fprintf(gnuplot, "splot '.././geometry/scripts/cuboid.txt' using 1:2:3 with lines lw 2 title '%s'\n",
             isCube ? "Cube" : "Cuboid");
 
     pclose(gnuplot);

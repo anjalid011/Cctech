@@ -2,6 +2,8 @@
 #include "Line.h"
 #include <iostream>
 #include <fstream>
+#include <sys/stat.h>  // For mkdir
+#include <sys/types.h> // For mkdir
 
 using namespace std;
 Line::Line(double x1, double y1, double x2, double y2) 
@@ -11,7 +13,15 @@ Line::Line(double x1, double y1, double z1, double x2, double y2, double z2)
     : x1(x1), y1(y1), z1(z1), x2(x2), y2(y2), z2(z2), is3D(true) {}
 
 void Line::draw() const {
-    std::ofstream pointsFile("geometry/scripts/points.txt");
+    // struct stat st;
+    // if (stat("geometry/scripts", &st) != 0) {
+    //     if (mkdir("geometry/scripts", 0777) != 0) {
+    //         std::cerr << "Error: Failed to create directory 'geometry/scripts'!\n";
+    //         return;
+    //     }
+    // }
+
+    std::ofstream pointsFile(".././geometry/scripts/points.txt");
     FILE *gnuplot = popen("gnuplot -persist", "w");
 
     if (!pointsFile) {
@@ -41,12 +51,12 @@ void Line::draw() const {
         // 3D Line Plot
         fprintf(gnuplot, "set zlabel 'Z-axis'\n");
         fprintf(gnuplot, "set view 45, 60\n");
-        fprintf(gnuplot, "splot 'geometry/scripts/points.txt' using 1:2:3 with lines lw 2 title '3D Line', \\\n");
-        fprintf(gnuplot, "      'geometry/scripts/points.txt' using 1:2:3 with points pt 7 ps 1.5 lc rgb 'red'\n");
+        fprintf(gnuplot, "splot '.././geometry/scripts/points.txt' using 1:2:3 with lines lw 2 title '3D Line', \\\n");
+        fprintf(gnuplot, "      '.././geometry/scripts/points.txt' using 1:2:3 with points pt 7 ps 1.5 lc rgb 'red'\n");
     } else {
         // 2D Line Plot
-        fprintf(gnuplot, "plot 'geometry/scripts/points.txt' using 1:2 with lines lw 2 title '2D Line', \\\n");
-        fprintf(gnuplot, "     'geometry/scripts/points.txt' using 1:2 with points pt 7 ps 1.5 lc rgb 'red'\n");
+        fprintf(gnuplot, "plot '.././geometry/scripts/points.txt' using 1:2 with lines lw 2 title '2D Line', \\\n");
+        fprintf(gnuplot, "     '.././geometry/scripts/points.txt' using 1:2 with points pt 7 ps 1.5 lc rgb 'red'\n");
     }
 
     pclose(gnuplot);
