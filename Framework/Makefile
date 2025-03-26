@@ -7,22 +7,38 @@ GEOM_LIB = geometry/lib
 GEOM_SCRIPTS = geometry/scripts
 APP_SRC = application
 
-
-OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o
+OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o
 
 LIBGEOM = $(GEOM_LIB)/libgeometry.so
-
 EXEC = $(APP_SRC)/main
 
-all: $(LIBGEOM) $(EXEC)
+all: $(GEOM_LIB) $(LIBGEOM) $(EXEC)
 
-$(GEOM_LIB)/Line.o: $(GEOM_SRC)/Line.cpp $(GEOM_INC)/Line.h
+$(GEOM_LIB):
+	mkdir -p $(GEOM_LIB)  # Ensures that the geometry/lib directory exists
+
+$(GEOM_LIB)/Line.o: $(GEOM_SRC)/Line.cpp $(GEOM_INC)/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Rectangle.o: $(GEOM_SRC)/Rectangle.cpp $(GEOM_INC)/Rectangle.h
+$(GEOM_LIB)/Rectangle.o: $(GEOM_SRC)/Rectangle.cpp $(GEOM_INC)/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Cuboid.o: $(GEOM_SRC)/Cuboid.cpp $(GEOM_INC)/Cuboid.h
+$(GEOM_LIB)/Cuboid.o: $(GEOM_SRC)/Cuboid.cpp $(GEOM_INC)/Geometry.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Sphere.o: $(GEOM_SRC)/Sphere.cpp $(GEOM_INC)/Geometry.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Circle.o: $(GEOM_SRC)/Circle.cpp $(GEOM_INC)/Geometry.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Cone.o: $(GEOM_SRC)/Cone.cpp $(GEOM_INC)/Geometry.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Transformations.o: $(GEOM_SRC)/Transformations.cpp $(GEOM_INC)/Transformations.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Plotter.o: $(GEOM_SRC)/Plotter.cpp $(GEOM_INC)/Plotter.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(LIBGEOM): $(OBJS)
@@ -35,5 +51,4 @@ run:
 	cd application && ./main
 
 clean:
-	rm -f $(OBJS) $(LIBGEOM) $(EXEC) geometry/scripts/*.txt
-
+	rm -f $(OBJS) $(LIBGEOM) $(EXEC) $(GEOM_SCRIPTS)/*.txt

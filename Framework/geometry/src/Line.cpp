@@ -1,5 +1,6 @@
 
-#include "Line.h"
+#include "Geometry.h"
+#include "Plotter.h"
 #include <iostream>
 #include <fstream>
 #include <sys/stat.h>  // For mkdir
@@ -22,7 +23,6 @@ void Line::draw() const {
     // }
 
     std::ofstream pointsFile(".././geometry/scripts/points.txt");
-    FILE *gnuplot = popen("gnuplot -persist", "w");
 
     if (!pointsFile) {
         std::cerr << "Error: Unable to open points file!\n";
@@ -42,24 +42,14 @@ void Line::draw() const {
     }
     pointsFile.close();
 
-    fprintf(gnuplot, "set terminal wxt\n");
-    fprintf(gnuplot, "set mouse\n");
-    fprintf(gnuplot, "set xlabel 'X-axis'\n");
-    fprintf(gnuplot, "set ylabel 'Y-axis'\n");
-
     if (is3D) {
-        // 3D Line Plot
-        fprintf(gnuplot, "set zlabel 'Z-axis'\n");
-        fprintf(gnuplot, "set view 45, 60\n");
-        fprintf(gnuplot, "splot '.././geometry/scripts/points.txt' using 1:2:3 with lines lw 2 title '3D Line', \\\n");
-        fprintf(gnuplot, "      '.././geometry/scripts/points.txt' using 1:2:3 with points pt 7 ps 1.5 lc rgb 'red'\n");
+        Plotter::plot3D(".././geometry/scripts/points.txt",".././geometry/scripts/transformed.txt", "3D Line");
+
     } else {
-        // 2D Line Plot
-        fprintf(gnuplot, "plot '.././geometry/scripts/points.txt' using 1:2 with lines lw 2 title '2D Line', \\\n");
-        fprintf(gnuplot, "     '.././geometry/scripts/points.txt' using 1:2 with points pt 7 ps 1.5 lc rgb 'red'\n");
+        Plotter::plot2D(".././geometry/scripts/points.txt",".././geometry/scripts/transformed.txt", "2D Line");
+
     }
 
-    pclose(gnuplot);
     std::cout << (is3D ? "3D" : "2D") << " Line drawn successful!\n";
 
 }
