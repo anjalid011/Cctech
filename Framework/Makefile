@@ -7,7 +7,7 @@ GEOM_LIB = geometry/lib
 GEOM_SCRIPTS = geometry/scripts
 APP_SRC = application
 
-OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o
+OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o
 
 LIBGEOM = $(GEOM_LIB)/libgeometry.so
 EXEC = $(APP_SRC)/main
@@ -33,6 +33,9 @@ $(GEOM_LIB)/Circle.o: $(GEOM_SRC)/Circle.cpp $(GEOM_INC)/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(GEOM_LIB)/Cone.o: $(GEOM_SRC)/Cone.cpp $(GEOM_INC)/Geometry.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Cylinder.o: $(GEOM_SRC)/Cylinder.cpp $(GEOM_INC)/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(GEOM_LIB)/Transformations.o: $(GEOM_SRC)/Transformations.cpp $(GEOM_INC)/Transformations.h

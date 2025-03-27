@@ -29,6 +29,6 @@ void Circle::draw() const {
 
     file.close();
 
-    Plotter::plot2D("../geometry/scripts/rectangle.txt",".././geometry/scripts/transformed.txt", "Rectangle");
+    //Plotter::plot2D("../geometry/scripts/circle.txt",".././geometry/scripts/transformed.txt", "Circle");
     std::cout << "Circle drawn successfully!\n";
 }

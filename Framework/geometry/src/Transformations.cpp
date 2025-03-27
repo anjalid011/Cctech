@@ -2,126 +2,104 @@
 #include "Plotter.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <cmath>
 
-#define PI 3.141592653589793
+#define PI 3.14159265358979323846
 
-// **Function to apply the selected transformation**
-void Transformations::applyTransformation(const std::string& inputFile, const std::string& outputFile, int choice) {
-    std::ifstream input(inputFile);
-    std::ofstream output(outputFile);
-    
-    if (!input || !output) {
-        std::cerr << "Error: Unable to open input or output file!\n";
+Transformations::Transformations(const std::string& inputFile) {
+    loadPoints(inputFile);
+}
+
+void Transformations::loadPoints(const std::string& inputFile) {
+    std::ifstream file(inputFile);
+    if (!file) {
+        std::cerr << "Error: Unable to open file " << inputFile << "\n";
         return;
     }
 
-    std::vector<std::vector<double>> transformationMatrix;
-    
-    if (choice == 1) { // Translation
-        double tx, ty, tz;
-        std::cout << "Enter translation values (tx, ty, tz): ";
-        std::cin >> tx >> ty >> tz;
-        transformationMatrix = getTranslationMatrix(tx, ty, tz);
-    } 
-    else if (choice == 2) { // Rotation
-        double angle;
-        char axis;
-        std::cout << "Enter rotation angle (in degrees): ";
-        std::cin >> angle;
-        std::cout << "Enter axis of rotation (x/y/z): ";
-        std::cin >> axis;
-        transformationMatrix = getRotationMatrix(angle, axis);
-    } 
-    else if (choice == 3) { // Scaling
-        double sx, sy, sz;
-        std::cout << "Enter scaling factors (sx, sy, sz): ";
-        std::cin >> sx >> sy >> sz;
-        transformationMatrix = getScalingMatrix(sx, sy, sz);
-    } 
-    else {
-        std::cerr << "Invalid choice!\n";
-        return;
-    }
-
-    std::vector<std::vector<double>> originalPoints;
-    std::vector<std::vector<double>> transformedPoints;
     double x, y, z;
-    
-    while (input >> x >> y) {
-        z = 0;
-        if (input.peek() != '\n' && input >> z) { } // Read Z if present
+    while (file >> x >> y >> z) {
+        points.push_back({x, y, z});
+    }
+    file.close();
+}
 
-        std::vector<double> point = {x, y, z, 1}; // Homogeneous coordinates
+void Transformations::applyTransformation(const std::vector<std::vector<double>>& matrix, const std::string& outputFile) {
+    std::vector<std::vector<double>> transformedPoints;
+
+    for (const auto& point : points) {
         std::vector<double> newPoint(3, 0);
-
-        for (int i = 0; i < 3; i++) {
-            newPoint[i] = transformationMatrix[i][0] * point[0] + 
-                          transformationMatrix[i][1] * point[1] + 
-                          transformationMatrix[i][2] * point[2] + 
-                          transformationMatrix[i][3] * point[3];
+        for (int i = 0; i < 3; ++i) {
+            newPoint[i] = matrix[i][0] * point[0] + matrix[i][1] * point[1] + matrix[i][2] * point[2];
         }
-
-        originalPoints.push_back({x, y, z});
-        transformedPoints.push_back({newPoint[0], newPoint[1], newPoint[2]});
+        transformedPoints.push_back(newPoint);
     }
 
-    Plotter::savePoints(inputFile, originalPoints);
-    Plotter::savePoints(outputFile, transformedPoints);
-    
-    // Plot both original and transformed shape
-    if (transformedPoints[0].size() == 3)
-        Plotter::plot3D(inputFile, outputFile, "Original & Transformed Shape");
-    else
-        Plotter::plot2D(inputFile, outputFile, "Original & Transformed Shape");
+    points = transformedPoints;
+    savePoints(outputFile);
 }
 
-// **Function to create Translation Matrix**
-std::vector<std::vector<double>> Transformations::getTranslationMatrix(double tx, double ty, double tz) {
-    return {
-        {1, 0, 0, tx},
-        {0, 1, 0, ty},
-        {0, 0, 1, tz},
-        {0, 0, 0, 1}
-    };
+// Translation
+void Transformations::applyTranslation(double tx, double ty, double tz, const std::string& outputFile) {
+    for (auto& point : points) {
+        point[0] += tx;
+        point[1] += ty;
+        point[2] += tz;
+    }
+    savePoints(outputFile);
+    Plotter::plot3D("../geometry/scripts/cuboid.txt",".././geometry/scripts/transformed.txt","Cuboid");
 }
 
-// **Function to create Rotation Matrix**
-std::vector<std::vector<double>> Transformations::getRotationMatrix(double angle, char axis) {
-    double radians = angle * PI / 180.0;
-    if (axis == 'x' || axis == 'X') {
-        return {
-            {1, 0, 0, 0},
-            {0, cos(radians), -sin(radians), 0},
-            {0, sin(radians), cos(radians), 0},
-            {0, 0, 0, 1}
+// Scaling
+void Transformations::applyScaling(double sx, double sy, double sz, const std::string& outputFile) {
+    for (auto& point : points) {
+        point[0] *= sx;
+        point[1] *= sy;
+        point[2] *= sz;
+    }
+    savePoints(outputFile);
+    Plotter::plot3D("../geometry/scripts/cuboid.txt",".././geometry/scripts/transformed.txt","Cuboid");
+}
+
+// Rotation
+void Transformations::applyRotation(double angle, char axis, const std::string& outputFile) {
+    double rad = angle * PI / 180.0;
+    std::vector<std::vector<double>> rotationMatrix(3, std::vector<double>(3, 0));
+
+    if (axis == 'x') {
+        rotationMatrix = {
+            {1, 0, 0},
+            {0, cos(rad), -sin(rad)},
+            {0, sin(rad), cos(rad)}
         };
-    } 
-    else if (axis == 'y' || axis == 'Y') {
-        return {
-            {cos(radians), 0, sin(radians), 0},
-            {0, 1, 0, 0},
-            {-sin(radians), 0, cos(radians), 0},
-            {0, 0, 0, 1}
+    } else if (axis == 'y') {
+        rotationMatrix = {
+            {cos(rad), 0, sin(rad)},
+            {0, 1, 0},
+            {-sin(rad), 0, cos(rad)}
         };
-    } 
-    else if (axis == 'z' || axis == 'Z') {
-        return {
-            {cos(radians), -sin(radians), 0, 0},
-            {sin(radians), cos(radians), 0, 0},
-            {0, 0, 1, 0},
-            {0, 0, 0, 1}
+    } else if (axis == 'z') {
+        rotationMatrix = {
+            {cos(rad), -sin(rad), 0},
+            {sin(rad), cos(rad), 0},
+            {0, 0, 1}
         };
     }
-    return {}; // Return empty matrix if invalid axis
+
+    applyTransformation(rotationMatrix, outputFile);
+    Plotter::plot3D("../geometry/scripts/cuboid.txt",".././geometry/scripts/transformed.txt", "Cuboid");
 }
 
-// **Function to create Scaling Matrix**
-std::vector<std::vector<double>> Transformations::getScalingMatrix(double sx, double sy, double sz) {
-    return {
-        {sx, 0, 0, 0},
-        {0, sy, 0, 0},
-        {0, 0, sz, 0},
-        {0, 0, 0, 1}
-    };
+void Transformations::savePoints(const std::string& outputFile) {
+    std::ofstream file(outputFile);
+    if (!file) {
+        std::cerr << "Error: Unable to create file " << outputFile << "\n";
+        return;
+    }
+
+    for (const auto& point : points) {
+        file << point[0] << " " << point[1] << " " << point[2] << "\n";
+    }
+    file.close();
 }

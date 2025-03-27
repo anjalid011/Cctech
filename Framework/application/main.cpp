@@ -1,261 +1,174 @@
 #include "Geometry.h"
-// #include <iostream>
-
-// int main() {
-//     int choice;
-//     std::cout << "Choose a shape to plot:\n";
-//     std::cout << "1. 2D Line\n2. 3D Line\n3. Rectangle\n4. Square\n5. Cuboid\n6. Cube\n7. Circle\n8. Sphere\n9. Triangle\n10.Cone\n";
-//     std::cout << "\nEnter choice: ";
-//     std::cin >> choice;
-
-//     switch (choice) {
-//         case 1: {
-//             double x1, y1, x2, y2;
-//             std::cout << "Enter x1, y1, x2, y2 for 2D Line: ";
-//             std::cin >> x1 >> y1 >> x2 >> y2;
-//             Line line(x1, y1, x2, y2);
-//             line.draw();
-//             break;
-//         }
-//         case 2: { 
-//             double x1, y1, z1, x2, y2, z2;
-//             std::cout << "Enter x1, y1, z1, x2, y2, z2 for 3D Line: ";
-//             std::cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
-//             Line line(x1, y1, z1, x2, y2, z2); 
-//             line.draw();
-//             break;
-//         }
-//         case 3: {
-//             double x, y, width, height;
-//             std::cout << "Enter x, y, width, height for Rectangle: ";
-//             std::cin >> x >> y >> width >> height;
-//             Rectangle rectangle(x, y, width, height);
-//             rectangle.draw();
-//             break;
-//         }
-//         case 4: {
-//             double x, y, side;
-//             std::cout << "Enter x, y, side length for Square: ";
-//             std::cin >> x >> y >> side;
-//             Square square(x, y, side);
-//             square.draw();
-//             break;
-//         }
-//         case 5: {
-//             double x, y, z, width, height, depth;
-//             std::cout << "Enter x, y, z, width, height, depth for Cuboid: ";
-//             std::cin >> x >> y >> z >> width >> height >> depth;
-//             Cuboid cuboid(x, y, z, width, height, depth);
-//             cuboid.draw();
-//             break;
-//         }
-//         case 6: {  
-//             double x, y, z, side;
-//             std::cout << "Enter x, y, z, side length for Cube: ";
-//             std::cin >> x >> y >> z >> side;
-//             Cuboid cube(x, y, z, side, side, side);  
-//             cube.draw();
-//             break;
-//         }
-//         case 7:{
-//             double radius;
-//             std::cout << "Enter radius for Circle: ";
-//             std::cin >> radius;
-//             Circle circle(radius);
-//             circle.draw();    
-//             break;       
-//         }
-//         case 8: {
-//             double radius;
-//             std::cout << "Enter radius for Sphere: ";
-//             std::cin >> radius;
-//             Sphere sphere(radius);
-//             sphere.draw();
-//             break;
-//         }
-//         case 10: {
-//             double radius, height;
-//             std::cout << "Enter base radius and height for Cone: ";
-//             std::cin >> radius >> height;
-//             Cone cone(radius, height);
-//             cone.draw();
-//             break;
-//         }
-//         default:
-//             std::cout << "Invalid choice!\n";
-//     }
-
-//     return 0;
-// }
+#include "Transformations.h"
+#include <iostream>
+#include "Plotter.h"
 #include <iostream>
 #include <fstream>
 #include <string>
 #include "Transformations.h"
+void performTransformation(const std::string& inputFile, const std::string& outputFile) {
+    int choice;
+    std::cout << "Choose a transformation:\n";
+    std::cout << "1. Translation\n2. Scaling\n3. Rotation\nEnter choice: ";
+    std::cin >> choice;
 
-std::string createShape(int shapeChoice) {
-    std::string inputFile;
+    Transformations transform(inputFile);
 
-    std::ofstream file(inputFile);
-    // if (!file) {
-    //     std::cerr << "Error: Unable to create shape file!\n";
-    //     return "";
-    // }
-    switch (shapeChoice) {
-        case 1: inputFile = ".././geometry/scripts/points.txt"; break;
-        case 2: inputFile = ".././geometry/scripts/points.txt"; break;
-        case 3: inputFile = ".././geometry/scripts/rectangle.txt"; break;
-        case 4: inputFile = ".././geometry/scripts/square.txt"; break;
-        case 5: inputFile = ".././geometry/scripts/cuboid.txt"; break;
-        case 6: inputFile = ".././geometry/scripts/cube.txt"; break;
-        case 7: inputFile = ".././geometry/scripts/circle.txt"; break;
-        case 8: inputFile = ".././geometry/scripts/sphere.txt"; break;
-        case 9: inputFile = ".././geometry/scripts/triangle.txt"; break;
-        case 10: inputFile = ".././geometry/scripts/cone.txt"; break;
-        default:
-            std::cout << "Invalid shape choice!\n";
-            return "";
+    if (choice == 1) {
+        double tx, ty, tz;
+        std::cout << "Enter translation (tx ty tz): ";
+        std::cin >> tx >> ty >> tz;
+        transform.applyTranslation(tx, ty, tz, outputFile);
+    } else if (choice == 2) {
+        double sx, sy, sz;
+        std::cout << "Enter scaling factors (sx sy sz): ";
+        std::cin >> sx >> sy >> sz;
+        transform.applyScaling(sx, sy, sz, outputFile);
+    } else if (choice == 3) {
+        double angle;
+        char axis;
+        std::cout << "Enter rotation angle (degrees) and axis (x/y/z): ";
+        std::cin >> angle >> axis;
+        transform.applyRotation(angle, axis, outputFile);
+    } else {
+        std::cout << "Invalid choice!\n";
+        return;
     }
 
-    std::cout << "Enter parameters for the shape:\n";
-    switch (shapeChoice) {
-        case 1: { // 2D Line
-            double x1, y1, x2, y2;
-            std::cout << "Enter x1, y1, x2, y2: ";
-            std::cin >> x1 >> y1 >> x2 >> y2;
-            file << x1 << " " << y1 << "\n" << x2 << " " << y2 << "\n";
-            break;
-        }
-        case 2: { // 3D Line
-            double x1, y1, z1, x2, y2, z2;
-            std::cout << "Enter x1, y1, z1, x2, y2, z2: ";
-            std::cin >> x1 >> y1 >> z1 >> x2 >> y2 >> z2;
-            file << x1 << " " << y1 << " " << z1 << "\n" << x2 << " " << y2 << " " << z2 << "\n";
-            break;
-        }
-        case 3: {
-            double x, y, width, height;
-            std::cout << "Enter x, y, width, height for Rectangle: ";
-            std::cin >> x >> y >> width >> height;
-            Rectangle rectangle(x, y, width, height);
-            rectangle.draw();
-            break;
-        }
-        case 4: {
-            double x, y, side;
-            std::cout << "Enter x, y, side length for Square: ";
-            std::cin >> x >> y >> side;
-            Square square(x, y, side);
-            square.draw();
-            break;
-        }
+    std::cout << "Transformation applied successfully!\n";
+}
+
+void createRobot(Plotter& plotter) {
+    // Define Reference Point (Base of Torso)
+    double xRef = 0, yRef = 0, zRef = 0;
+
+    // Create and position body parts
+    Sphere head(xRef, yRef, zRef + 50, 10); // Head
+    Cone hat(xRef, yRef, zRef + 60, 10, 20); // Hat
+    Cylinder neck(xRef, yRef, zRef + 45, 5, 5); // Neck
+    Cylinder torso(xRef, yRef, zRef + 20, 15, 40); // Torso
+
+    // Shoulders & Arms
+    Sphere leftShoulder(xRef - 15, yRef, zRef + 35, 2.5);
+    Sphere rightShoulder(xRef + 15, yRef, zRef + 35, 2.5);
+    Cylinder leftArm(xRef - 15, yRef, zRef + 35, 2.5, 21);
+    Cylinder rightArm(xRef + 15, yRef, zRef + 35, 2.5, 21);
+    Cuboid leftHand(xRef - 35, yRef, zRef + 25, 4, 5, 5);
+    Cuboid rightHand(xRef + 35, yRef, zRef + 25, 4, 5, 5);
+
+    // Hips & Legs
+    Sphere leftHip(xRef - 7.5, yRef, zRef, 2.5);
+    Sphere rightHip(xRef + 7.5, yRef, zRef, 2.5);
+    Cylinder leftLeg(xRef - 7.5, yRef, zRef - 20, 2.5, 20);
+    Cylinder rightLeg(xRef + 7.5, yRef, zRef - 20, 2.5, 20);
+    Cuboid leftFoot(xRef - 10, yRef, zRef - 30, 10, 5, 5);
+    Cuboid rightFoot(xRef + 10, yRef, zRef - 30, 10, 5, 5);
+
+    // Draw all parts
+    head.draw();
+    hat.draw();
+    neck.draw();
+    torso.draw();
+    leftShoulder.draw();
+    rightShoulder.draw();
+    leftArm.draw();
+    rightArm.draw();
+    leftHand.draw();
+    rightHand.draw();
+    leftHip.draw();
+    rightHip.draw();
+    leftLeg.draw();
+    rightLeg.draw();
+    leftFoot.draw();
+    rightFoot.draw();
+
+    std::vector<std::string> shapeFiles;
+
+    Sphere head(0, 0, 30, 10);  // Head position
+    std::string headFile = "head.txt";
+    head.saveToFile("geometry/scripts/" + headFile);
+    shapeFiles.push_back(headFile);
+
+    Cone hat(0, 0, 40, 10, 20);  // Hat on top
+    std::string hatFile = "hat.txt";
+    hat.saveToFile("geometry/scripts/" + hatFile);
+    shapeFiles.push_back(hatFile);
+
+    Cylinder torso(0, 0, 0, 15, 40);  // Torso
+    std::string torsoFile = "torso.txt";
+    torso.saveToFile("geometry/scripts/" + torsoFile);
+    shapeFiles.push_back(torsoFile);
+
+    Cuboid foot1(-10, 0, -20, 10, 5, 5);  // Left foot
+    std::string foot1File = "foot1.txt";
+    foot1.saveToFile("geometry/scripts/" + foot1File);
+    shapeFiles.push_back(foot1File);
+
+    // Plot the humanoid figure
+    plotter.plotMultipleShapes(shapeFiles, "humanoid");
+}
+
+int main() {
+    int choice;
+    std::cout << "Choose a shape to plot:\n";
+    std::cout << "5. Cuboid\n8. Sphere\n10.Cone\n11. Cylinder\n12. Robot";
+    std::cout << "\nEnter choice: ";
+    std::cin >> choice;
+
+    switch (choice) {
         case 5: {
             double x, y, z, width, height, depth;
             std::cout << "Enter x, y, z, width, height, depth for Cuboid: ";
             std::cin >> x >> y >> z >> width >> height >> depth;
             Cuboid cuboid(x, y, z, width, height, depth);
             cuboid.draw();
+            std::string inputFile = ".././geometry/scripts/cuboid.txt";
+            std::string outputFile = ".././geometry/scripts/transformed.txt";
+            performTransformation(inputFile, outputFile);
+            Plotter::plot3D("../geometry/scripts/cuboid.txt",".././geometry/scripts/transformed.txt","Cuboid");
             break;
-        }
-        case 6: {  
-            double x, y, z, side;
-            std::cout << "Enter x, y, z, side length for Cube: ";
-            std::cin >> x >> y >> z >> side;
-            Cuboid cube(x, y, z, side, side, side);  
-            cube.draw();
-            break;
-        }
-        case 7:{
-            double radius;
-            std::cout << "Enter radius for Circle: ";
-            std::cin >> radius;
-            Circle circle(radius);
-            circle.draw();    
-            break;       
         }
         case 8: {
             double radius;
             std::cout << "Enter radius for Sphere: ";
             std::cin >> radius;
-            Sphere sphere(radius);
-            sphere.draw();
+            //Sphere sphere(radius);
+            //sphere.draw();
+            std::string inputFile = ".././geometry/scripts/sphere.txt";
+            std::string outputFile = ".././geometry/scripts/transformed.txt";
+            performTransformation(inputFile, outputFile);
+            Plotter::plot3D("../geometry/scripts/sphere.txt",".././geometry/scripts/transformed.txt", "Sphere");
             break;
-        }
-        case 9:{
-            std::cout<<"Not Ready Yet";
         }
         case 10: {
             double radius, height;
             std::cout << "Enter base radius and height for Cone: ";
             std::cin >> radius >> height;
-            Cone cone(radius, height);
-            cone.draw();
+            //Cone cone(radius, height);
+            //cone.draw();
+            std::string inputFile = ".././geometry/scripts/cone.txt";
+            std::string outputFile = ".././geometry/scripts/transformed.txt";
+            performTransformation(inputFile, outputFile);
+            Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cone");
             break;
         }
+        case 11:{
+            double radius, height;
+            std::cout << "Enter base radius and height for Cylinder: ";
+            std::cin >> radius >> height;
+            //Cylinder cylinder(radius, height);
+            //cylinder.draw();
+            std::string inputFile = ".././geometry/scripts/cylinder.txt";
+            std::string outputFile = ".././geometry/scripts/transformed.txt";
+            performTransformation(inputFile, outputFile);
+            Plotter::plot3D(".././geometry/scripts/cylinder.txt",".././geometry/scripts/transformed.txt", "Cylinder");
+            break;
+        }
+        case 12:{
+            createRobot();
+            //plotMultipleShapes(const std::vector<std::string>& shapeFiles, const std::string& outputName)
+        }   
     }
-
-    file.close();
-    return inputFile;
-}
-
-int main() {
-    int shapeChoice;
-    std::cout << "Choose a shape to plot:\n";
-    std::cout << "1. 2D Line\n2. 3D Line\n3. Rectangle\n4. Square\n5. Cuboid\n6. Cube\n7. Circle\n8. Sphere\n9. Triangle\n10.Cone\n";
-    std::cout << "Enter choice: ";
-    std::cin >> shapeChoice;
-
-    std::string inputFile = createShape(shapeChoice);
-    if (inputFile.empty()) {
-        return 1; // Exit if shape creation failed
-    }
-
-    //Transformations transform(inputFile);
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
-
-    // int transformChoice;
-    // std::cout << "Choose a transformation:\n";
-    // std::cout << "1. Translation\n2. Scaling\n3. Rotation\nEnter choice: ";
-    // std::cin >> transformChoice;
-
-    // switch (transformChoice) {
-    //     case 1: { // Translation
-    //         double tx, ty, tz;
-    //         std::cout << "Enter translation values (tx ty tz): ";
-    //         std::cin >> tx >> ty >> tz;
-    //         transform.applyTranslation(tx, ty, tz, outputFile);
-    //         std::cout << "Transformation applied successfully! Results saved in: " << outputFile << "\n";
-    //         break;
-    //     }
-    //     case 2: { // Scaling
-    //         double sx, sy, sz;
-    //         std::cout << "Enter scaling factors (sx sy sz): ";
-    //         std::cin >> sx >> sy >> sz;
-    //         transform.applyScaling(sx, sy, sz, outputFile);
-    //         std::cout << "Transformation applied successfully! Results saved in: " << outputFile << "\n";
-    //         break;
-    //     }
-    //     case 3: { // Rotation
-    //         double angle;
-    //         char axis;
-    //         std::cout << "Enter rotation angle (degrees) and axis (x/y/z): ";
-    //         std::cin >> angle >> axis;
-    //         transform.applyRotation(angle, axis, outputFile);
-    //         std::cout << "Transformation applied successfully! Results saved in: " << outputFile << "\n";
-    //         break;
-    //     }
-    //     default:
-    //         std::cout << "Invalid transformation choice!\n";
-    //         return 1;
-    // }
-
-    int choice;
-    std::cout << "Choose transformation:\n";
-    std::cout << "1. Translation\n2. Rotation\n3. Scaling\n";
-    std::cout << "Enter choice: ";
-    std::cin >> choice;
-
-    Transformations::applyTransformation(inputFile, outputFile, choice);
-
     return 0;
 }
 

@@ -1,8 +1,10 @@
 #ifndef GEOMETRY_H
 #define GEOMETRY_H
-
+#include "Shape.h"
+#include <vector>
 #include <iostream>
 #include <fstream>
+#include <cmath>
 
 class Line {
 private:
@@ -34,14 +36,20 @@ class Square : public Rectangle {
 
 class Cuboid {
     private:
-        double x, y, z, width, height, depth;
+        double x, y, z; // Center coordinates
+        double width, depth, height;
         bool isCube;
     
     public:
-       
-        Cuboid(double x, double y, double z, double width, double height, double depth);
-        
-        Cuboid(double x, double y, double z, double side);
+
+        Cuboid(double x, double y, double z, double width, double depth, double height) {
+            this->x = x;
+            this->y = y;
+            this->z = z;
+            this->width = width;
+            this->depth = depth;
+            this->height = height;
+        }
     
         void draw() const;
 };
@@ -56,17 +64,50 @@ class Circle {
 
 class Sphere {
     private:
+        double x, y, z; // Center coordinates
         double radius;
     public:
-        Sphere(double r);
+
+        Sphere(double x, double y, double z, double r) {
+            this->x = x;
+            this->y = y;
+            this->z = z;
+            this->radius = r;
+        }
         void draw() const;
 };
 
 class Cone {
     private:
-        double radius, height;
+        double x, y, z; // Base center coordinates
+        double radius;
+        double height;
     public:
-        Cone(double r, double h);
+
+        Cone(double x, double y, double z, double radius, double height) {
+            this->x = x;
+            this->y = y;
+            this->z = z;
+            this->radius = radius;
+            this->height = height;
+        }
+        void draw() const;
+};
+
+class Cylinder {
+    private:
+        double x, y, z; // Base center coordinates
+        double radius;
+        double height;
+    public:
+
+        Cylinder(double x, double y, double z, double radius, double height) {
+            this->x = x;
+            this->y = y;
+            this->z = z;
+            this->radius = radius;
+            this->height = height;
+        }
         void draw() const;
 };
 

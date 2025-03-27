@@ -6,17 +6,17 @@
 
 #define PI 3.141592653589793
 
-//Cone::Cone(double r, double h) : radius(r), height(h) {}
+//Cylinder::Cylinder(double r, double h) : radius(r), height(h) {}
 
-void Cone::draw() const {
-    std::ofstream file(".././geometry/scripts/cone.txt");
+void Cylinder::draw() const {
+    std::ofstream file(".././geometry/scripts/cylinder.txt");
     if (!file) {
-        std::cerr << "Error: Unable to open cone file!\n";
+        std::cerr << "Error: Unable to open cylinder file!\n";
         return;
     }
 
     int numTheta = 100; // Number of rotations
-    int numT = 50;      // Points along the slanted line
+    int numT = 50;      // Points along the vertical line
 
     for (int i = 0; i <= numTheta; i++) {
         double theta = i * (2 * PI / numTheta);
@@ -25,9 +25,9 @@ void Cone::draw() const {
             double t = j * (1.0 / numT);
             
             // Compute rotated coordinates
-            double x = radius * t * cos(theta);
-            double y = radius * t * sin(theta);
-            double z = height * (1 - t);
+            double x = radius * cos(theta);
+            double y = radius * sin(theta);
+            double z = height * t;
 
             file << x << " " << y << " " << z << "\n";
         }
@@ -35,8 +35,5 @@ void Cone::draw() const {
     }
 
     file.close();
-
-    // Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cone");
-
-    std::cout << "Cone drawn successfully!\n";
+    std::cout << "Cylinder drawn successfully!\n";
 }

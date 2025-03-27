@@ -52,3 +52,20 @@ void Plotter::plot3D(const std::string& filename, const std::string& transformed
 
     pclose(gnuplot);
 }
+void Plotter::plotMultipleShapes(const std::vector<std::string>& shapeFiles, const std::string& outputName) {
+    std::ofstream script("geometry/scripts/" + outputName + ".plt");
+
+    script << "set view equal xyz\n";
+    script << "splot ";
+
+    for (size_t i = 0; i < shapeFiles.size(); i++) {
+        script << "'geometry/scripts/" << shapeFiles[i] << "' with lines";
+        if (i < shapeFiles.size() - 1) script << ", ";
+    }
+    
+    script << "\npause -1\n";
+    script.close();
+
+    std::string command = "gnuplot geometry/scripts/" + outputName + ".plt";
+    system(command.c_str());
+}

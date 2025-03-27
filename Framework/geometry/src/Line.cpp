@@ -42,13 +42,13 @@ void Line::draw() const {
     }
     pointsFile.close();
 
-    if (is3D) {
-        Plotter::plot3D(".././geometry/scripts/points.txt",".././geometry/scripts/transformed.txt", "3D Line");
+    // if (is3D) {
+    //     Plotter::plot3D(".././geometry/scripts/points.txt",".././geometry/scripts/transformed.txt", "3D Line");
 
-    } else {
-        Plotter::plot2D(".././geometry/scripts/points.txt",".././geometry/scripts/transformed.txt", "2D Line");
+    // } else {
+    //     Plotter::plot2D(".././geometry/scripts/points.txt",".././geometry/scripts/transformed.txt", "2D Line");
 
-    }
+    // }
 
     std::cout << (is3D ? "3D" : "2D") << " Line drawn successful!\n";
 
