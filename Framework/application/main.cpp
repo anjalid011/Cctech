@@ -6,6 +6,8 @@
 #include <fstream>
 #include <string>
 #include "Transformations.h"
+#include "Shape.h"
+
 void performTransformation(const std::string& inputFile, const std::string& outputFile) {
     int choice;
     std::cout << "Choose a transformation:\n";
@@ -38,74 +40,52 @@ void performTransformation(const std::string& inputFile, const std::string& outp
     std::cout << "Transformation applied successfully!\n";
 }
 
-void createRobot(Plotter& plotter) {
-    // Define Reference Point (Base of Torso)
-    double xRef = 0, yRef = 0, zRef = 0;
-
-    // Create and position body parts
-    Sphere head(xRef, yRef, zRef + 50, 10); // Head
-    Cone hat(xRef, yRef, zRef + 60, 10, 20); // Hat
-    Cylinder neck(xRef, yRef, zRef + 45, 5, 5); // Neck
-    Cylinder torso(xRef, yRef, zRef + 20, 15, 40); // Torso
-
-    // Shoulders & Arms
-    Sphere leftShoulder(xRef - 15, yRef, zRef + 35, 2.5);
-    Sphere rightShoulder(xRef + 15, yRef, zRef + 35, 2.5);
-    Cylinder leftArm(xRef - 15, yRef, zRef + 35, 2.5, 21);
-    Cylinder rightArm(xRef + 15, yRef, zRef + 35, 2.5, 21);
-    Cuboid leftHand(xRef - 35, yRef, zRef + 25, 4, 5, 5);
-    Cuboid rightHand(xRef + 35, yRef, zRef + 25, 4, 5, 5);
-
-    // Hips & Legs
-    Sphere leftHip(xRef - 7.5, yRef, zRef, 2.5);
-    Sphere rightHip(xRef + 7.5, yRef, zRef, 2.5);
-    Cylinder leftLeg(xRef - 7.5, yRef, zRef - 20, 2.5, 20);
-    Cylinder rightLeg(xRef + 7.5, yRef, zRef - 20, 2.5, 20);
-    Cuboid leftFoot(xRef - 10, yRef, zRef - 30, 10, 5, 5);
-    Cuboid rightFoot(xRef + 10, yRef, zRef - 30, 10, 5, 5);
-
-    // Draw all parts
-    head.draw();
-    hat.draw();
-    neck.draw();
-    torso.draw();
-    leftShoulder.draw();
-    rightShoulder.draw();
-    leftArm.draw();
-    rightArm.draw();
-    leftHand.draw();
-    rightHand.draw();
-    leftHip.draw();
-    rightHip.draw();
-    leftLeg.draw();
-    rightLeg.draw();
-    leftFoot.draw();
-    rightFoot.draw();
-
-    std::vector<std::string> shapeFiles;
-
-    Sphere head(0, 0, 30, 10);  // Head position
-    std::string headFile = "head.txt";
-    head.saveToFile("geometry/scripts/" + headFile);
-    shapeFiles.push_back(headFile);
-
-    Cone hat(0, 0, 40, 10, 20);  // Hat on top
-    std::string hatFile = "hat.txt";
-    hat.saveToFile("geometry/scripts/" + hatFile);
-    shapeFiles.push_back(hatFile);
-
-    Cylinder torso(0, 0, 0, 15, 40);  // Torso
-    std::string torsoFile = "torso.txt";
-    torso.saveToFile("geometry/scripts/" + torsoFile);
-    shapeFiles.push_back(torsoFile);
-
-    Cuboid foot1(-10, 0, -20, 10, 5, 5);  // Left foot
-    std::string foot1File = "foot1.txt";
-    foot1.saveToFile("geometry/scripts/" + foot1File);
-    shapeFiles.push_back(foot1File);
-
-    // Plot the humanoid figure
-    plotter.plotMultipleShapes(shapeFiles, "humanoid");
+void createRobot() {
+    Plotter plotter;
+    
+    // Head
+    plotter.plotSphere(0, 55, 0, 10, "Head");
+    
+    // Hat
+    plotter.plotCone(0, 65, 0, 10, 20, "Hat");
+    
+    // Neck
+    plotter.plotCylinder(0, 50, 0, 5, 5, "Neck");
+    
+    // Torso + Hips (Body)
+    plotter.plotCylinder(0, 30, 0, 15, 40, "Body");
+    
+    // Shoulder Joints
+    plotter.plotSphere(-15, 47, 0, 2.5, "Left Shoulder Joint");
+    plotter.plotSphere(15, 47, 0, 2.5, "Right Shoulder Joint");
+    
+    // Upper Arms
+    plotter.plotCylinder(-20, 35, 0, 2.5, 21, "Left Upper Arm");
+    plotter.plotCylinder(20, 35, 0, 2.5, 21, "Right Upper Arm");
+    
+    // Elbows
+    plotter.plotSphere(-30, 25, 0, 2.5, "Left Elbow");
+    plotter.plotSphere(30, 25, 0, 2.5, "Right Elbow");
+    
+    // Lower Arms
+    plotter.plotCylinder(-35, 15, 0, 2.5, 20, "Left Lower Arm");
+    plotter.plotCylinder(35, 15, 0, 2.5, 20, "Right Lower Arm");
+    
+    // Hands
+    plotter.plotCuboid(-40, 5, 0, 4, 5, 5, "Left Hand");
+    plotter.plotCuboid(40, 5, 0, 4, 5, 5, "Right Hand");
+    
+    // Hip Joints
+    plotter.plotSphere(-10, 10, 0, 2.5, "Left Hip Joint");
+    plotter.plotSphere(10, 10, 0, 2.5, "Right Hip Joint");
+    
+    // Legs
+    plotter.plotCylinder(-10, -10, 0, 2.5, 20, "Left Leg");
+    plotter.plotCylinder(10, -10, 0, 2.5, 20, "Right Leg");
+    
+    // Feet
+    plotter.plotCuboid(-10, -30, 0, 10, 5, 5, "Left Foot");
+    plotter.plotCuboid(10, -30, 0, 10, 5, 5, "Right Foot");
 }
 
 int main() {
@@ -132,8 +112,8 @@ int main() {
             double radius;
             std::cout << "Enter radius for Sphere: ";
             std::cin >> radius;
-            //Sphere sphere(radius);
-            //sphere.draw();
+            Sphere sphere(radius);
+            sphere.draw();
             std::string inputFile = ".././geometry/scripts/sphere.txt";
             std::string outputFile = ".././geometry/scripts/transformed.txt";
             performTransformation(inputFile, outputFile);
@@ -144,8 +124,8 @@ int main() {
             double radius, height;
             std::cout << "Enter base radius and height for Cone: ";
             std::cin >> radius >> height;
-            //Cone cone(radius, height);
-            //cone.draw();
+            Cone cone(radius, height);
+            cone.draw();
             std::string inputFile = ".././geometry/scripts/cone.txt";
             std::string outputFile = ".././geometry/scripts/transformed.txt";
             performTransformation(inputFile, outputFile);
@@ -156,8 +136,8 @@ int main() {
             double radius, height;
             std::cout << "Enter base radius and height for Cylinder: ";
             std::cin >> radius >> height;
-            //Cylinder cylinder(radius, height);
-            //cylinder.draw();
+            Cylinder cylinder(radius, height);
+            cylinder.draw();
             std::string inputFile = ".././geometry/scripts/cylinder.txt";
             std::string outputFile = ".././geometry/scripts/transformed.txt";
             performTransformation(inputFile, outputFile);
@@ -166,7 +146,6 @@ int main() {
         }
         case 12:{
             createRobot();
-            //plotMultipleShapes(const std::vector<std::string>& shapeFiles, const std::string& outputName)
         }   
     }
     return 0;

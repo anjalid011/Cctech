@@ -6,7 +6,7 @@
 
 #define PI 3.141592653589793
 
-//Cylinder::Cylinder(double r, double h) : radius(r), height(h) {}
+Cylinder::Cylinder(double r, double h) : radius(r), height(h) {}
 
 void Cylinder::draw() const {
     std::ofstream file(".././geometry/scripts/cylinder.txt");
@@ -36,4 +36,17 @@ void Cylinder::draw() const {
 
     file.close();
     std::cout << "Cylinder drawn successfully!\n";
+}
+
+void Cylinder::savePoints(const std::string& outputFile) {
+    std::ofstream file(outputFile);
+    if (!file) {
+        std::cerr << "Error: Unable to create file " << outputFile << "\n";
+        return;
+    }
+
+    for (const auto& point : points) {
+        file << point[0] << " " << point[1] << " " << point[2] << "\n";
+    }
+    file.close();
 }

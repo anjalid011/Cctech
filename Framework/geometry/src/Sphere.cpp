@@ -6,7 +6,7 @@
 
 #define PI 3.141592653589793
 
-//Sphere::Sphere(double r) : radius(r) {}
+Sphere::Sphere(double r) : radius(r) {}
 
 void Sphere::draw() const {
     std::ofstream file(".././geometry/scripts/sphere.txt");
@@ -37,4 +37,16 @@ void Sphere::draw() const {
 
     // Plotter::plot3D("../geometry/scripts/sphere.txt",".././geometry/scripts/transformed.txt", "Sphere");
     std::cout << "Sphere drawn successfully!\n";
+}
+void Sphere::savePoints(const std::string& outputFile) {
+    std::ofstream file(outputFile);
+    if (!file) {
+        std::cerr << "Error: Unable to create file " << outputFile << "\n";
+        return;
+    }
+
+    for (const auto& point : points) {
+        file << point[0] << " " << point[1] << " " << point[2] << "\n";
+    }
+    file.close();
 }

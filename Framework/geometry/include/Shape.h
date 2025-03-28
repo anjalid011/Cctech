@@ -1,13 +1,16 @@
 #ifndef SHAPE_H
 #define SHAPE_H
-
+#include <vector>
 #include <string>
 
 class Shape {
-public:
-    virtual ~Shape() {} // Virtual destructor
-    virtual void draw() const = 0; // Pure virtual function to enforce draw() in derived classes
-    virtual std::string getFilename() const = 0; // Returns the filename containing shape points
+    protected:
+        std::vector<std::vector<double>> points;  // Stores shape's points
+        std::string shapeFile;  // File where shape data is stored
+    
+    public:
+        virtual void generate() = 0;  // Pure virtual function to generate shape
+        virtual void saveToFile(const std::string& filename);
+        std::vector<std::vector<double>> getPoints();  // Getter for points
 };
-
 #endif

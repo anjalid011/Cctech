@@ -36,22 +36,15 @@ class Square : public Rectangle {
 
 class Cuboid {
     private:
-        double x, y, z; // Center coordinates
-        double width, depth, height;
-        bool isCube;
-    
-    public:
+    double x, y, z, width, height, depth;
+    bool isCube;
 
-        Cuboid(double x, double y, double z, double width, double depth, double height) {
-            this->x = x;
-            this->y = y;
-            this->z = z;
-            this->width = width;
-            this->depth = depth;
-            this->height = height;
-        }
-    
-        void draw() const;
+public:
+    std::vector<std::vector<double>> points; 
+    Cuboid(double x, double y, double z, double width, double height, double depth);
+    Cuboid(double x, double y, double z, double side);
+    void savePoints(const std::string& outputFile); // Save transformed points
+    void draw() const;
 };
 
 class Circle {
@@ -60,56 +53,40 @@ class Circle {
     public:
         Circle(double r);
         void draw() const;
+        void savePoints(const std::string& outputFile); // Save transformed points
+
 };
 
 class Sphere {
     private:
-        double x, y, z; // Center coordinates
-        double radius;
+    double radius;
     public:
-
-        Sphere(double x, double y, double z, double r) {
-            this->x = x;
-            this->y = y;
-            this->z = z;
-            this->radius = r;
-        }
+        Sphere(double r);
         void draw() const;
+        std::vector<std::vector<double>> points; 
+        void savePoints(const std::string& outputFile); // Save transformed points
 };
+
 
 class Cone {
     private:
-        double x, y, z; // Base center coordinates
-        double radius;
-        double height;
+        double radius, height;
     public:
-
-        Cone(double x, double y, double z, double radius, double height) {
-            this->x = x;
-            this->y = y;
-            this->z = z;
-            this->radius = radius;
-            this->height = height;
-        }
+        Cone(double r, double h);
         void draw() const;
+        std::vector<std::vector<double>> points; 
+        void savePoints(const std::string& outputFile); // Save transformed points
 };
 
 class Cylinder {
     private:
-        double x, y, z; // Base center coordinates
-        double radius;
-        double height;
+        double radius, height;
     public:
-
-        Cylinder(double x, double y, double z, double radius, double height) {
-            this->x = x;
-            this->y = y;
-            this->z = z;
-            this->radius = radius;
-            this->height = height;
-        }
+        Cylinder(double r, double h);
         void draw() const;
-};
+        std::vector<std::vector<double>> points; 
+        void savePoints(const std::string& outputFile); // Save transformed points
+    };
 
 
 #endif 

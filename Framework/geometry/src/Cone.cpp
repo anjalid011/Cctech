@@ -6,7 +6,7 @@
 
 #define PI 3.141592653589793
 
-//Cone::Cone(double r, double h) : radius(r), height(h) {}
+Cone::Cone(double r, double h) : radius(r), height(h) {}
 
 void Cone::draw() const {
     std::ofstream file(".././geometry/scripts/cone.txt");
@@ -39,4 +39,17 @@ void Cone::draw() const {
     // Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cone");
 
     std::cout << "Cone drawn successfully!\n";
+}
+
+void Cone::savePoints(const std::string& outputFile) {
+    std::ofstream file(outputFile);
+    if (!file) {
+        std::cerr << "Error: Unable to create file " << outputFile << "\n";
+        return;
+    }
+
+    for (const auto& point : points) {
+        file << point[0] << " " << point[1] << " " << point[2] << "\n";
+    }
+    file.close();
 }

@@ -16,6 +16,7 @@ public:
     void applyTranslation(double tx, double ty, double tz, const std::string& outputFile);
     void applyScaling(double sx, double sy, double sz, const std::string& outputFile);
     void applyRotation(double angle, char axis, const std::string& outputFile);
+    void applyMirroring(char axis, const std::string& outputFile);  // ✅ New function
 
 private:
     std::vector<std::vector<double>> points;  // Stores the points of the shape
