@@ -25,10 +25,3 @@ void Rectangle::draw() const {
     Plotter::plot2D("../geometry/scripts/rectangle.txt",".././geometry/scripts/transformed.txt", "Rectangle");
     std::cout << "Rectangle drawn successfully!\n";
 }
-Square::Square(double x, double y, double side)
-    : Rectangle(x, y, side, side) {}
-
-void Square::draw() const {
-    std::cout << "Drawing Square...\n";
-    Rectangle::draw(); 
-}

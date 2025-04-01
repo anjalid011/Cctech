@@ -1,5 +1,6 @@
 #include "Geometry.h"
 #include "Plotter.h"
+#include "Transformations.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -8,45 +9,45 @@
 
 Cylinder::Cylinder(double r, double h) : radius(r), height(h) {}
 
-void Cylinder::draw() const {
+Cylinder::Cylinder(){
+    radius=10;
+    height=10;
+}
+void Cylinder::draw() {
     std::ofstream file(".././geometry/scripts/cylinder.txt");
     if (!file) {
         std::cerr << "Error: Unable to open cylinder file!\n";
         return;
     }
 
-    int numTheta = 100; // Number of rotations
-    int numT = 50;      // Points along the vertical line
+    int numTheta = 100;
+    int numT = 50;   
 
     for (int i = 0; i <= numTheta; i++) {
         double theta = i * (2 * PI / numTheta);
 
         for (int j = 0; j <= numT; j++) {
             double t = j * (1.0 / numT);
-            
-            // Compute rotated coordinates
+        
             double x = radius * cos(theta);
             double y = radius * sin(theta);
             double z = height * t;
 
             file << x << " " << y << " " << z << "\n";
         }
-        file << "\n"; // Separate each curve
+        file << "\n"; 
     }
 
     file.close();
     std::cout << "Cylinder drawn successfully!\n";
 }
 
-void Cylinder::savePoints(const std::string& outputFile) {
-    std::ofstream file(outputFile);
-    if (!file) {
-        std::cerr << "Error: Unable to create file " << outputFile << "\n";
-        return;
-    }
-
-    for (const auto& point : points) {
-        file << point[0] << " " << point[1] << " " << point[2] << "\n";
-    }
-    file.close();
+void Cylinder::transformAndPlot() {
+    std::string inputFile = ".././geometry/scripts/cone.txt";
+    std::string outputFile = ".././geometry/scripts/transformed.txt";
+    
+    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
+    Transformations transformations;
+    transformations.performTransformation(inputFile, outputFile);
+    Plotter::plot3D(inputFile, outputFile, "Cylinder");
 }

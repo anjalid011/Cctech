@@ -1,5 +1,6 @@
 #include "Geometry.h"
 #include "Plotter.h"
+#include "Transformations.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -8,7 +9,15 @@
 
 Sphere::Sphere(double r) : radius(r) {}
 
-void Sphere::draw() const {
+Sphere::Sphere(){
+    radius=10;
+}
+void Sphere::draw() {
+    double radius;
+    std::cout << "Enter radius for Sphere: ";
+    std::cin >> radius;
+    Sphere sphere(radius);
+
     std::ofstream file(".././geometry/scripts/sphere.txt");
     if (!file) {
         std::cerr << "Error: Unable to open sphere file!\n";
@@ -35,18 +44,16 @@ void Sphere::draw() const {
 
     file.close();
 
-    // Plotter::plot3D("../geometry/scripts/sphere.txt",".././geometry/scripts/transformed.txt", "Sphere");
+    Plotter::plot3D("../geometry/scripts/sphere.txt",".././geometry/scripts/transformed.txt", "Sphere");
     std::cout << "Sphere drawn successfully!\n";
 }
-void Sphere::savePoints(const std::string& outputFile) {
-    std::ofstream file(outputFile);
-    if (!file) {
-        std::cerr << "Error: Unable to create file " << outputFile << "\n";
-        return;
-    }
 
-    for (const auto& point : points) {
-        file << point[0] << " " << point[1] << " " << point[2] << "\n";
-    }
-    file.close();
+void Sphere::transformAndPlot() {
+    std::string inputFile = ".././geometry/scripts/cone.txt";
+    std::string outputFile = ".././geometry/scripts/transformed.txt";
+    
+    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
+    Transformations transformations;
+    transformations.performTransformation(inputFile, outputFile);
+    Plotter::plot3D(inputFile, outputFile, "Cone");
 }

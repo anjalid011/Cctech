@@ -1,16 +1,27 @@
 #include "Geometry.h"
+#include "Shape.h"
 #include "Plotter.h"
+#include "Transformations.h"
 #include <iostream>
 #include <fstream>
 
 Cuboid::Cuboid(double x, double y, double z, double width, double height, double depth)
-    : x(x), y(y), z(z), width(width), height(height), depth(depth), isCube(false) {}
+    : x(x), y(y), z(z), width(width), height(height), depth(depth) {}
 
-Cuboid::Cuboid(double x, double y, double z, double side)
-    : x(x), y(y), z(z), width(side), height(side), depth(side), isCube(true) {}
+Cuboid::Cuboid(){
+    x=0;
+    y=0;
+    z=0;
+    width=10;
+    height=10;
+    depth=10;
+}
 
+void Cuboid::draw() {
+    std::cout << "Enter x, y, z, width, height, depth for Cuboid: ";
+    std::cin >> x >> y >> z >> width >> height >> depth;
+    Cuboid cuboid(x, y, z, width, height, depth);
 
-void Cuboid::draw() const {
     std::ofstream pointsFile(".././geometry/scripts/cuboid.txt");
 
     if (!pointsFile) {
@@ -53,17 +64,17 @@ void Cuboid::draw() const {
                << H[0] << " " << H[1] << " " << H[2] << "\n";
 
     pointsFile.close();
-    std::cout << (isCube ? "Cube" : "Cuboid") << " drawn successfully!\n";
-}
-void Cuboid::savePoints(const std::string& outputFile) {
-    std::ofstream file(outputFile);
-    if (!file) {
-        std::cerr << "Error: Unable to create file " << outputFile << "\n";
-        return;
-    }
+    Plotter::plot3D(".././geometry/scripts/cuboid.txt",".././geometry/scripts/transformed.txt", "Cuboid");
 
-    for (const auto& point : points) {
-        file << point[0] << " " << point[1] << " " << point[2] << "\n";
-    }
-    file.close();
+    std::cout << ("Cuboid") << " drawn successfully!\n";
+}
+
+void Cuboid::transformAndPlot() {
+    std::string inputFile = ".././geometry/scripts/cuboid.txt";
+    std::string outputFile = ".././geometry/scripts/transformed.txt";
+    
+    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
+    Transformations transformations;
+    transformations.performTransformation(inputFile, outputFile);
+    Plotter::plot3D(inputFile, outputFile, "Cuboid");
 }

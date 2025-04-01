@@ -1,5 +1,6 @@
 #include "Geometry.h"
 #include "Plotter.h"
+#include "Transformations.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -8,7 +9,16 @@
 
 Cone::Cone(double r, double h) : radius(r), height(h) {}
 
-void Cone::draw() const {
+Cone::Cone(){
+    radius=10;
+    height=10;
+}
+
+void Cone::draw() {
+    double radius, height;
+    std::cout << "Enter base radius and height for Cone: ";
+    std::cin >> radius >> height;
+    Cone cone(radius, height);
     std::ofstream file(".././geometry/scripts/cone.txt");
     if (!file) {
         std::cerr << "Error: Unable to open cone file!\n";
@@ -33,23 +43,17 @@ void Cone::draw() const {
         }
         file << "\n"; // Separate each curve
     }
-
     file.close();
-
-    // Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cone");
-
+    Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cone");
     std::cout << "Cone drawn successfully!\n";
 }
 
-void Cone::savePoints(const std::string& outputFile) {
-    std::ofstream file(outputFile);
-    if (!file) {
-        std::cerr << "Error: Unable to create file " << outputFile << "\n";
-        return;
-    }
-
-    for (const auto& point : points) {
-        file << point[0] << " " << point[1] << " " << point[2] << "\n";
-    }
-    file.close();
+void Cone::transformAndPlot() {
+    std::string inputFile = ".././geometry/scripts/cone.txt";
+    std::string outputFile = ".././geometry/scripts/transformed.txt";
+    
+    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
+    Transformations transformations;
+    transformations.performTransformation(inputFile, outputFile);
+    Plotter::plot3D(inputFile, outputFile, "Cone");
 }

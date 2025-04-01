@@ -15,12 +15,11 @@ void Circle::draw() const {
         return;
     }
 
-    int numTheta = 100; // More points for smoother circle
+    int numTheta = 100;
 
     for (int i = 0; i <= numTheta; i++) {
         double theta = i * (2 * PI / numTheta);
 
-        // Compute circle coordinates by rotating a line
         double x = radius * cos(theta);
         double y = radius * sin(theta);
 
@@ -29,6 +28,6 @@ void Circle::draw() const {
 
     file.close();
 
-    //Plotter::plot2D("../geometry/scripts/circle.txt",".././geometry/scripts/transformed.txt", "Circle");
+    Plotter::plot2D("../geometry/scripts/circle.txt",".././geometry/scripts/transformed.txt", "Circle");
     std::cout << "Circle drawn successfully!\n";
 }

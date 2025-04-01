@@ -1,6 +1,6 @@
 #ifndef GEOMETRY_H
 #define GEOMETRY_H
-#include "Shape.h"
+#include <Shape.h>
 #include <vector>
 #include <iostream>
 #include <fstream>
@@ -13,14 +13,12 @@ private:
 
 public:
     Line(double x1, double y1, double x2, double y2);
-
     Line(double x1, double y1, double z1, double x2, double y2, double z2);
-
     void draw()const ;
 };
 
 class Rectangle {
-    protected:
+    private:
         double x, y, width, height;
     
     public:
@@ -28,23 +26,15 @@ class Rectangle {
         virtual void draw() const;
 };
     
-class Square : public Rectangle {
-    public:
-        Square(double x, double y, double side);
-        void draw() const override;
-};
-
-class Cuboid {
+class Cuboid : public Shape {
     private:
     double x, y, z, width, height, depth;
-    bool isCube;
-
-public:
-    std::vector<std::vector<double>> points; 
-    Cuboid(double x, double y, double z, double width, double height, double depth);
-    Cuboid(double x, double y, double z, double side);
-    void savePoints(const std::string& outputFile); // Save transformed points
-    void draw() const;
+    public:
+        std::vector<std::vector<double>> points; 
+        Cuboid(double x, double y, double z, double width, double height, double depth);
+        Cuboid(); 
+        void draw() override;
+        void transformAndPlot() override;
 };
 
 class Circle {
@@ -53,39 +43,40 @@ class Circle {
     public:
         Circle(double r);
         void draw() const;
-        void savePoints(const std::string& outputFile); // Save transformed points
-
 };
 
-class Sphere {
+class Sphere : public Shape {
     private:
-    double radius;
+        double radius;
     public:
-        Sphere(double r);
-        void draw() const;
         std::vector<std::vector<double>> points; 
-        void savePoints(const std::string& outputFile); // Save transformed points
+        Sphere(double r);
+        Sphere();
+        void draw() override;
+        void transformAndPlot() override;
 };
 
 
-class Cone {
+class Cone : public Shape {
     private:
         double radius, height;
     public:
         Cone(double r, double h);
-        void draw() const;
+        Cone();
+        void draw() override;
+        void transformAndPlot() override;
         std::vector<std::vector<double>> points; 
-        void savePoints(const std::string& outputFile); // Save transformed points
 };
 
-class Cylinder {
+class Cylinder : public Shape {
     private:
         double radius, height;
     public:
         Cylinder(double r, double h);
-        void draw() const;
+        void draw() override;
+        Cylinder();
+        void transformAndPlot() override;
         std::vector<std::vector<double>> points; 
-        void savePoints(const std::string& outputFile); // Save transformed points
     };
 
 
