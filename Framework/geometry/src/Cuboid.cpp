@@ -2,8 +2,11 @@
 #include "Shape.h"
 #include "Plotter.h"
 #include "Transformations.h"
+#include "StlToDat.h"
 #include <iostream>
 #include <fstream>
+
+using namespace std;
 
 Cuboid::Cuboid(double x, double y, double z, double width, double height, double depth)
     : x(x), y(y), z(z), width(width), height(height), depth(depth) {}
@@ -20,55 +23,75 @@ Cuboid::Cuboid(){
 void Cuboid::draw() {
     std::cout << "Enter x, y, z, width, height, depth for Cuboid: ";
     std::cin >> x >> y >> z >> width >> height >> depth;
-    Cuboid cuboid(x, y, z, width, height, depth);
 
-    std::ofstream pointsFile(".././geometry/scripts/shape.txt");
+    std::ofstream stlFile(".././geometry/scripts/cuboid.stl");
+    std::ofstream datFile(".././geometry/scripts/shape.dat");
 
-    if (!pointsFile) {
-        std::cerr << "Error: Unable to open points file!\n";
+    if (!stlFile) {
+        std::cerr << "Error: Unable to open STL file for Cuboid!\n";
         return;
     }
 
+    stlFile << "solid Cuboid\n";
+
+    // Define the 8 vertices of the cuboid
     double A[3] = {x, y, z};
     double B[3] = {x + width, y, z};
     double C[3] = {x + width, y + height, z};
     double D[3] = {x, y + height, z};
-
     double E[3] = {x, y, z + depth};
     double F[3] = {x + width, y, z + depth};
     double G[3] = {x + width, y + height, z + depth};
     double H[3] = {x, y + height, z + depth};
 
-    pointsFile << A[0] << " " << A[1] << " " << A[2] << "\n"
-               << B[0] << " " << B[1] << " " << B[2] << "\n"
-               << C[0] << " " << C[1] << " " << C[2] << "\n"
-               << D[0] << " " << D[1] << " " << D[2] << "\n"
-               << A[0] << " " << A[1] << " " << A[2] << "\n\n"
+    auto writeFacet = [&](double v1[3], double v2[3], double v3[3]) {
+        stlFile << "  facet normal 0 0 0\n";
+        stlFile << "    outer loop\n";
+        stlFile << "      vertex " << v1[0] << " " << v1[1] << " " << v1[2] << "\n";
+        stlFile << "      vertex " << v2[0] << " " << v2[1] << " " << v2[2] << "\n";
+        stlFile << "      vertex " << v3[0] << " " << v3[1] << " " << v3[2] << "\n";
+        stlFile << "    endloop\n";
+        stlFile << "  endfacet\n";
+    };
 
-               << E[0] << " " << E[1] << " " << E[2] << "\n"
-               << F[0] << " " << F[1] << " " << F[2] << "\n"
-               << G[0] << " " << G[1] << " " << G[2] << "\n"
-               << H[0] << " " << H[1] << " " << H[2] << "\n"
-               << E[0] << " " << E[1] << " " << E[2] << "\n\n"
+    // Front face
+    writeFacet(A, B, C);
+    writeFacet(A, C, D);
 
-               << A[0] << " " << A[1] << " " << A[2] << "\n"
-               << E[0] << " " << E[1] << " " << E[2] << "\n\n"
+    // Back face
+    writeFacet(E, F, G);
+    writeFacet(E, G, H);
 
-               << B[0] << " " << B[1] << " " << B[2] << "\n"
-               << F[0] << " " << F[1] << " " << F[2] << "\n\n"
+    // Left face
+    writeFacet(A, D, H);
+    writeFacet(A, H, E);
 
-               << C[0] << " " << C[1] << " " << C[2] << "\n"
-               << G[0] << " " << G[1] << " " << G[2] << "\n\n"
+    // Right face
+    writeFacet(B, C, G);
+    writeFacet(B, G, F);
 
-               << D[0] << " " << D[1] << " " << D[2] << "\n"
-               << H[0] << " " << H[1] << " " << H[2] << "\n";
+    // Top face
+    writeFacet(D, C, G);
+    writeFacet(D, G, H);
 
-    pointsFile.close();
-    //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cuboid");
-    
+    // Bottom face
+    writeFacet(A, B, F);
+    writeFacet(A, F, E);
+
+    stlFile << "endsolid Cuboid\n";
+
+    stlFile.close();
+    // datFile.close();
+
+    std::cout << "Cuboid STL files created successfully!\n";
+    std::string stlFilePath = ".././geometry/scripts/cuboid.stl";
+    std::string datFilePath = ".././geometry/scripts/shape.dat";
+
+    StlToDat s;
+    s.convertSTLtoDAT(stlFilePath, datFilePath);
+
     Transformations t;
     t.performTransformation();
-    
-    Plotter::plot3D(".././geometry/scripts/shape.txt","Cuboid");
-}
 
+    Plotter::plot3D(".././geometry/scripts/shape.dat", "Cuboid");
+}

@@ -47,7 +47,7 @@ void Transformations::applyTranslation(double tx, double ty, double tz, const st
         point[2] += tz;
     }
     savePoints(outputFile);
-    Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt","Shape");
+    Plotter::plot3DTrans(".././geometry/scripts/shape.dat",".././geometry/scripts/transformed.dat","Shape");
 }
 
 void Transformations::applyScaling(double sx, double sy, double sz, const std::string& outputFile) {
@@ -57,7 +57,7 @@ void Transformations::applyScaling(double sx, double sy, double sz, const std::s
         point[2] *= sz;
     }
     savePoints(outputFile);
-    Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt","Shape");
+    Plotter::plot3DTrans(".././geometry/scripts/shape.dat",".././geometry/scripts/transformed.dat","Shape");
 }
 
 void Transformations::applyRotation(double angle, char axis, const std::string& outputFile) {
@@ -85,7 +85,7 @@ void Transformations::applyRotation(double angle, char axis, const std::string& 
     }
 
     applyTransformation(rotationMatrix, outputFile);
-    Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Shape");
+    Plotter::plot3DTrans(".././geometry/scripts/shape.dat",".././geometry/scripts/transformed.dat", "Shape");
 }
 
 void Transformations::savePoints(const std::string& outputFile) {
@@ -102,8 +102,8 @@ void Transformations::savePoints(const std::string& outputFile) {
 }
 void Transformations::performTransformation() {
     int choice;
-    std::string inputFile = ".././geometry/scripts/shape.txt";
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
+    std::string inputFile = ".././geometry/scripts/shape.dat";
+    std::string outputFile = ".././geometry/scripts/transformed.dat";
     std::cout << "Choose a transformation:\n";
     std::cout << "1. Translation\n2. Scaling\n3. Rotation\n 4.NO\n Enter choice: ";
     std::cin >> choice;
