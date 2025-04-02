@@ -18,7 +18,7 @@ void Sphere::draw() {
     std::cin >> radius;
     Sphere sphere(radius);
 
-    std::ofstream file(".././geometry/scripts/sphere.txt");
+    std::ofstream file(".././geometry/scripts/shape.txt");
     if (!file) {
         std::cerr << "Error: Unable to open sphere file!\n";
         return;
@@ -43,17 +43,7 @@ void Sphere::draw() {
     }
 
     file.close();
-
-    Plotter::plot3D("../geometry/scripts/sphere.txt",".././geometry/scripts/transformed.txt", "Sphere");
+    Plotter::plot3D(".././geometry/scripts/shape.txt","Sphere");
+    //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Sphere");
     std::cout << "Sphere drawn successfully!\n";
-}
-
-void Sphere::transformAndPlot() {
-    std::string inputFile = ".././geometry/scripts/cone.txt";
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
-    
-    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
-    Transformations transformations;
-    transformations.performTransformation(inputFile, outputFile);
-    Plotter::plot3D(inputFile, outputFile, "Cone");
 }

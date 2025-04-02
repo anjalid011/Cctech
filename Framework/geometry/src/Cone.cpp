@@ -19,7 +19,7 @@ void Cone::draw() {
     std::cout << "Enter base radius and height for Cone: ";
     std::cin >> radius >> height;
     Cone cone(radius, height);
-    std::ofstream file(".././geometry/scripts/cone.txt");
+    std::ofstream file("../geometry/scripts/shape.txt");
     if (!file) {
         std::cerr << "Error: Unable to open cone file!\n";
         return;
@@ -44,16 +44,9 @@ void Cone::draw() {
         file << "\n"; // Separate each curve
     }
     file.close();
-    Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cone");
+    Plotter::plot3D(".././geometry/scripts/shape.txt","Cone");
+    //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cone");
+
     std::cout << "Cone drawn successfully!\n";
 }
 
-void Cone::transformAndPlot() {
-    std::string inputFile = ".././geometry/scripts/cone.txt";
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
-    
-    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
-    Transformations transformations;
-    transformations.performTransformation(inputFile, outputFile);
-    Plotter::plot3D(inputFile, outputFile, "Cone");
-}

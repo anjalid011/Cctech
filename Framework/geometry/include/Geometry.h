@@ -5,7 +5,10 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include<bits/stdc++.h>
 
+using namespace std;
+typedef std::vector<vector<double>>  Matrix;
 class Line {
 private:
     double x1, y1, z1, x2, y2, z2;
@@ -30,11 +33,10 @@ class Cuboid : public Shape {
     private:
     double x, y, z, width, height, depth;
     public:
-        std::vector<std::vector<double>> points; 
+        Matrix points; 
         Cuboid(double x, double y, double z, double width, double height, double depth);
-        Cuboid(); 
         void draw() override;
-        void transformAndPlot() override;
+        Cuboid();
 };
 
 class Circle {
@@ -49,11 +51,10 @@ class Sphere : public Shape {
     private:
         double radius;
     public:
-        std::vector<std::vector<double>> points; 
+        Matrix points; 
         Sphere(double r);
-        Sphere();
         void draw() override;
-        void transformAndPlot() override;
+        Sphere();
 };
 
 
@@ -62,10 +63,9 @@ class Cone : public Shape {
         double radius, height;
     public:
         Cone(double r, double h);
-        Cone();
         void draw() override;
-        void transformAndPlot() override;
-        std::vector<std::vector<double>> points; 
+        Matrix points;
+        Cone(); 
 };
 
 class Cylinder : public Shape {
@@ -74,9 +74,8 @@ class Cylinder : public Shape {
     public:
         Cylinder(double r, double h);
         void draw() override;
+        Matrix points; 
         Cylinder();
-        void transformAndPlot() override;
-        std::vector<std::vector<double>> points; 
     };
 
 

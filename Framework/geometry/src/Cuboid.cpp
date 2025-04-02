@@ -22,7 +22,7 @@ void Cuboid::draw() {
     std::cin >> x >> y >> z >> width >> height >> depth;
     Cuboid cuboid(x, y, z, width, height, depth);
 
-    std::ofstream pointsFile(".././geometry/scripts/cuboid.txt");
+    std::ofstream pointsFile(".././geometry/scripts/shape.txt");
 
     if (!pointsFile) {
         std::cerr << "Error: Unable to open points file!\n";
@@ -64,17 +64,9 @@ void Cuboid::draw() {
                << H[0] << " " << H[1] << " " << H[2] << "\n";
 
     pointsFile.close();
-    Plotter::plot3D(".././geometry/scripts/cuboid.txt",".././geometry/scripts/transformed.txt", "Cuboid");
+    Plotter::plot3D(".././geometry/scripts/shape.txt","Cuboid");
+    //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cuboid");
 
-    std::cout << ("Cuboid") << " drawn successfully!\n";
+    std::cout << "Cuboid drawn successfully!\n";
 }
 
-void Cuboid::transformAndPlot() {
-    std::string inputFile = ".././geometry/scripts/cuboid.txt";
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
-    
-    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
-    Transformations transformations;
-    transformations.performTransformation(inputFile, outputFile);
-    Plotter::plot3D(inputFile, outputFile, "Cuboid");
-}

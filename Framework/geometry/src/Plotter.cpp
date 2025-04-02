@@ -36,7 +36,25 @@ void Plotter::plot2D(const std::string& filename, const std::string& transformed
     pclose(gnuplot);
 }
 
-void Plotter::plot3D(const std::string& filename, const std::string& transformedFile, const std::string& title) {
+void Plotter::plot3D(const std::string& filename, const std::string& title) {
+    FILE *gnuplot = popen("/usr/bin/gnuplot -persistent", "w");
+    if (!gnuplot) {
+        std::cerr << "Error: Unable to open gnuplot!\n";
+        return;
+    }
+
+    fprintf(gnuplot, "set terminal wxt\n");
+    fprintf(gnuplot, "set mouse\n");
+    fprintf(gnuplot, "set xlabel 'X-axis'\n");
+    fprintf(gnuplot, "set ylabel 'Y-axis'\n");
+    fprintf(gnuplot, "set zlabel 'Z-axis'\n");
+    fprintf(gnuplot, "set view 60, 30\n");
+    fprintf(gnuplot, "splot '%s' using 1:2:3 with lines lw 2 title 'Original', \\\n", filename.c_str());
+
+    pclose(gnuplot);
+}
+
+void Plotter::plot3DTrans(const std::string& filename, const std::string& transformedFile, const std::string& title) {
     FILE *gnuplot = popen("gnuplot -persist", "w");
     if (!gnuplot) {
         std::cerr << "Error: Unable to open gnuplot!\n";

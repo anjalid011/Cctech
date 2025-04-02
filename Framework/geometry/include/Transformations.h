@@ -10,8 +10,6 @@ public:
     Transformations(const std::string& inputFile);
 
     // Apply user-defined transformation
-    void performTransformation(const std::string& inputFile, const std::string& outputFile);
-    Transformations();
     void applyTransformation(const std::vector<std::vector<double>>& matrix, const std::string& outputFile);
     void applyTranslation(double tx, double ty, double tz, const std::string& outputFile);
     void applyScaling(double sx, double sy, double sz, const std::string& outputFile);

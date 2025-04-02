@@ -14,7 +14,7 @@ Cylinder::Cylinder(){
     height=10;
 }
 void Cylinder::draw() {
-    std::ofstream file(".././geometry/scripts/cylinder.txt");
+    std::ofstream file(".././geometry/scripts/shape.txt");
     if (!file) {
         std::cerr << "Error: Unable to open cylinder file!\n";
         return;
@@ -39,15 +39,7 @@ void Cylinder::draw() {
     }
 
     file.close();
+    Plotter::plot3D(".././geometry/scripts/shape.txt","Cylinder");
+    //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cylinder");
     std::cout << "Cylinder drawn successfully!\n";
-}
-
-void Cylinder::transformAndPlot() {
-    std::string inputFile = ".././geometry/scripts/cone.txt";
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
-    
-    // Call performTransformation and Plotter::plot3D (assumed to be defined elsewhere)
-    Transformations transformations;
-    transformations.performTransformation(inputFile, outputFile);
-    Plotter::plot3D(inputFile, outputFile, "Cylinder");
 }

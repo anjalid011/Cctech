@@ -11,10 +11,6 @@ Transformations::Transformations(const std::string& inputFile) {
     loadPoints(inputFile);
 }
 
-Transformations::Transformations(){
-    //inputFile = "../geometry/scripts/cuboid.txt";
-}
-
 void Transformations::loadPoints(const std::string& inputFile) {
     std::ifstream file(inputFile);
     if (!file) {
@@ -51,7 +47,7 @@ void Transformations::applyTranslation(double tx, double ty, double tz, const st
         point[2] += tz;
     }
     savePoints(outputFile);
-    Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt","Cuboid");
+    Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt","Shape");
 }
 
 void Transformations::applyScaling(double sx, double sy, double sz, const std::string& outputFile) {
@@ -61,7 +57,7 @@ void Transformations::applyScaling(double sx, double sy, double sz, const std::s
         point[2] *= sz;
     }
     savePoints(outputFile);
-    Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt","Cuboid");
+    Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt","Shape");
 }
 
 void Transformations::applyRotation(double angle, char axis, const std::string& outputFile) {
@@ -89,7 +85,7 @@ void Transformations::applyRotation(double angle, char axis, const std::string& 
     }
 
     applyTransformation(rotationMatrix, outputFile);
-    Plotter::plot3D(".././geometry/scripts/cone.txt",".././geometry/scripts/transformed.txt", "Cuboid");
+    Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Shape");
 }
 
 void Transformations::savePoints(const std::string& outputFile) {
@@ -103,39 +99,4 @@ void Transformations::savePoints(const std::string& outputFile) {
         file << point[0] << " " << point[1] << " " << point[2] << "\n";
     }
     file.close();
-}
-
-void Transformations::performTransformation(const std::string& inputFile, const std::string& outputFile) {
-    int choice;
-    std::cout << "Choose a transformation:\n";
-    std::cout << "1. Translation\n2. Scaling\n3. Rotation\nEnter choice: ";
-    std::cin >> choice;
-
-    Transformations transform(inputFile);
-
-    if (choice == 1) {
-        double tx, ty, tz;
-        std::cout << "Enter translation (tx ty tz): ";
-        std::cin >> tx >> ty >> tz;
-        applyTranslation(tx, ty, tz, outputFile);
-    } 
-    else if (choice == 2) {
-        double sx, sy, sz;
-        std::cout << "Enter scaling factors (sx sy sz): ";
-        std::cin >> sx >> sy >> sz;
-        applyScaling(sx, sy, sz, outputFile);
-    } 
-    else if (choice == 3) {
-        double angle;
-        char axis;
-        std::cout << "Enter rotation angle (degrees) and axis (x/y/z): ";
-        std::cin >> angle >> axis;
-        applyRotation(angle, axis, outputFile);
-    } 
-    else {
-        std::cout << "Invalid choice!\n";
-        return;
-    }
-
-    //std::cout << "Transformation applied successfully!\n";
 }
