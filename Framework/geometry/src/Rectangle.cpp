@@ -21,7 +21,8 @@ void Rectangle::draw() const {
     rectFile << x << " " << y << "\n";                       
 
     rectFile.close();
-
+    
+    
     Plotter::plot2D("../geometry/scripts/rectangle.txt",".././geometry/scripts/transformed.txt", "Rectangle");
     std::cout << "Rectangle drawn successfully!\n";
 }

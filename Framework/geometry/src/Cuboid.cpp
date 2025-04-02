@@ -64,9 +64,11 @@ void Cuboid::draw() {
                << H[0] << " " << H[1] << " " << H[2] << "\n";
 
     pointsFile.close();
-    Plotter::plot3D(".././geometry/scripts/shape.txt","Cuboid");
     //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cuboid");
-
-    std::cout << "Cuboid drawn successfully!\n";
+    
+    Transformations t;
+    t.performTransformation();
+    
+    Plotter::plot3D(".././geometry/scripts/shape.txt","Cuboid");
 }
 

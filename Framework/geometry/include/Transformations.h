@@ -8,12 +8,14 @@ class Transformations {
 public:
     // Constructor
     Transformations(const std::string& inputFile);
+    Transformations() = default;    
 
     // Apply user-defined transformation
     void applyTransformation(const std::vector<std::vector<double>>& matrix, const std::string& outputFile);
     void applyTranslation(double tx, double ty, double tz, const std::string& outputFile);
     void applyScaling(double sx, double sy, double sz, const std::string& outputFile);
     void applyRotation(double angle, char axis, const std::string& outputFile);
+    void performTransformation();
 
 private:
     std::vector<std::vector<double>> points;  // Stores the points of the shape

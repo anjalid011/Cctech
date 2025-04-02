@@ -44,6 +44,9 @@ void Cone::draw() {
         file << "\n"; // Separate each curve
     }
     file.close();
+
+    Transformations t;
+    t.performTransformation();
     Plotter::plot3D(".././geometry/scripts/shape.txt","Cone");
     //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cone");
 

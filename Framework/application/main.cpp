@@ -22,42 +22,7 @@ std::vector<std::shared_ptr<Shape>> getShape() {
 }
 
 
-void performTransformation() {
-    int choice;
-    std::string inputFile = ".././geometry/scripts/shape.txt";
-    std::string outputFile = ".././geometry/scripts/transformed.txt";
-    std::cout << "Choose a transformation:\n";
-    std::cout << "1. Translation\n2. Scaling\n3. Rotation\nEnter choice: ";
-    std::cin >> choice;
 
-    Transformations transform(inputFile);
-
-    if (choice == 1) {
-        double tx, ty, tz;
-        std::cout << "Enter translation (tx ty tz): ";
-        std::cin >> tx >> ty >> tz;
-        transform.applyTranslation(tx, ty, tz, outputFile);
-    } 
-    else if (choice == 2) {
-        double sx, sy, sz;
-        std::cout << "Enter scaling factors (sx sy sz): ";
-        std::cin >> sx >> sy >> sz;
-        transform.applyScaling(sx, sy, sz, outputFile);
-    } 
-    else if (choice == 3) {
-        double angle;
-        char axis;
-        std::cout << "Enter rotation angle (degrees) and axis (x/y/z): ";
-        std::cin >> angle >> axis;
-        transform.applyRotation(angle, axis, outputFile);
-    } 
-    else {
-        std::cout << "Invalid choice!\n";
-        return;
-    }
-
-    //std::cout << "Transformation applied successfully!\n";
-}
 
 int main() {
     int choice;
@@ -76,18 +41,7 @@ int main() {
     } else {
         std::cout << "Invalid choice!\n";
     }
-    int tChoice;
-    std::cout << "Do you want to Perform Transformation:\n";
-    std::cout << "1. Yes\n2. No\n";
-    std::cout << "\nEnter choice: ";
-    std::cin >> tChoice;
-
-    if(tChoice==1){
-        performTransformation();
-    }
-    else{
-        
-    }
+   
     return 0;
 }
 

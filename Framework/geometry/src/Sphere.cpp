@@ -43,6 +43,9 @@ void Sphere::draw() {
     }
 
     file.close();
+
+    Transformations t;
+    t.performTransformation();
     Plotter::plot3D(".././geometry/scripts/shape.txt","Sphere");
     //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Sphere");
     std::cout << "Sphere drawn successfully!\n";

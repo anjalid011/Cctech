@@ -100,3 +100,35 @@ void Transformations::savePoints(const std::string& outputFile) {
     }
     file.close();
 }
+void Transformations::performTransformation() {
+    int choice;
+    std::string inputFile = ".././geometry/scripts/shape.txt";
+    std::string outputFile = ".././geometry/scripts/transformed.txt";
+    std::cout << "Choose a transformation:\n";
+    std::cout << "1. Translation\n2. Scaling\n3. Rotation\n 4.NO\n Enter choice: ";
+    std::cin >> choice;
+
+    Transformations transform(inputFile);
+
+    if (choice == 1) {
+        double tx, ty, tz;
+        std::cout << "Enter translation (tx ty tz): ";
+        std::cin >> tx >> ty >> tz;
+        transform.applyTranslation(tx, ty, tz, outputFile);
+    } 
+    else if (choice == 2) {
+        double sx, sy, sz;
+        std::cout << "Enter scaling factors (sx sy sz): ";
+        std::cin >> sx >> sy >> sz;
+        transform.applyScaling(sx, sy, sz, outputFile);
+    } 
+    else if (choice == 3) {
+        double angle;
+        char axis;
+        std::cout << "Enter rotation angle (degrees) and axis (x/y/z): ";
+        std::cin >> angle >> axis;
+        transform.applyRotation(angle, axis, outputFile);
+    } 
+    
+
+}

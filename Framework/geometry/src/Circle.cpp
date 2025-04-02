@@ -1,4 +1,5 @@
 #include "Geometry.h"
+#include "Transformations.h"
 #include "Plotter.h"
 #include <iostream>
 #include <fstream>
@@ -27,6 +28,9 @@ void Circle::draw() const {
     }
 
     file.close();
+
+    Transformations t;
+    t.performTransformation();
 
     Plotter::plot2D("../geometry/scripts/circle.txt",".././geometry/scripts/transformed.txt", "Circle");
     std::cout << "Circle drawn successfully!\n";

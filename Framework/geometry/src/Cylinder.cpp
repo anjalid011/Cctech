@@ -39,7 +39,10 @@ void Cylinder::draw() {
     }
 
     file.close();
+
+    Transformations t;
+    t.performTransformation();
     Plotter::plot3D(".././geometry/scripts/shape.txt","Cylinder");
     //Plotter::plot3DTrans(".././geometry/scripts/shape.txt",".././geometry/scripts/transformed.txt", "Cylinder");
-    std::cout << "Cylinder drawn successfully!\n";
+    
 }
