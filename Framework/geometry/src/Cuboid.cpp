@@ -21,8 +21,8 @@ Cuboid::Cuboid(){
 }
 
 void Cuboid::draw() {
-    std::cout << "Enter x, y, z, width, height, depth for Cuboid: ";
-    std::cin >> x >> y >> z >> width >> height >> depth;
+    // std::cout << "Enter x, y, z, width, height, depth for Cuboid: ";
+    // std::cin >> x >> y >> z >> width >> height >> depth;
 
     std::ofstream stlFile(".././geometry/scripts/cuboid.stl");
     std::ofstream datFile(".././geometry/scripts/shape.dat");

@@ -16,9 +16,9 @@ Cone::Cone(){
 }
 
 void Cone::draw() {
-    double radius, height;
-    std::cout << "Enter base radius and height for Cone: ";
-    std::cin >> radius >> height;
+    // double radius, height;
+    // std::cout << "Enter base radius and height for Cone: ";
+    // std::cin >> radius >> height;
 
     std::ofstream stlFile("../geometry/scripts/cone.stl");
     std::ofstream datFile("../geometry/scripts/shape.dat");

@@ -19,7 +19,23 @@ void Plotter::savePoints(const std::string& filename, const std::vector<std::vec
     file.close();
 }
 
-void Plotter::plot2D(const std::string& filename, const std::string& transformedFile, const std::string& title) {
+void Plotter::plot2D(const std::string& filename, const std::string& title) {
+    FILE *gnuplot = popen("gnuplot -persist", "w");
+    if (!gnuplot) {
+        std::cerr << "Error: Unable to open gnuplot!\n";
+        return;
+    }
+
+    fprintf(gnuplot, "set terminal wxt\n");
+    fprintf(gnuplot, "set mouse\n");
+    fprintf(gnuplot, "set xlabel 'X-axis'\n");
+    fprintf(gnuplot, "set ylabel 'Y-axis'\n");
+    fprintf(gnuplot, "plot '%s' using 1:2 with lines lw 2 title 'Original', \\\n", filename.c_str());
+
+    pclose(gnuplot);
+}
+
+void Plotter::plot2DTrans(const std::string& filename, const std::string& transformedFile, const std::string& title) {
     FILE *gnuplot = popen("gnuplot -persist", "w");
     if (!gnuplot) {
         std::cerr << "Error: Unable to open gnuplot!\n";

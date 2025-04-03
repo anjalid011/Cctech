@@ -15,7 +15,12 @@ public:
     void applyTranslation(double tx, double ty, double tz, const std::string& outputFile);
     void applyScaling(double sx, double sy, double sz, const std::string& outputFile);
     void applyRotation(double angle, char axis, const std::string& outputFile);
+    void applyTranslation2D(double tx, double ty, const std::string& outputFile);
+    void applyScaling2D(double sx, double sy, const std::string& outputFile);
+    void applyRotation2D(double angle, const std::string& outputFile);
     void performTransformation();
+    void performTransformation2D();
+
 
 private:
     std::vector<std::vector<double>> points;  // Stores the points of the shape

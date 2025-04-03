@@ -39,7 +39,7 @@ void StlToDat::convertSTLtoDAT(const std::string& stlFilename, const std::string
     for (size_t i = 0; i < vertices.size(); i += 3) {
         datFile << vertices[i].x << " " << vertices[i].y << " " << vertices[i].z << "\n";
         datFile << vertices[i + 1].x << " " << vertices[i + 1].y << " " << vertices[i + 1].z << "\n";
-        datFile << vertices[i + 2].x << " " << vertices[i + 2].y << " " << vertices[i + 2].z << "\n"; // New line after each triangle
+        datFile << vertices[i + 2].x << " " << vertices[i + 2].y << " " << vertices[i + 2].z << "\n";
         datFile << vertices[i].x << " " << vertices[i].y << " " << vertices[i].z << "\n\n\n";
     }
 

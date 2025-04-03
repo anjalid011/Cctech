@@ -9,7 +9,7 @@
 
 using namespace std;
 typedef std::vector<vector<double>>  Matrix;
-class Line {
+class Line : public Shape {
 private:
     double x1, y1, z1, x2, y2, z2;
     bool is3D;
@@ -17,16 +17,16 @@ private:
 public:
     Line(double x1, double y1, double x2, double y2);
     Line(double x1, double y1, double z1, double x2, double y2, double z2);
-    void draw()const ;
+    void draw() override ;
 };
 
-class Rectangle {
+class Rectangle : public Shape {
     private:
         double x, y, width, height;
     
     public:
         Rectangle(double x, double y, double width, double height);
-        virtual void draw() const;
+        void draw() override;
 };
     
 class Cuboid : public Shape {
@@ -39,12 +39,12 @@ class Cuboid : public Shape {
         Cuboid();
 };
 
-class Circle {
+class Circle : public Shape {
     private:
         double radius;
     public:
         Circle(double r);
-        void draw() const;
+        void draw() override;
 };
 
 class Sphere : public Shape {

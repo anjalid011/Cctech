@@ -14,9 +14,9 @@ Sphere::Sphere(){
     radius=10;
 }
 void Sphere::draw() {
-    double radius;
-    std::cout << "Enter radius for Sphere: ";
-    std::cin >> radius;
+    // double radius;
+    // std::cout << "Enter radius for Sphere: ";
+    // std::cin >> radius;
 
     std::ofstream stlFile(".././geometry/scripts/sphere.stl");
     std::ofstream datFile(".././geometry/scripts/shape.dat"); // Open DAT file

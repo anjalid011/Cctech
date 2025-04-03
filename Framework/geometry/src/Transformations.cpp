@@ -105,7 +105,7 @@ void Transformations::performTransformation() {
     std::string inputFile = ".././geometry/scripts/shape.dat";
     std::string outputFile = ".././geometry/scripts/transformed.dat";
     std::cout << "Choose a transformation:\n";
-    std::cout << "1. Translation\n2. Scaling\n3. Rotation\n 4.NO\n Enter choice: ";
+    std::cout << "1. Translation\n2. Scaling\n3. Rotation\n4.NO\nEnter choice: ";
     std::cin >> choice;
 
     Transformations transform(inputFile);
@@ -129,6 +129,76 @@ void Transformations::performTransformation() {
         std::cin >> angle >> axis;
         transform.applyRotation(angle, axis, outputFile);
     } 
-    
+    else {
+        std::cout << "No transformation applied.\n";
+    }
+}
 
+void Transformations::applyTranslation2D(double tx, double ty, const std::string& outputFile) {
+    for (auto& point : points) {
+        point[0] += tx;
+        point[1] += ty;
+    }
+    savePoints(outputFile);
+    Plotter::plot2DTrans(".././geometry/scripts/shape2D.dat", ".././geometry/scripts/transformed2D.dat", "Shape2D");
+}
+
+void Transformations::applyScaling2D(double sx, double sy, const std::string& outputFile) {
+    for (auto& point : points) {
+        point[0] *= sx;
+        point[1] *= sy;
+    }
+    savePoints(outputFile);
+    Plotter::plot2DTrans(".././geometry/scripts/shape2D.dat", ".././geometry/scripts/transformed2D.dat", "Shape2D");
+}
+
+void Transformations::applyRotation2D(double angle, const std::string& outputFile) {
+    double rad = angle * PI / 180.0;
+    std::vector<std::vector<double>> rotationMatrix = {
+        {cos(rad), -sin(rad)},
+        {sin(rad), cos(rad)}
+    };
+
+    std::vector<std::vector<double>> transformedPoints;
+    for (const auto& point : points) {
+        std::vector<double> newPoint(2, 0);
+        for (int i = 0; i < 2; ++i) {
+            newPoint[i] = rotationMatrix[i][0] * point[0] + rotationMatrix[i][1] * point[1];
+        }
+        transformedPoints.push_back(newPoint);
+    }
+
+    points = transformedPoints;
+    savePoints(outputFile);
+    Plotter::plot2DTrans(".././geometry/scripts/shape2D.dat", ".././geometry/scripts/transformed2D.dat", "Shape2D");
+}
+
+void Transformations::performTransformation2D() {
+    int choice;
+    std::string inputFile = ".././geometry/scripts/shape2D.dat";
+    std::string outputFile = ".././geometry/scripts/transformed2D.dat";
+    std::cout << "Choose a 2D transformation:\n";
+    std::cout << "1. Translation\n2. Scaling\n3. Rotation\n4. NO\nEnter choice: ";
+    std::cin >> choice;
+
+    Transformations transform(inputFile);
+
+    if (choice == 1) {
+        double tx, ty;
+        std::cout << "Enter translation (tx ty): ";
+        std::cin >> tx >> ty;
+        transform.applyTranslation2D(tx, ty, outputFile);
+    } else if (choice == 2) {
+    double sx, sy;
+        std::cout << "Enter scaling factors (sx sy): ";
+        std::cin >> sx >> sy;
+        transform.applyScaling2D(sx, sy, outputFile);
+    } else if (choice == 3) {
+        double angle;
+        std::cout << "Enter rotation angle (degrees): ";
+        std::cin >> angle;
+        transform.applyRotation2D(angle, outputFile);
+    } else {
+        std::cout << "No transformation applied.\n";
+    }
 }

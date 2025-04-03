@@ -9,8 +9,8 @@
 
 Circle::Circle(double r) : radius(r) {}
 
-void Circle::draw() const {
-    std::ofstream file(".././geometry/scripts/circle.txt");
+void Circle::draw() {
+    std::ofstream file(".././geometry/scripts/shape.dat");
     if (!file) {
         std::cerr << "Error: Unable to open circle file!\n";
         return;
@@ -30,8 +30,8 @@ void Circle::draw() const {
     file.close();
 
     Transformations t;
-    t.performTransformation();
+    t.performTransformation2D();
 
-    Plotter::plot2D("../geometry/scripts/circle.txt",".././geometry/scripts/transformed.txt", "Circle");
+    Plotter::plot2D("../geometry/scripts/shape.dat", "Circle");
     std::cout << "Circle drawn successfully!\n";
 }

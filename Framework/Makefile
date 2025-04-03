@@ -7,7 +7,7 @@ GEOM_LIB = geometry/lib
 GEOM_SCRIPTS = geometry/scripts
 APP_SRC = application
 
-OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/StlToDat.o
+OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/StlToDat.o $(GEOM_LIB)/Robot.o $(GEOM_LIB)/ObjToStl.o
 
 LIBGEOM = $(GEOM_LIB)/libgeometry.so
 EXEC = $(APP_SRC)/main
@@ -46,6 +46,13 @@ $(GEOM_LIB)/Plotter.o: $(GEOM_SRC)/Plotter.cpp $(GEOM_INC)/Plotter.h
 
 $(GEOM_LIB)/StlToDat.o: $(GEOM_SRC)/StlToDat.cpp $(GEOM_INC)/StlToDat.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/Robot.o: $(GEOM_SRC)/Robot.cpp $(GEOM_INC)/Robot.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(GEOM_LIB)/ObjToStl.o: $(GEOM_SRC)/ObjToStl.cpp $(GEOM_INC)/ObjToStl.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 
 $(LIBGEOM): $(OBJS)
 	$(CXX) -shared -o $@ $^

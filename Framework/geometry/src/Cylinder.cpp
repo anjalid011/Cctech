@@ -15,8 +15,8 @@ Cylinder::Cylinder(){
     height=10;
 }
 void Cylinder::draw() {
-    std::cout << "Enter radius and height for Cylinder: ";
-    std::cin >> radius >> height;
+    // std::cout << "Enter radius and height for Cylinder: ";
+    // std::cin >> radius >> height;
 
     std::ofstream stlFile(".././geometry/scripts/cylinder.stl");
     std::ofstream datFile(".././geometry/scripts/shape.dat");

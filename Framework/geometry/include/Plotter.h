@@ -8,7 +8,8 @@ using namespace std;
 
 class Plotter {
 public:
-    static void plot2D(const std::string& filename, const std::string& transformedFile, const std::string& title);
+    static void plot2D(const std::string& filename, const std::string& title);
+    static void plot2DTrans(const std::string& filename, const std::string& transformedFile, const std::string& title);
     static void plot3D(const std::string& filename, const std::string& title);
     static void plot3DTrans(const std::string& filename,const std::string& transformedFile, const std::string& title);
     static void savePoints(const std::string& filename, const std::vector<std::vector<double>>& points);
