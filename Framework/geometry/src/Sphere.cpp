@@ -5,7 +5,6 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-
 #include "Triangle.h"
 
 #define PI 3.141592653589793
