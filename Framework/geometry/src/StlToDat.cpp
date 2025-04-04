@@ -3,9 +3,7 @@
 #include <vector>
 #include <sstream>
 #include "StlToDat.h"
-struct Vertex {
-    double x, y, z;
-};
+#include "Triangle.h"
 
 void StlToDat::convertSTLtoDAT(const std::string& stlFilename, const std::string& datFilename) {
     std::ifstream stlFile(stlFilename);
@@ -21,7 +19,8 @@ void StlToDat::convertSTLtoDAT(const std::string& stlFilename, const std::string
     }
 
     std::string line;
-    std::vector<Vertex> vertices;
+    std::vector<Triangle> triangles;
+    std::vector<Vec3> vertices;
 
     while (std::getline(stlFile, line)) {
         std::stringstream ss(line);
@@ -29,7 +28,7 @@ void StlToDat::convertSTLtoDAT(const std::string& stlFilename, const std::string
         ss >> keyword;
 
         if (keyword == "vertex") {
-            Vertex v;
+            Vec3 v;
             ss >> v.x >> v.y >> v.z;
             vertices.push_back(v);
         }

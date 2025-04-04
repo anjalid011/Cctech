@@ -6,6 +6,8 @@
 #include <fstream>
 #include <cmath>
 
+#include "Triangle.h"
+
 #define PI 3.141592653589793
 
 Sphere::Sphere(double r) : radius(r) {}
@@ -30,9 +32,12 @@ void Sphere::draw() {
     int numTheta = 50;  // Number of azimuthal divisions
     int numPhi = 50;    // Number of polar divisions
 
+    vector<Triangle> triangles;
+
     for (int i = 0; i < numTheta; i++) {
         double theta1 = i * (2 * PI / numTheta);
         double theta2 = (i + 1) * (2 * PI / numTheta);
+
 
         for (int j = 0; j < numPhi; j++) {
             double phi1 = j * (PI / numPhi);
@@ -42,36 +47,45 @@ void Sphere::draw() {
             double x1 = radius * cos(theta1) * sin(phi1);
             double y1 = radius * sin(theta1) * sin(phi1);
             double z1 = radius * cos(phi1);
+            Vec3 v1(x1, y1, z1);
 
             double x2 = radius * cos(theta2) * sin(phi1);
             double y2 = radius * sin(theta2) * sin(phi1);
             double z2 = radius * cos(phi1);
+            Vec3 v2(x2, y2, z2);
 
             double x3 = radius * cos(theta2) * sin(phi2);
             double y3 = radius * sin(theta2) * sin(phi2);
             double z3 = radius * cos(phi2);
+            Vec3 v3(x3, y3, z3);
 
             double x4 = radius * cos(theta1) * sin(phi2);
             double y4 = radius * sin(theta1) * sin(phi2);
             double z4 = radius * cos(phi2);
+            Vec3 v4(x4, y4, z4);
 
-            // Write two triangles for the current quad to the STL file
-            stlFile << "  facet normal 0 0 0\n";
-            stlFile << "    outer loop\n";
-            stlFile << "      vertex " << x1 << " " << y1 << " " << z1 << "\n";
-            stlFile << "      vertex " << x2 << " " << y2 << " " << z2 << "\n";
-            stlFile << "      vertex " << x3 << " " << y3 << " " << z3 << "\n";
-            stlFile << "    endloop\n";
-            stlFile << "  endfacet\n";
+            Triangle t1(v1, v2, v3);
+            Triangle t2(v1, v3, v4);
 
-            stlFile << "  facet normal 0 0 0\n";
-            stlFile << "    outer loop\n";
-            stlFile << "      vertex " << x1 << " " << y1 << " " << z1 << "\n";
-            stlFile << "      vertex " << x3 << " " << y3 << " " << z3 << "\n";
-            stlFile << "      vertex " << x4 << " " << y4 << " " << z4 << "\n";
-            stlFile << "    endloop\n";
-            stlFile << "  endfacet\n";
+            triangles.push_back(t1);
+            triangles.push_back(t2);
         }
+    }
+
+    for(auto& t : triangles) {
+        auto v1 = t.v1;
+        auto v2 = t.v2;
+        auto v3 = t.v3;
+        auto normal = t.normal;
+
+        // Write two triangles for the current quad to the STL file
+        stlFile << "  facet normal " << normal.x << " " << normal.y << " " << normal.z << "\n";
+        stlFile << "    outer loop\n";
+        stlFile << "      vertex " << v1.x << " " << v1.y << " " << v1.z << "\n";
+        stlFile << "      vertex " << v2.x << " " << v2.y << " " << v2.z << "\n";
+        stlFile << "      vertex " << v3.x << " " << v3.y << " " << v3.z << "\n";
+        stlFile << "    endloop\n";
+        stlFile << "  endfacet\n";
     }
 
     stlFile << "endsolid Sphere\n";

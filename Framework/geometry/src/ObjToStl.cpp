@@ -4,13 +4,10 @@
 #include <vector>
 #include <string>
 #include "ObjToStl.h"
+#include "../include/Triangle.h" // Include the Triangle header file
 
 struct Vertex {
     double x, y, z;
-};
-
-struct Face {
-    int v1, v2, v3; // Indices of vertices in the face
 };
 
 void ObjToStl::ConvertObjToStl() {
@@ -27,7 +24,7 @@ void ObjToStl::ConvertObjToStl() {
     }
 
     std::vector<Vertex> vertices;
-    std::vector<Face> faces;
+    std::vector<Triangle> triangles;
 
     std::string line;
     while (std::getline(objFile, line)) {
@@ -42,25 +39,31 @@ void ObjToStl::ConvertObjToStl() {
             vertices.push_back(vertex);
         } else if (prefix == "f") {
             // Parse face (assuming triangular faces)
-            Face face;
+            int v1, v2, v3;
             char slash; // To handle the "//" in OBJ face definitions
-            iss >> face.v1 >> slash >> slash >> face.v2 >> slash >> slash >> face.v3;
-            face.v1--; // Convert to 0-based index
-            face.v2--;
-            face.v3--;
-            faces.push_back(face);
+            iss >> v1 >> slash >> slash >> v2 >> slash >> slash >> v3;
+            v1--; // Convert to 0-based index
+            v2--;
+            v3--;
+
+            // Create a Triangle using the vertices
+            Vec3 vertex1(vertices[v1].x, vertices[v1].y, vertices[v1].z);
+            Vec3 vertex2(vertices[v2].x, vertices[v2].y, vertices[v2].z);
+            Vec3 vertex3(vertices[v3].x, vertices[v3].y, vertices[v3].z);
+            Triangle triangle(vertex1, vertex2, vertex3);
+            triangles.push_back(triangle);
         }
     }
 
     // Write STL file
     stlFile << "solid obj_to_stl\n";
-    for (const auto& face : faces) {
-        // Compute a dummy normal (0, 0, 0) for simplicity
-        stlFile << "  facet normal 0 0 0\n";
+    for (const auto& triangle : triangles) {
+        // Use the computed normal from the Triangle class
+        stlFile << "  facet normal " << triangle.normal.x << " " << triangle.normal.y << " " << triangle.normal.z << "\n";
         stlFile << "    outer loop\n";
-        stlFile << "      vertex " << vertices[face.v1].x << " " << vertices[face.v1].y << " " << vertices[face.v1].z << "\n";
-        stlFile << "      vertex " << vertices[face.v2].x << " " << vertices[face.v2].y << " " << vertices[face.v2].z << "\n";
-        stlFile << "      vertex " << vertices[face.v3].x << " " << vertices[face.v3].y << " " << vertices[face.v3].z << "\n";
+        stlFile << "      vertex " << triangle.v1.x << " " << triangle.v1.y << " " << triangle.v1.z << "\n";
+        stlFile << "      vertex " << triangle.v2.x << " " << triangle.v2.y << " " << triangle.v2.z << "\n";
+        stlFile << "      vertex " << triangle.v3.x << " " << triangle.v3.y << " " << triangle.v3.z << "\n";
         stlFile << "    endloop\n";
         stlFile << "  endfacet\n";
     }
