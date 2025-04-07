@@ -2,8 +2,8 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-#include "StlToDat.h"
-#include "Triangle.h"
+#include "Conversions/StlToDat.h"
+#include "Conversions/Triangle.h"
 
 void StlToDat::convertSTLtoDAT(const std::string& stlFilename, const std::string& datFilename) {
     std::ifstream stlFile(stlFilename);

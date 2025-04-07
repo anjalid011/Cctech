@@ -3,8 +3,8 @@
 #include <sstream>
 #include <vector>
 #include <string>
-#include "ObjToStl.h"
-#include "../include/Triangle.h" // Include the Triangle header file
+#include "Conversions/ObjToStl.h"
+#include "Conversions/Triangle.h" // Include the Triangle header file
 
 struct Vertex {
     double x, y, z;

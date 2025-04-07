@@ -7,7 +7,7 @@ GEOM_LIB = geometry/lib
 GEOM_SCRIPTS = geometry/scripts
 APP_SRC = application
 
-OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/StlToDat.o $(GEOM_LIB)/Robot.o $(GEOM_LIB)/ObjToStl.o
+OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/StlToDat.o $(GEOM_LIB)/ObjToStl.o $(GEOM_LIB)/StlToObj.o $(GEOM_LIB)/FileHandler.o
 
 LIBGEOM = $(GEOM_LIB)/libgeometry.so
 EXEC = $(APP_SRC)/main
@@ -17,42 +17,44 @@ all: $(GEOM_LIB) $(LIBGEOM) $(EXEC)
 $(GEOM_LIB):
 	mkdir -p $(GEOM_LIB)  # Ensures that the geometry/lib directory exists
 
-$(GEOM_LIB)/Line.o: $(GEOM_SRC)/Line.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Line.o: $(GEOM_SRC)/Shapes/Line.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Rectangle.o: $(GEOM_SRC)/Rectangle.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Rectangle.o: $(GEOM_SRC)/Shapes/Rectangle.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Cuboid.o: $(GEOM_SRC)/Cuboid.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Cuboid.o: $(GEOM_SRC)/Shapes/Cuboid.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Sphere.o: $(GEOM_SRC)/Sphere.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Sphere.o: $(GEOM_SRC)/Shapes/Sphere.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Circle.o: $(GEOM_SRC)/Circle.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Circle.o: $(GEOM_SRC)/Shapes/Circle.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Cone.o: $(GEOM_SRC)/Cone.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Cone.o: $(GEOM_SRC)/Shapes/Cone.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Cylinder.o: $(GEOM_SRC)/Cylinder.cpp $(GEOM_INC)/Geometry.h
+$(GEOM_LIB)/Cylinder.o: $(GEOM_SRC)/Shapes/Cylinder.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Transformations.o: $(GEOM_SRC)/Transformations.cpp $(GEOM_INC)/Transformations.h
+$(GEOM_LIB)/Transformations.o: $(GEOM_SRC)/Shapes/Transformations.cpp $(GEOM_INC)/Shapes/Transformations.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Plotter.o: $(GEOM_SRC)/Plotter.cpp $(GEOM_INC)/Plotter.h
+$(GEOM_LIB)/Plotter.o: $(GEOM_SRC)/Shapes/Plotter.cpp $(GEOM_INC)/Shapes/Plotter.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/StlToDat.o: $(GEOM_SRC)/StlToDat.cpp $(GEOM_INC)/StlToDat.h
+$(GEOM_LIB)/StlToDat.o: $(GEOM_SRC)/Conversions/StlToDat.cpp $(GEOM_INC)/Conversions/StlToDat.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/Robot.o: $(GEOM_SRC)/Robot.cpp $(GEOM_INC)/Robot.h
+$(GEOM_LIB)/ObjToStl.o: $(GEOM_SRC)/Conversions/ObjToStl.cpp $(GEOM_INC)/Conversions/ObjToStl.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-$(GEOM_LIB)/ObjToStl.o: $(GEOM_SRC)/ObjToStl.cpp $(GEOM_INC)/ObjToStl.h
+$(GEOM_LIB)/StlToObj.o: $(GEOM_SRC)/Conversions/StlToObj.cpp $(GEOM_INC)/Conversions/StlToObj.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+$(GEOM_LIB)/FileHandler.o: $(GEOM_SRC)/Conversions/FileHandler.cpp $(GEOM_INC)/Conversions/FileHandler.h
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(LIBGEOM): $(OBJS)
 	$(CXX) -shared -o $@ $^
@@ -64,6 +66,6 @@ run:
 	cd application && ./main
 
 clean:
-	rm -f $(OBJS) $(LIBGEOM) $(EXEC) $(GEOM_SCRIPTS)/*.dat $(GEOM_SCRIPTS)/*.stl
+	rm -f $(OBJS) $(LIBGEOM) $(EXEC) $(GEOM_SCRIPTS)/*.dat $(GEOM_SCRIPTS)/*.stl $(GEOM_SCRIPTS)/*.obj
 	
 

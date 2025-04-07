@@ -1,6 +1,7 @@
-#include "Geometry.h"
-#include "Transformations.h"
-#include "Plotter.h"
+#include "Shapes/Geometry.h"
+#include "Shapes/Transformations.h"
+#include "Shapes/Plotter.h"
+#include "Conversions/StlToDat.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -10,7 +11,7 @@
 Circle::Circle(double r) : radius(r) {}
 
 void Circle::draw() {
-    std::ofstream file(".././geometry/scripts/shape.dat");
+    std::ofstream file(".././geometry/scripts/circle.stl");
     if (!file) {
         std::cerr << "Error: Unable to open circle file!\n";
         return;
@@ -29,9 +30,15 @@ void Circle::draw() {
 
     file.close();
 
-    Transformations t;
-    t.performTransformation2D();
+    std::string stlFilePath = ".././geometry/scripts/circle.stl";
+    std::string datFilePath = ".././geometry/scripts/circle.dat";
 
-    Plotter::plot2D("../geometry/scripts/shape.dat", "Circle");
+    StlToDat s;
+    s.convertSTLtoDAT(stlFilePath, datFilePath);
+
+    Transformations t;
+    t.performTransformation2D(".././geometry/scripts/circle.dat", ".././geometry/scripts/transformedCircle.dat", "Circle");
+
+    Plotter::plot2D("../geometry/scripts/circle.dat", "Circle");
     std::cout << "Circle drawn successfully!\n";
 }

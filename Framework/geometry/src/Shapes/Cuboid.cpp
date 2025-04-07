@@ -1,8 +1,8 @@
-#include "Geometry.h"
-#include "Triangle.h"
-#include "Plotter.h"
-#include "Transformations.h"
-#include "StlToDat.h"
+#include "Shapes/Geometry.h"
+#include "Conversions/FileHandler.h"
+#include "Shapes/Plotter.h"
+#include "Shapes/Transformations.h"
+#include "Conversions/Triangle.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -20,13 +20,9 @@ Cuboid::Cuboid() {
 }
 
 void Cuboid::draw() {
-    std::ofstream stlFile(".././geometry/scripts/cuboid.stl");
-    if (!stlFile) {
-        std::cerr << "Error: Unable to open STL file for Cuboid!\n";
-        return;
-    }
+    std::string objFilePath = ".././geometry/scripts/cuboid.obj";
 
-    stlFile << "solid Cuboid\n";
+    std::vector<Triangle> triangles;
 
     // Define the 8 vertices of the cuboid
     Vec3 A(x, y, z);
@@ -37,8 +33,6 @@ void Cuboid::draw() {
     Vec3 F(x + width, y, z + depth);
     Vec3 G(x + width, y + height, z + depth);
     Vec3 H(x, y + height, z + depth);
-
-    std::vector<Triangle> triangles;
 
     // Front face
     triangles.emplace_back(A, B, C);
@@ -64,19 +58,20 @@ void Cuboid::draw() {
     triangles.emplace_back(A, B, F);
     triangles.emplace_back(A, F, E);
 
-    // Write triangles to STL file
-    for (const auto& t : triangles) {
-        stlFile << "  facet normal " << t.normal.x << " " << t.normal.y << " " << t.normal.z << "\n";
-        stlFile << "    outer loop\n";
-        stlFile << "      vertex " << t.v1.x << " " << t.v1.y << " " << t.v1.z << "\n";
-        stlFile << "      vertex " << t.v2.x << " " << t.v2.y << " " << t.v2.z << "\n";
-        stlFile << "      vertex " << t.v3.x << " " << t.v3.y << " " << t.v3.z << "\n";
-        stlFile << "    endloop\n";
-        stlFile << "  endfacet\n";
+    // Write to OBJ file
+    FileHandler fileHandler;
+    if (!fileHandler.writeOBJFile(objFilePath, triangles)) {
+        std::cerr << "Error: Failed to write OBJ file!\n";
+        return;
     }
+    fileHandler.convertOBJtoSTL(objFilePath, ".././geometry/scripts/cuboid.stl");
+    fileHandler.convertSTLtoDAT(".././geometry/scripts/cuboid.stl", ".././geometry/scripts/cuboid.dat");
 
-    stlFile << "endsolid Cuboid\n";
-    stlFile.close();
+    std::cout << "Cuboid OBJ file created successfully at " << objFilePath << "!\n";
 
-    std::cout << "Cuboid STL file created successfully!\n";
+    // Optional: Perform transformations and plotting
+    Transformations t;
+    t.performTransformation(".././geometry/scripts/cuboid.dat", ".././geometry/scripts/transformedCuboid.dat", "Cuboid");
+
+    Plotter::plot3D(objFilePath, "Cuboid");
 }

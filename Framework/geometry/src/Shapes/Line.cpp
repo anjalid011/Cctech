@@ -1,8 +1,8 @@
 
-#include "Geometry.h"
-#include "Plotter.h"
-#include "Shape.h"
-#include "Transformations.h"
+#include "Shapes/Geometry.h"
+#include "Shapes/Plotter.h"
+#include "Shapes/Shape.h"
+#include "Shapes/Transformations.h"
 #include <iostream>
 #include <fstream>
 
@@ -14,7 +14,7 @@ Line::Line(double x1, double y1, double z1, double x2, double y2, double z2)
     : x1(x1), y1(y1), z1(z1), x2(x2), y2(y2), z2(z2), is3D(true) {}
 
 void Line::draw() {
-    std::ofstream pointsFile(".././geometry/scripts/shape.dat");
+    std::ofstream pointsFile(".././geometry/scripts/line.dat");
 
     if (!pointsFile) {
         std::cerr << "Error: Unable to open points file!\n";
@@ -35,9 +35,9 @@ void Line::draw() {
     pointsFile.close();
 
     Transformations t;
-    t.performTransformation2D();
+    t.performTransformation2D(".././geometry/scripts/line.dat", ".././geometry/scripts/transformedLine.dat", "Line");
     
-    Plotter::plot2D("../geometry/scripts/shape.dat", "Line");
+    Plotter::plot2D("../geometry/scripts/line.dat", "Line");
     std::cout << (is3D ? "3D" : "2D") << " Line drawn successful!\n";
 
 }

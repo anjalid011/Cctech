@@ -1,8 +1,7 @@
-#include "Geometry.h"
-#include "Transformations.h"
-#include "Robot.h"
-#include "Plotter.h"
-#include "ObjToStl.h"
+#include "Shapes/Geometry.h"
+#include "Shapes/Transformations.h"
+#include "Shapes/Plotter.h"
+#include "Conversions/ObjToStl.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -42,16 +41,6 @@ std::shared_ptr<Shape> getShape(int choice) {
             std::cout << "Enter radius and height for Cylinder: ";
             std::cin >> cylinderRadius >> cylinderHeight;
             return std::make_shared<Cylinder>(cylinderRadius, cylinderHeight);
-        }},
-        {5, []() -> std::shared_ptr<Shape> {
-            // double torsoHeight, torsoRadius;
-            // std::cout << "Enter torso height: ";
-            // std::cin >> torsoHeight;
-            // std::cout << "Enter torso radius: ";
-            // std::cin >> torsoRadius;
-            Robot r;
-            r.buildAndPlot();
-            return nullptr; // No shape to return for Robot
         }},
         {6, []() -> std::shared_ptr<Shape> {
             double x1, y1, x2, y2;

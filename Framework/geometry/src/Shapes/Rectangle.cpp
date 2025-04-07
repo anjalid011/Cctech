@@ -1,7 +1,8 @@
-#include "Geometry.h"
-#include "Plotter.h"
-#include "Shape.h"
-#include "Transformations.h"
+#include "Shapes/Geometry.h"
+#include "Shapes/Plotter.h"
+#include "Shapes/Shape.h"
+#include "Shapes/Transformations.h"
+#include "Conversions/StlToDat.h"
 #include <iostream>
 #include <fstream>
 
@@ -9,7 +10,7 @@ Rectangle::Rectangle(double x, double y, double width, double height)
     : x(x), y(y), width(width), height(height) {}
 
 void Rectangle::draw() {
-    std::ofstream rectFile(".././geometry/scripts/shape.dat");
+    std::ofstream rectFile(".././geometry/scripts/rectangle.dat");
 
     if (!rectFile) {
         std::cerr << "Error: Unable to open rectangle file!\n";
@@ -24,9 +25,15 @@ void Rectangle::draw() {
 
     rectFile.close();
     
+    std::string stlFilePath = ".././geometry/scripts/rectangle.stl";
+    std::string datFilePath = ".././geometry/scripts/rectangle.dat";
+
+    StlToDat s;
+    s.convertSTLtoDAT(stlFilePath, datFilePath);
+
     Transformations t;
-    t.performTransformation2D();
+    t.performTransformation2D(".././geometry/scripts/rectangle.dat", ".././geometry/scripts/transformedRectangle.dat", "Rectangle");
     
-    Plotter::plot2D("../geometry/scripts/shape.dat", "Rectangle");
+    Plotter::plot2D("../geometry/scripts/rectangle.dat", "Rectangle");
     std::cout << "Rectangle drawn successfully!\n";
 }

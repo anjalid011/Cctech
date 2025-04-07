@@ -1,6 +1,6 @@
 #ifndef GEOMETRY_H
 #define GEOMETRY_H
-#include <Shape.h>
+#include <Shapes/Shape.h>
 #include <vector>
 #include <iostream>
 #include <fstream>
