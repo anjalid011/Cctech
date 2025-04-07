@@ -1,4 +1,3 @@
-
 #include "Shapes/Geometry.h"
 #include "Shapes/Plotter.h"
 #include "Shapes/Shape.h"

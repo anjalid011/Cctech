@@ -7,7 +7,7 @@ GEOM_LIB = geometry/lib
 GEOM_SCRIPTS = geometry/scripts
 APP_SRC = application
 
-OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/StlToDat.o $(GEOM_LIB)/ObjToStl.o $(GEOM_LIB)/StlToObj.o $(GEOM_LIB)/FileHandler.o
+OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/FileHandler.o
 
 LIBGEOM = $(GEOM_LIB)/libgeometry.so
 EXEC = $(APP_SRC)/main
@@ -42,15 +42,6 @@ $(GEOM_LIB)/Transformations.o: $(GEOM_SRC)/Shapes/Transformations.cpp $(GEOM_INC
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(GEOM_LIB)/Plotter.o: $(GEOM_SRC)/Shapes/Plotter.cpp $(GEOM_INC)/Shapes/Plotter.h
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(GEOM_LIB)/StlToDat.o: $(GEOM_SRC)/Conversions/StlToDat.cpp $(GEOM_INC)/Conversions/StlToDat.h
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(GEOM_LIB)/ObjToStl.o: $(GEOM_SRC)/Conversions/ObjToStl.cpp $(GEOM_INC)/Conversions/ObjToStl.h
-	$(CXX) $(CXXFLAGS) -c $< -o $@
-
-$(GEOM_LIB)/StlToObj.o: $(GEOM_SRC)/Conversions/StlToObj.cpp $(GEOM_INC)/Conversions/StlToObj.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(GEOM_LIB)/FileHandler.o: $(GEOM_SRC)/Conversions/FileHandler.cpp $(GEOM_INC)/Conversions/FileHandler.h

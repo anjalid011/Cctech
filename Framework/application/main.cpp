@@ -1,7 +1,6 @@
 #include "Shapes/Geometry.h"
 #include "Shapes/Transformations.h"
 #include "Shapes/Plotter.h"
-#include "Conversions/ObjToStl.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -96,8 +95,7 @@ int main() {
             std::cout << "Invalid choice!\n";
         }
     }else if(choice==10){
-        ObjToStl o;
-        o.ConvertObjToStl();
+        
     } else {
         std::cout << "Invalid choice!\n";
     }

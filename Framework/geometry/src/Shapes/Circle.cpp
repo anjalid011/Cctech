@@ -1,7 +1,6 @@
 #include "Shapes/Geometry.h"
 #include "Shapes/Transformations.h"
 #include "Shapes/Plotter.h"
-#include "Conversions/StlToDat.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>
@@ -32,9 +31,6 @@ void Circle::draw() {
 
     std::string stlFilePath = ".././geometry/scripts/circle.stl";
     std::string datFilePath = ".././geometry/scripts/circle.dat";
-
-    StlToDat s;
-    s.convertSTLtoDAT(stlFilePath, datFilePath);
 
     Transformations t;
     t.performTransformation2D(".././geometry/scripts/circle.dat", ".././geometry/scripts/transformedCircle.dat", "Circle");
