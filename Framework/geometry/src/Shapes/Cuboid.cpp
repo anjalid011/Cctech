@@ -36,9 +36,6 @@ void Cuboid::draw() {
         return vertexIndexMap[v];
     };
 
-    // Start measuring time
-    auto startTime = std::chrono::high_resolution_clock::now();
-
     // Define the 8 vertices of the cuboid
     Vec3 A(x, y, z);
     Vec3 B(x + width, y, z);
@@ -83,10 +80,6 @@ void Cuboid::draw() {
     triangles.emplace_back(iA, iB, iF, uniqueVertices);
     triangles.emplace_back(iA, iF, iE, uniqueVertices);
 
-     // Stop measuring time
-     auto endTime = std::chrono::high_resolution_clock::now();
-     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-
     // Calculate memory usage
     size_t memoryForPoints = sizeof(Vec3) * uniqueVertices.size();
     size_t memoryForTriangles = sizeof(Triangle) * triangles.size();
@@ -97,7 +90,6 @@ void Cuboid::draw() {
     std::cout << "Number of Triangles: " << triangles.size() << "\n";
     std::cout << "Memory for Points: " << memoryForPoints << " bytes\n";
     std::cout << "Memory for Triangles: " << memoryForTriangles << " bytes\n";
-    std::cout << "Time Taken: " << duration.count() << " ms\n";
 
     // Write to OBJ file
     FileHandler fileHandler;
@@ -106,8 +98,22 @@ void Cuboid::draw() {
         return;
     }
 
+    // Start measuring time
+    auto startTime1 = std::chrono::high_resolution_clock::now();
+
     fileHandler.convertOBJtoSTL(objFilePath, ".././geometry/scripts/cuboid.stl");
+
+    auto endTime1 = std::chrono::high_resolution_clock::now();
+    auto durationforOBJtoSTL = std::chrono::duration_cast<std::chrono::milliseconds>(endTime1 - startTime1);
+    std::cout << "Time Taken For Obj to STL: " << durationforOBJtoSTL.count() << " ms\n";
+
+    auto startTime2 = std::chrono::high_resolution_clock::now();
+
     fileHandler.convertSTLtoDAT(".././geometry/scripts/cuboid.stl", ".././geometry/scripts/cuboid.dat");
+
+    auto endTime2 = std::chrono::high_resolution_clock::now();
+    auto durationforSTLtoDAT = std::chrono::duration_cast<std::chrono::milliseconds>(endTime2 - startTime2);
+    std::cout << "Time Taken For STL to DAT: " << durationforSTLtoDAT.count() << " ms\n";
 
     std::cout << "Cuboid OBJ file created successfully at " << objFilePath << "!\n";
 

@@ -36,9 +36,6 @@ void Cone::draw() {
         return vertexIndexMap[v];
     };
 
-    // Start measuring time
-    auto startTime = std::chrono::high_resolution_clock::now();
-
     // Generate the lateral surface of the cone
     Vec3 apex(0, 0, height); // Apex of the cone
     int apexIndex = getVertexIndex(apex);
@@ -72,10 +69,7 @@ void Cone::draw() {
 
         triangles.emplace_back(centerIndex, i1, i2, uniqueVertices);
     }
-    // Stop measuring time
-    auto endTime = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-
+   
     // Calculate memory usage
     size_t memoryForPoints = sizeof(Vec3) * uniqueVertices.size();
     size_t memoryForTriangles = sizeof(Triangle) * triangles.size();
@@ -86,7 +80,6 @@ void Cone::draw() {
     std::cout << "Number of Triangles: " << triangles.size() << "\n";
     std::cout << "Memory for Points: " << memoryForPoints << " bytes\n";
     std::cout << "Memory for Triangles: " << memoryForTriangles << " bytes\n";
-    std::cout << "Time Taken: " << duration.count() << " ms\n";
 
     // Write to OBJ file
     FileHandler fileHandler;
@@ -95,8 +88,22 @@ void Cone::draw() {
         return;
     }
 
+    // Start measuring time
+    auto startTime1 = std::chrono::high_resolution_clock::now();
+
     fileHandler.convertOBJtoSTL(objFilePath, ".././geometry/scripts/cone.stl");
+
+    auto endTime1 = std::chrono::high_resolution_clock::now();
+    auto durationforOBJtoSTL = std::chrono::duration_cast<std::chrono::milliseconds>(endTime1 - startTime1);
+    std::cout << "Time Taken For Obj to STL: " << durationforOBJtoSTL.count() << " ms\n";
+
+    auto startTime2 = std::chrono::high_resolution_clock::now();
+
     fileHandler.convertSTLtoDAT(".././geometry/scripts/cone.stl", ".././geometry/scripts/cone.dat");
+
+    auto endTime2 = std::chrono::high_resolution_clock::now();
+    auto durationforSTLtoDAT = std::chrono::duration_cast<std::chrono::milliseconds>(endTime2 - startTime2);
+    std::cout << "Time Taken For STL to DAT: " << durationforSTLtoDAT.count() << " ms\n";
 
     std::cout << "Cone OBJ file created successfully at " << objFilePath << "!\n";
 
