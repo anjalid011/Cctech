@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -fPIC -Igeometry/include
+CXXFLAGS = -Wall -Igeometry/include -D_USE_MATH_DEFINES
 
 GEOM_SRC = geometry/src
 GEOM_INC = geometry/include
@@ -9,13 +9,13 @@ APP_SRC = application
 
 OBJS = $(GEOM_LIB)/Line.o $(GEOM_LIB)/Rectangle.o $(GEOM_LIB)/Cuboid.o $(GEOM_LIB)/Circle.o $(GEOM_LIB)/Cone.o $(GEOM_LIB)/Sphere.o $(GEOM_LIB)/Transformations.o $(GEOM_LIB)/Plotter.o $(GEOM_LIB)/Cylinder.o $(GEOM_LIB)/FileHandler.o
 
-LIBGEOM = $(GEOM_LIB)/libgeometry.so
-EXEC = $(APP_SRC)/main
+LIBGEOM = $(GEOM_LIB)/libgeometry.dll
+EXEC = $(APP_SRC)/main.exe
 
 all: $(GEOM_LIB) $(LIBGEOM) $(EXEC)
 
 $(GEOM_LIB):
-	mkdir -p $(GEOM_LIB)  # Ensures that the geometry/lib directory exists
+	mkdir $(GEOM_LIB) 2> NUL || exit 0
 
 $(GEOM_LIB)/Line.o: $(GEOM_SRC)/Shapes/Line.cpp $(GEOM_INC)/Shapes/Geometry.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -54,9 +54,12 @@ $(EXEC): $(APP_SRC)/main.cpp $(LIBGEOM)
 	$(CXX) -o $@ $(APP_SRC)/main.cpp -I$(GEOM_INC) -L$(GEOM_LIB) -lgeometry
 
 run:
-	cd application && ./main
+	cd application && main.exe
 
 clean:
-	rm -f $(OBJS) $(LIBGEOM) $(EXEC) $(GEOM_SCRIPTS)/*.dat $(GEOM_SCRIPTS)/*.stl $(GEOM_SCRIPTS)/*.obj
-	
-
+	del /Q $(subst /,\,$(OBJS)) 2> NUL
+	del /Q $(subst /,\,$(LIBGEOM)) 2> NUL
+	del /Q $(subst /,\,$(EXEC)) 2> NUL
+	del /Q $(subst /,\,$(GEOM_SCRIPTS))\*.dat 2> NUL
+	del /Q $(subst /,\,$(GEOM_SCRIPTS))\*.stl 2> NUL
+	del /Q $(subst /,\,$(GEOM_SCRIPTS))\*.obj 2> NUL

@@ -3,8 +3,9 @@
 
 class Shape {
     public:
-        virtual void draw() = 0;
+        virtual void draw()=0; 
         virtual ~Shape() {}
+        //virtual vector<Triangle> getTriangles() = 0;
     };
 
 #endif 

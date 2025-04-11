@@ -6,6 +6,7 @@
 #include <fstream>
 #include <cmath>
 #include<bits/stdc++.h>
+#include "./Conversions/Triangle.h"
 
 using namespace std;
 typedef std::vector<vector<double>>  Matrix;
@@ -27,6 +28,7 @@ class Rectangle : public Shape {
     public:
         Rectangle(double x, double y, double width, double height);
         void draw() override;
+       // vector<Triangle> getTriangles() override;
 };
     
 class Cuboid : public Shape {

@@ -18,6 +18,50 @@ Sphere::Sphere() {
     radius = 10;
 }
 
+// vector<Triangle> Sphere::getTriangles() {
+//     std::vector<Vec3> uniqueVertices;
+//     std::unordered_map<Vec3, int> vertexIndexMap;
+//     std::vector<Triangle> triangles;
+
+//     int numTheta = 500; // Number of azimuthal divisions
+//     int numPhi = 500;   // Number of polar divisions
+
+//     auto getVertexIndex = [&](const Vec3& v) -> int {
+//         if (vertexIndexMap.find(v) == vertexIndexMap.end()) {
+//             vertexIndexMap[v] = uniqueVertices.size();
+//             uniqueVertices.push_back(v);
+//         }
+//         return vertexIndexMap[v];
+//     };
+
+//     for (int i = 0; i < numTheta; i++) {
+//         double theta1 = i * (2 * PI / numTheta);
+//         double theta2 = (i + 1) * (2 * PI / numTheta);
+
+//         for (int j = 0; j < numPhi; j++) {
+//             double phi1 = j * (PI / numPhi);
+//             double phi2 = (j + 1) * (PI / numPhi);
+
+//             // Compute the four vertices of the current quad
+//             Vec3 v1(radius * cos(theta1) * sin(phi1), radius * sin(theta1) * sin(phi1), radius * cos(phi1));
+//             Vec3 v2(radius * cos(theta2) * sin(phi1), radius * sin(theta2) * sin(phi1), radius * cos(phi1));
+//             Vec3 v3(radius * cos(theta2) * sin(phi2), radius * sin(theta2) * sin(phi2), radius * cos(phi2));
+//             Vec3 v4(radius * cos(theta1) * sin(phi2), radius * sin(theta1) * sin(phi2), radius * cos(phi2));
+
+//             // Get indices for the vertices
+//             int i1 = getVertexIndex(v1);
+//             int i2 = getVertexIndex(v2);
+//             int i3 = getVertexIndex(v3);
+//             int i4 = getVertexIndex(v4);
+
+//             // Create two triangles for the quad
+//             triangles.emplace_back(i1, i2, i3, uniqueVertices);
+//             triangles.emplace_back(i1, i3, i4, uniqueVertices);
+//         }
+//     }
+//     return triangles;
+// }
+
 void Sphere::draw() {
     std::string objFilePath = ".././geometry/scripts/sphere.obj";
 
