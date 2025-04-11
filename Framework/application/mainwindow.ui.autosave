@@ -14,14 +14,20 @@
    <string>Shape Drawer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btnDrawShape">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>100</width>
-      <height>30</height>
+      <x>274</x>
+      <y>463</y>
+      <width>181</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sitka</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>Draw Shape</string>
@@ -30,10 +36,10 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>780</width>
-      <height>500</height>
+      <x>230</x>
+      <y>130</y>
+      <width>256</width>
+      <height>192</height>
      </rect>
     </property>
    </widget>
@@ -51,5 +57,22 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>graphicsView</receiver>
+   <slot>invalidateScene()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>333</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
