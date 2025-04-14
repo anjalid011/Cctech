@@ -128,6 +128,7 @@ C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_auto
   C:/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QOpenGLFunctions \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QSurfaceFormat \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qbrush.h \
@@ -158,6 +159,7 @@ C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_auto
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtransform.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \

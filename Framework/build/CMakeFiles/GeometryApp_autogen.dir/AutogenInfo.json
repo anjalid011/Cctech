@@ -566,7 +566,6 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
-		"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/include/application/ui_mainwindow.h",
 		"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/mocs_compilation.cpp"
 	],
 	"MULTI_CONFIG" : false,
@@ -602,7 +601,6 @@
 	],
 	"UIC_SKIP" : 
 	[
-		"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/include/application/ui_mainwindow.h",
 		"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/mocs_compilation.cpp"
 	],
 	"UIC_UI_FILES" : [],

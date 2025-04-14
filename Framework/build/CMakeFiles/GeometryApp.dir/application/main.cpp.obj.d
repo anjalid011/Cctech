@@ -383,9 +383,32 @@ CMakeFiles/GeometryApp.dir/application/main.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGraphicsScene \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
- C:/Qt/6.9.0/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qrubberband.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QSlider \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistview.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qitemselectionmodel.h \
  C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\application\openglwidget.h \
  C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \
  C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qopenglwidget.h \
@@ -403,6 +426,8 @@ CMakeFiles/GeometryApp.dir/application/main.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglcontext.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qnativeinterface.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglcontext_platform.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QApplication \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qapplication.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication.h \
@@ -415,5 +440,4 @@ CMakeFiles/GeometryApp.dir/application/main.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qinputmethod.h \
- C:/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h

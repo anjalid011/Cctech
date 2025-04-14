@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GeometryApp_autogen"
-  "GeometryApp_autogen/include/application/ui_mainwindow.h"
   "GeometryApp_autogen/mocs_compilation.cpp"
   "GeometryApp_autogen/timestamp"
 )
