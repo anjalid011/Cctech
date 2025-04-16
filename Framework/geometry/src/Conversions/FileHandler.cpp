@@ -80,35 +80,30 @@ bool FileHandler::writeDATFile(const std::string& path, const std::vector<Vec3>&
 }
 
 // Read OBJ file
-bool FileHandler::readOBJFile(const std::string& path, std::vector<Triangle>& triangles) {
-    std::ifstream file(path);
-    if (!file) {
-        std::cerr << "Error: Cannot open OBJ file " << path << "\n";
+bool FileHandler::readOBJFile(const std::string &filePath, std::vector<Vec3> &vertices, std::vector<Triangle> &triangles) {
+    std::ifstream file(filePath);
+    if (!file.is_open()) {
         return false;
     }
 
-    std::vector<Vec3> vertices;
     std::string line;
-
     while (std::getline(file, line)) {
-        if (line.rfind("v ", 0) == 0) {
-            // Parse vertex
-            std::stringstream ss(line.substr(2));
-            Vec3 v;
-            ss >> v.x >> v.y >> v.z;
-            vertices.push_back(v);
-        } else if (line.rfind("f ", 0) == 0) {
-            // Parse face
-            std::stringstream ss(line.substr(2));
-            int v1, v2, v3;
-            ss >> v1 >> v2 >> v3;
+        std::istringstream iss(line);
+        std::string prefix;
+        iss >> prefix;
 
-            // Convert 1-based indices to 0-based
-            triangles.emplace_back(vertices[v1 - 1], vertices[v2 - 1], vertices[v3 - 1]);
+        if (prefix == "v") { // Vertex definition
+            Vec3 vertex;
+            iss >> vertex.x >> vertex.y >> vertex.z;
+            vertices.push_back(vertex);
+        } else if (prefix == "f") { // Face definition
+            int v1, v2, v3;
+            iss >> v1 >> v2 >> v3;
+            // OBJ indices are 1-based, so subtract 1 for 0-based indexing
+            triangles.emplace_back(v1 - 1, v2 - 1, v3 - 1, vertices);
         }
     }
 
-    file.close();
     return true;
 }
 

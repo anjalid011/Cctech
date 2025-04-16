@@ -142,6 +142,19 @@ GeometryApp/fast:
 .PHONY : GeometryApp/fast
 
 #=============================================================================
+# Target rules for targets named clean_scripts
+
+# Build rule for target.
+clean_scripts: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean_scripts
+.PHONY : clean_scripts
+
+# fast build rule for target.
+clean_scripts/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clean_scripts.dir\build.make CMakeFiles/clean_scripts.dir/build
+.PHONY : clean_scripts/fast
+
+#=============================================================================
 # Target rules for targets named geometry_autogen_timestamp_deps
 
 # Build rule for target.
@@ -563,6 +576,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... GeometryApp_autogen
 	@echo ... GeometryApp_autogen_timestamp_deps
+	@echo ... clean_scripts
 	@echo ... geometry_autogen
 	@echo ... geometry_autogen_timestamp_deps
 	@echo ... GeometryApp

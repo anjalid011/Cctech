@@ -78,6 +78,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/geometry.dir/clean
 clean: CMakeFiles/GeometryApp.dir/clean
+clean: CMakeFiles/clean_scripts.dir/clean
 clean: CMakeFiles/geometry_autogen_timestamp_deps.dir/clean
 clean: CMakeFiles/geometry_autogen.dir/clean
 clean: CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/clean
@@ -88,11 +89,11 @@ clean: CMakeFiles/GeometryApp_autogen.dir/clean
 # Target rules for target CMakeFiles/geometry.dir
 
 # All Build rule for target.
-CMakeFiles/geometry.dir/all: CMakeFiles/geometry_autogen_timestamp_deps.dir/all
 CMakeFiles/geometry.dir/all: CMakeFiles/geometry_autogen.dir/all
+CMakeFiles/geometry.dir/all: CMakeFiles/geometry_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target geometry"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=9,10,11,12,13,14,15,16,17,18,19,20,21 "Built target geometry"
 .PHONY : CMakeFiles/geometry.dir/all
 
 # Build rule for subdir invocation for target.
@@ -109,7 +110,7 @@ geometry: CMakeFiles/geometry.dir/rule
 # codegen rule for target.
 CMakeFiles/geometry.dir/codegen: CMakeFiles/geometry_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=8,9,10,11,12,13,14,15,16,17,18,19,20 "Finished codegen for target geometry"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=9,10,11,12,13,14,15,16,17,18,19,20,21 "Finished codegen for target geometry"
 .PHONY : CMakeFiles/geometry.dir/codegen
 
 # clean rule for target.
@@ -122,8 +123,9 @@ CMakeFiles/geometry.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/GeometryApp.dir/all: CMakeFiles/geometry.dir/all
-CMakeFiles/GeometryApp.dir/all: CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all
 CMakeFiles/GeometryApp.dir/all: CMakeFiles/GeometryApp_autogen.dir/all
+CMakeFiles/GeometryApp.dir/all: CMakeFiles/clean_scripts.dir/all
+CMakeFiles/GeometryApp.dir/all: CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target GeometryApp"
@@ -131,7 +133,7 @@ CMakeFiles/GeometryApp.dir/all: CMakeFiles/GeometryApp_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GeometryApp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 21
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GeometryApp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 0
 .PHONY : CMakeFiles/GeometryApp.dir/rule
@@ -141,6 +143,7 @@ GeometryApp: CMakeFiles/GeometryApp.dir/rule
 .PHONY : GeometryApp
 
 # codegen rule for target.
+CMakeFiles/GeometryApp.dir/codegen: CMakeFiles/clean_scripts.dir/all
 CMakeFiles/GeometryApp.dir/codegen: CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=1,2,3,4,5,6 "Finished codegen for target GeometryApp"
@@ -150,6 +153,38 @@ CMakeFiles/GeometryApp.dir/codegen: CMakeFiles/GeometryApp_autogen_timestamp_dep
 CMakeFiles/GeometryApp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/clean
 .PHONY : CMakeFiles/GeometryApp.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clean_scripts.dir
+
+# All Build rule for target.
+CMakeFiles/clean_scripts.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clean_scripts.dir\build.make CMakeFiles/clean_scripts.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clean_scripts.dir\build.make CMakeFiles/clean_scripts.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=8 "Built target clean_scripts"
+.PHONY : CMakeFiles/clean_scripts.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clean_scripts.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/clean_scripts.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 0
+.PHONY : CMakeFiles/clean_scripts.dir/rule
+
+# Convenience name for target.
+clean_scripts: CMakeFiles/clean_scripts.dir/rule
+.PHONY : clean_scripts
+
+# codegen rule for target.
+CMakeFiles/clean_scripts.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clean_scripts.dir\build.make CMakeFiles/clean_scripts.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=8 "Finished codegen for target clean_scripts"
+.PHONY : CMakeFiles/clean_scripts.dir/codegen
+
+# clean rule for target.
+CMakeFiles/clean_scripts.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\clean_scripts.dir\build.make CMakeFiles/clean_scripts.dir/clean
+.PHONY : CMakeFiles/clean_scripts.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/geometry_autogen_timestamp_deps.dir
@@ -190,7 +225,7 @@ CMakeFiles/geometry_autogen_timestamp_deps.dir/clean:
 CMakeFiles/geometry_autogen.dir/all: CMakeFiles/geometry_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry_autogen.dir\build.make CMakeFiles/geometry_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry_autogen.dir\build.make CMakeFiles/geometry_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=21 "Built target geometry_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=22 "Built target geometry_autogen"
 .PHONY : CMakeFiles/geometry_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -207,7 +242,7 @@ geometry_autogen: CMakeFiles/geometry_autogen.dir/rule
 # codegen rule for target.
 CMakeFiles/geometry_autogen.dir/codegen: CMakeFiles/geometry_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry_autogen.dir\build.make CMakeFiles/geometry_autogen.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=21 "Finished codegen for target geometry_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=22 "Finished codegen for target geometry_autogen"
 .PHONY : CMakeFiles/geometry_autogen.dir/codegen
 
 # clean rule for target.
@@ -220,6 +255,7 @@ CMakeFiles/geometry_autogen.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all: CMakeFiles/geometry.dir/all
+CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all: CMakeFiles/clean_scripts.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp_autogen_timestamp_deps.dir\build.make CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp_autogen_timestamp_deps.dir\build.make CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num= "Built target GeometryApp_autogen_timestamp_deps"
@@ -227,7 +263,7 @@ CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all: CMakeFiles/geometry.dir/a
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 0
 .PHONY : CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/rule
@@ -259,7 +295,7 @@ CMakeFiles/GeometryApp_autogen.dir/all: CMakeFiles/GeometryApp_autogen_timestamp
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GeometryApp_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 15
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/GeometryApp_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" 0
 .PHONY : CMakeFiles/GeometryApp_autogen.dir/rule

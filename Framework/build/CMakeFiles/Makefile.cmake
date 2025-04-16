@@ -372,6 +372,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/geometry.dir/DependInfo.cmake"
   "CMakeFiles/GeometryApp.dir/DependInfo.cmake"
+  "CMakeFiles/clean_scripts.dir/DependInfo.cmake"
   "CMakeFiles/geometry_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/geometry_autogen.dir/DependInfo.cmake"
   "CMakeFiles/GeometryApp_autogen_timestamp_deps.dir/DependInfo.cmake"

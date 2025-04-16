@@ -2,30 +2,31 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QGraphicsScene>
+#include <QPushButton>
+#include <QListWidget>
+#include <QComboBox>
 #include "openglwidget.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
-}
-QT_END_NAMESPACE
-
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
+    
     ~MainWindow();
 
 private slots:
-    void onDrawShapeClicked();
+    void onDrawButtonClicked(); // Slot to handle the "Draw" button click
 
 private:
-    Ui::MainWindow *ui;
-    QGraphicsScene *scene;
-    OpenGLWidget *openGLWidget; // Declare the OpenGLWidget here
+    void setupUI(); // Sets up the UI layout and widgets
+
+    OpenGLWidget *glWidget; // OpenGL widget for rendering
+    QPushButton *drawButton; // Button to draw the cuboid
+    QComboBox *shapeComboBox; // Dropdown to select shapes
+    QListWidget *shapeList;   // List to display drawn shapes
+    // QList<QString> drawnShapes; // List of drawn shapes
+    // QList<QString> objFilePaths; // List of corresponding .obj file paths
 };
 
 #endif // MAINWINDOW_H

@@ -26,7 +26,6 @@ set(APPLICATION_SRC
     ${CMAKE_SOURCE_DIR}/application/main.cpp
     ${CMAKE_SOURCE_DIR}/application/mainwindow.cpp
     ${CMAKE_SOURCE_DIR}/application/mainwindow.h
-    ${CMAKE_SOURCE_DIR}/application/mainwindow.ui
     ${CMAKE_SOURCE_DIR}/application/openglwidget.cpp
     ${CMAKE_SOURCE_DIR}/application/openglwidget.h
 )
@@ -43,4 +42,15 @@ target_link_libraries(geometry Qt6::Widgets)
 
 # Add the main application executable
 add_executable(GeometryApp ${APPLICATION_SRC})
-target_link_libraries(GeometryApp geometry Qt6::Widgets Qt6::OpenGL Qt6::OpenGLWidgets opengl32)
+target_link_libraries(GeometryApp geometry Qt6::Widgets Qt6::OpenGL Qt6::OpenGLWidgets GLU32 OpenGL32)
+
+# Add a custom target to clean .dat, .stl, and .obj files from the scripts directory
+add_custom_target(clean_scripts
+    COMMAND ${CMAKE_COMMAND} -E echo "Cleaning .dat, .stl, and .obj files from scripts directory..."
+    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_SOURCE_DIR}/geometry/scripts
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/geometry/scripts
+    COMMENT "Cleaning up generated files in scripts directory"
+)
+
+# Ensure the clean_scripts target runs before the build
+add_dependencies(GeometryApp clean_scripts)

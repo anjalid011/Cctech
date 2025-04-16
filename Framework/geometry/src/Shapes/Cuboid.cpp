@@ -37,14 +37,14 @@ void Cuboid::draw() {
     };
 
     // Define the 8 vertices of the cuboid
-    Vec3 A(x, y, z);
-    Vec3 B(x + width, y, z);
-    Vec3 C(x + width, y + height, z);
-    Vec3 D(x, y + height, z);
-    Vec3 E(x, y, z + depth);
-    Vec3 F(x + width, y, z + depth);
-    Vec3 G(x + width, y + height, z + depth);
-    Vec3 H(x, y + height, z + depth);
+    Vec3 A(-width / 2, -height / 2, -depth / 2);
+    Vec3 B(width / 2, -height / 2, -depth / 2);
+    Vec3 C(width / 2, height / 2, -depth / 2);
+    Vec3 D(-width / 2, height / 2, -depth / 2);
+    Vec3 E(-width / 2, -height / 2, depth / 2);
+    Vec3 F(width / 2, -height / 2, depth / 2);
+    Vec3 G(width / 2, height / 2, depth / 2);
+    Vec3 H(-width / 2, height / 2, depth / 2);
 
     // Get indices for the vertices
     int iA = getVertexIndex(A);
@@ -80,17 +80,6 @@ void Cuboid::draw() {
     triangles.emplace_back(iA, iB, iF, uniqueVertices);
     triangles.emplace_back(iA, iF, iE, uniqueVertices);
 
-    // Calculate memory usage
-    size_t memoryForPoints = sizeof(Vec3) * uniqueVertices.size();
-    size_t memoryForTriangles = sizeof(Triangle) * triangles.size();
-
-    // Print statistics
-    std::cout << "Cuboid Statistics:\n";
-    std::cout << "Number of Points: " << uniqueVertices.size() << "\n";
-    std::cout << "Number of Triangles: " << triangles.size() << "\n";
-    std::cout << "Memory for Points: " << memoryForPoints << " bytes\n";
-    std::cout << "Memory for Triangles: " << memoryForTriangles << " bytes\n";
-
     // Write to OBJ file
     FileHandler fileHandler;
     if (!fileHandler.writeOBJFile(objFilePath, uniqueVertices, triangles)) {
@@ -98,28 +87,30 @@ void Cuboid::draw() {
         return;
     }
 
-    // Start measuring time
-    auto startTime1 = std::chrono::high_resolution_clock::now();
-
-    fileHandler.convertOBJtoSTL(objFilePath, ".././geometry/scripts/cuboid.stl");
-
-    auto endTime1 = std::chrono::high_resolution_clock::now();
-    auto durationforOBJtoSTL = std::chrono::duration_cast<std::chrono::milliseconds>(endTime1 - startTime1);
-    std::cout << "Time Taken For Obj to STL: " << durationforOBJtoSTL.count() << " ms\n";
-
-    auto startTime2 = std::chrono::high_resolution_clock::now();
-
-    fileHandler.convertSTLtoDAT(".././geometry/scripts/cuboid.stl", ".././geometry/scripts/cuboid.dat");
-
-    auto endTime2 = std::chrono::high_resolution_clock::now();
-    auto durationforSTLtoDAT = std::chrono::duration_cast<std::chrono::milliseconds>(endTime2 - startTime2);
-    std::cout << "Time Taken For STL to DAT: " << durationforSTLtoDAT.count() << " ms\n";
-
     std::cout << "Cuboid OBJ file created successfully at " << objFilePath << "!\n";
 
-    // Optional: Perform transformations and plotting
-    Transformations t;
-    t.performTransformation(".././geometry/scripts/cuboid.dat", ".././geometry/scripts/transformedCuboid.dat", "Cuboid");
+    // Start measuring time
+    // auto startTime1 = std::chrono::high_resolution_clock::now();
 
-    Plotter::plot3D(".././geometry/scripts/cuboid.dat", "Cuboid");
+    // fileHandler.convertOBJtoSTL(objFilePath, ".././geometry/scripts/cuboid.stl");
+
+    // auto endTime1 = std::chrono::high_resolution_clock::now();
+    // auto durationforOBJtoSTL = std::chrono::duration_cast<std::chrono::milliseconds>(endTime1 - startTime1);
+    // std::cout << "Time Taken For Obj to STL: " << durationforOBJtoSTL.count() << " ms\n";
+
+    // auto startTime2 = std::chrono::high_resolution_clock::now();
+
+    // fileHandler.convertSTLtoDAT(".././geometry/scripts/cuboid.stl", ".././geometry/scripts/cuboid.dat");
+
+    // auto endTime2 = std::chrono::high_resolution_clock::now();
+    // auto durationforSTLtoDAT = std::chrono::duration_cast<std::chrono::milliseconds>(endTime2 - startTime2);
+    // std::cout << "Time Taken For STL to DAT: " << durationforSTLtoDAT.count() << " ms\n";
+
+    // std::cout << "Cuboid OBJ file created successfully at " << objFilePath << "!\n";
+
+    // Optional: Perform transformations and plotting
+    // Transformations t;
+    // t.performTransformation(".././geometry/scripts/cuboid.dat", ".././geometry/scripts/transformedCuboid.dat", "Cuboid");
+
+    // Plotter::plot3D(".././geometry/scripts/cuboid.dat", "Cuboid");
 }

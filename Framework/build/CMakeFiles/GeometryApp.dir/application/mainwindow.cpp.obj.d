@@ -383,8 +383,17 @@ CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qcursor.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QComboBox \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistwidget.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistview.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qitemselectionmodel.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
@@ -396,19 +405,8 @@ CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qrubberband.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
- C:/Qt/6.9.0/mingw_64/include/QtCore/qabstractitemmodel.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QSlider \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qslider.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistwidget.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistview.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemview.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.9.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QComboBox \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qcombobox.h \
  C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\application\openglwidget.h \
  C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \
  C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qopenglwidget.h \
@@ -426,9 +424,41 @@ CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglcontext.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qnativeinterface.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglcontext_platform.h \
- C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QMouseEvent \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qevent.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreevent.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qbasictimer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qabstracteventdispatcher.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qeventloop.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qelapsedtimer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qiodevice.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qeventpoint.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvector2d.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Geometry.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qpointingdevice.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qinputdevice.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qscreen.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/QList \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qlist.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qobject.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/QRect \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qrect.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/QSize \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qsize.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/QSizeF \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QTransform \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qtransform.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qscreen_platform.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qinputmethod.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Conversions\Triangle.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Shape.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
@@ -545,23 +575,13 @@ CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory_resource \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/./Conversions/Triangle.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Plotter.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Transformations.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/FileHandler.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QGroupBox \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgroupbox.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLabel \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlabel.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.9.0/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.9.0/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.9.0/mingw_64/include/QtCore/qurl.h
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qtextdocument.h
