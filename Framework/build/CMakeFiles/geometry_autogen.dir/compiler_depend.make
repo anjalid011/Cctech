@@ -100,6 +100,7 @@ geometry_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler.cmake \
   C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
+  C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindOpenGL.cmake \
   C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake \
   C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake \
@@ -339,6 +340,7 @@ geometry_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   CMakeFiles/4.0.0/CMakeRCCompiler.cmake \
   CMakeFiles/4.0.0/CMakeSystem.cmake \
   C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Conversions/FileHandler.cpp \
+  C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Beizer.cpp \
   C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Circle.cpp \
   C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cone.cpp \
   C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cuboid.cpp \
@@ -638,6 +640,14 @@ C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler
 
 C:/Program\ Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake:
 
+C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake:
+
+C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateTargets.cmake:
+
+C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
+
+C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindOpenGL.cmake:
+
 C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cone.cpp:
 
 C:/Program\ Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake:
@@ -781,12 +791,6 @@ C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
 C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/QtPublicWindowsHelpers.cmake:
 
 C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
-
-C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake:
-
-C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateTargets.cmake:
-
-C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:
 
 C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
 
@@ -1037,6 +1041,8 @@ CMakeFiles/4.0.0/CMakeRCCompiler.cmake:
 CMakeFiles/4.0.0/CMakeSystem.cmake:
 
 C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Conversions/FileHandler.cpp:
+
+C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Beizer.cpp:
 
 C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cylinder.cpp:
 

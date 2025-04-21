@@ -22,7 +22,7 @@ Cuboid::Cuboid() {
 }
 
 void Cuboid::draw() {
-    std::string objFilePath = ".././geometry/scripts/cuboid.obj";
+    std::string objFilePath = "../geometry/scripts/cuboid.obj";
 
     std::vector<Vec3> uniqueVertices;
     std::unordered_map<Vec3, int> vertexIndexMap;
@@ -36,17 +36,17 @@ void Cuboid::draw() {
         return vertexIndexMap[v];
     };
 
-    // Define the 8 vertices of the cuboid
-    Vec3 A(-width / 2, -height / 2, -depth / 2);
-    Vec3 B(width / 2, -height / 2, -depth / 2);
-    Vec3 C(width / 2, height / 2, -depth / 2);
-    Vec3 D(-width / 2, height / 2, -depth / 2);
-    Vec3 E(-width / 2, -height / 2, depth / 2);
-    Vec3 F(width / 2, -height / 2, depth / 2);
-    Vec3 G(width / 2, height / 2, depth / 2);
-    Vec3 H(-width / 2, height / 2, depth / 2);
+    // Define 8 vertices relative to (x, y, z) as center
+    Vec3 A(x - width / 2, y - height / 2, z - depth / 2);
+    Vec3 B(x + width / 2, y - height / 2, z - depth / 2);
+    Vec3 C(x + width / 2, y + height / 2, z - depth / 2);
+    Vec3 D(x - width / 2, y + height / 2, z - depth / 2);
+    Vec3 E(x - width / 2, y - height / 2, z + depth / 2);
+    Vec3 F(x + width / 2, y - height / 2, z + depth / 2);
+    Vec3 G(x + width / 2, y + height / 2, z + depth / 2);
+    Vec3 H(x - width / 2, y + height / 2, z + depth / 2);
 
-    // Get indices for the vertices
+    // Indexing for triangles
     int iA = getVertexIndex(A);
     int iB = getVertexIndex(B);
     int iC = getVertexIndex(C);
@@ -80,7 +80,6 @@ void Cuboid::draw() {
     triangles.emplace_back(iA, iB, iF, uniqueVertices);
     triangles.emplace_back(iA, iF, iE, uniqueVertices);
 
-    // Write to OBJ file
     FileHandler fileHandler;
     if (!fileHandler.writeOBJFile(objFilePath, uniqueVertices, triangles)) {
         std::cerr << "Error: Failed to write OBJ file!\n";
@@ -88,29 +87,4 @@ void Cuboid::draw() {
     }
 
     std::cout << "Cuboid OBJ file created successfully at " << objFilePath << "!\n";
-
-    // Start measuring time
-    // auto startTime1 = std::chrono::high_resolution_clock::now();
-
-    // fileHandler.convertOBJtoSTL(objFilePath, ".././geometry/scripts/cuboid.stl");
-
-    // auto endTime1 = std::chrono::high_resolution_clock::now();
-    // auto durationforOBJtoSTL = std::chrono::duration_cast<std::chrono::milliseconds>(endTime1 - startTime1);
-    // std::cout << "Time Taken For Obj to STL: " << durationforOBJtoSTL.count() << " ms\n";
-
-    // auto startTime2 = std::chrono::high_resolution_clock::now();
-
-    // fileHandler.convertSTLtoDAT(".././geometry/scripts/cuboid.stl", ".././geometry/scripts/cuboid.dat");
-
-    // auto endTime2 = std::chrono::high_resolution_clock::now();
-    // auto durationforSTLtoDAT = std::chrono::duration_cast<std::chrono::milliseconds>(endTime2 - startTime2);
-    // std::cout << "Time Taken For STL to DAT: " << durationforSTLtoDAT.count() << " ms\n";
-
-    // std::cout << "Cuboid OBJ file created successfully at " << objFilePath << "!\n";
-
-    // Optional: Perform transformations and plotting
-    // Transformations t;
-    // t.performTransformation(".././geometry/scripts/cuboid.dat", ".././geometry/scripts/transformedCuboid.dat", "Cuboid");
-
-    // Plotter::plot3D(".././geometry/scripts/cuboid.dat", "Cuboid");
 }

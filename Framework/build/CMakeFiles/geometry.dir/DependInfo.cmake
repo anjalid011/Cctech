@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "geometry_autogen/timestamp" "custom" "geometry_autogen/deps"
   "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Conversions/FileHandler.cpp" "CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj" "gcc" "CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj.d"
+  "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Beizer.cpp" "CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj" "gcc" "CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj.d"
   "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Circle.cpp" "CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj" "gcc" "CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj.d"
   "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cone.cpp" "CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj" "gcc" "CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj.d"
   "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cuboid.cpp" "CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj" "gcc" "CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj.d"

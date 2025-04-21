@@ -430,12 +430,12 @@ CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
  C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Conversions\Triangle.h \
- C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\src\Conversions\FileHandler.cpp \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/FileHandler.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Shape.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h \
@@ -445,15 +445,20 @@ CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/./Conversions/Triangle.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\src\Conversions\FileHandler.cpp \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/FileHandler.h \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
  C:/Qt/6.9.0/mingw_64/include/QtCore/QDebug \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h

@@ -30,19 +30,39 @@ set(APPLICATION_SRC
     ${CMAKE_SOURCE_DIR}/application/openglwidget.h
 )
 
-# Set Qt installation path if needed
+# Set Qt installation path
 set(CMAKE_PREFIX_PATH "C:/Qt/6.9.0/mingw_64")
 
 # Find required Qt components
-find_package(Qt6 REQUIRED COMPONENTS Widgets OpenGL OpenGLWidgets)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets OpenGL OpenGLWidgets)
+
+# Find OpenGL
+find_package(OpenGL REQUIRED)
 
 # Add the geometry shared library
 add_library(geometry SHARED ${GEOMETRY_SRC})
-target_link_libraries(geometry Qt6::Widgets)
+
+# Link Qt and OpenGL libraries to the geometry library
+target_link_libraries(geometry
+    Qt6::OpenGL
+    Qt6::Widgets
+    Qt6::Gui
+    Qt6::Core
+    OpenGL::GL
+)
 
 # Add the main application executable
 add_executable(GeometryApp ${APPLICATION_SRC})
-target_link_libraries(GeometryApp geometry Qt6::Widgets Qt6::OpenGL Qt6::OpenGLWidgets GLU32 OpenGL32)
+
+# Link geometry and other libraries to the main application
+target_link_libraries(GeometryApp
+    geometry
+    Qt6::Widgets
+    Qt6::OpenGL
+    Qt6::OpenGLWidgets
+    GLU32
+    OpenGL32
+)
 
 # Add a custom target to clean .dat, .stl, and .obj files from the scripts directory
 add_custom_target(clean_scripts

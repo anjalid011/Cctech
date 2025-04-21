@@ -63,3 +63,14 @@ clean:
 	del /Q $(subst /,\,$(GEOM_SCRIPTS))\*.dat 2> NUL
 	del /Q $(subst /,\,$(GEOM_SCRIPTS))\*.stl 2> NUL
 	del /Q $(subst /,\,$(GEOM_SCRIPTS))\*.obj 2> NUL
+
+
+
+
+
+
+
+
+
+
+{

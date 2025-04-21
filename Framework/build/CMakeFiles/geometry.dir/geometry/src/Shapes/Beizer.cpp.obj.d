@@ -1,6 +1,6 @@
-CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj: \
- C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Rectangle.cpp \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Geometry.h \
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj: \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Beizer.cpp \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Shape.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
@@ -319,5 +319,67 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/./Conversions/Triangle.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Plotter.h \
- C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Transformations.h
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Transformations.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QOpenGLFunctions \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglfunctions.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qopengl.h \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/GL/gl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglext.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglcontext.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qobject.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qobjectdefs.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qlist.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qiterator.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qbytearraylist.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qstringlist.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qstringmatcher.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qscopedpointer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qmetatype.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qdatastream.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qiodevicebase.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qfloat16.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qtformat_impl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qiterable.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qmetacontainer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qcontainerinfo.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qtaggedpointer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qscopeguard.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qobject_impl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qbindingstorage.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qset.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qhash.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qnativeinterface.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QSurfaceFormat \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qsurfaceformat.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qtextstream.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qcontiguouscache.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qsharedpointer.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qshareddata.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qmap.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qshareddata_impl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qopenglcontext_platform.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h

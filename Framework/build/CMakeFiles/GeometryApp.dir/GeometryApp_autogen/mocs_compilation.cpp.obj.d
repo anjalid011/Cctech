@@ -408,6 +408,24 @@ CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qrubberband.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QComboBox \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qcombobox.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QStackedWidget \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qstackedwidget.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qurl.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qtextformat.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qtextoption.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLayout \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qgridlayout.h \
  C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/application/openglwidget.h \
  C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/QOpenGLWidget \
  C:/Qt/6.9.0/mingw_64/include/QtOpenGLWidgets/qopenglwidget.h \
@@ -434,7 +452,6 @@ CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qdeadlinetimer.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qelapsedtimer.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qiodevice.h \
- C:/Qt/6.9.0/mingw_64/include/QtCore/qurl.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qeventpoint.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qvector2d.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
@@ -459,6 +476,30 @@ CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.obj: \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qinputmethod.h \
  C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
  C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Conversions\Triangle.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Shapes/Shape.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QVector3D \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype \
+ C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
+ C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/./Conversions/Triangle.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/q20algorithm.h \

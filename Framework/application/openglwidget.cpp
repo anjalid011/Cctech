@@ -1,8 +1,13 @@
 #include "openglwidget.h"
 #include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Conversions\FileHandler.cpp"
+#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
 #include <QOpenGLFunctions>
 #include <QDebug>
-
+#include <QVector3D>
+#include <vector>
+#include <cmath>
+#include <cstdlib> 
+// #include <GL/gl.h>
 // Constructor for OpenGLWidget
 OpenGLWidget::OpenGLWidget(QWidget *parent)
     : QOpenGLWidget(parent) {
@@ -25,14 +30,18 @@ void OpenGLWidget::resizeGL(int w, int h) {
     glLoadIdentity();
  
     GLfloat aspect = GLfloat(w) / h;
-    GLfloat fovy = 100.0f;
+    GLfloat fovy = 45.0f;
     GLfloat near = 0.1f;
     GLfloat far = 100.0f;
-    GLfloat top = tan(fovy * M_PI / 360.0f) * near;
+    // GLfloat top = tan(fovy * M_PI / 360.0f) * near;
+    // GLfloat bottom = -top;
+    // GLfloat right = top * aspect;
+    // GLfloat left = -right;
+    GLfloat top = near * tan(fovy * M_PI / 360.0);
     GLfloat bottom = -top;
+    GLfloat left = bottom * aspect;
     GLfloat right = top * aspect;
-    GLfloat left = -right;
- 
+
     glFrustum(left, right, bottom, top, near, far);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
@@ -40,34 +49,38 @@ void OpenGLWidget::resizeGL(int w, int h) {
 
 // Renders the OpenGL scene
 void OpenGLWidget::paintGL() {
-
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the screen
     glLoadIdentity(); // Reset transformations
 
-    // Apply transformations to center the cuboid
-    glTranslatef(0.0f, 0.0f, -5.0f + zoom);// Move the cuboid back along the Z-axis
-    glRotatef(rotationX, 1.0f, 0.0f, 0.0f); // Rotate around the X-axis
-    glRotatef(rotationY, 0.0f, 1.0f, 0.0f); // Rotate around the Y-axis
+    // Apply transformations for zoom and rotation
+    glTranslatef(0.0f, 0.0f, -10.0f + zoom);
+    glRotatef(rotationX, 1.0f, 0.0f, 0.0f);
+    glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
 
-    // Enable wireframe mode
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
-    // Render the loaded triangles
-    glBegin(GL_TRIANGLES);
-    for (const auto &triangle : triangles) {
-        const Vec3 &v1 = vertices[triangle.v1];
-        const Vec3 &v2 = vertices[triangle.v2];
-        const Vec3 &v3 = vertices[triangle.v3];
-
-        glVertex3f(v1.x, v1.y, v1.z);
-        glVertex3f(v2.x, v2.y, v2.z);
-        glVertex3f(v3.x, v3.y, v3.z);
+    // Render control points
+    glPointSize(10.0f);
+    glBegin(GL_POINTS);
+    glColor3f(1.0f, 0.0f, 0.0f); // Red for control points
+    for (const auto& pt : controlPoints) {
+        glVertex3f(pt.x, pt.y, pt.z);
     }
     glEnd();
 
-    // Restore default polygon mode
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    // Render the Bezier curve if there are enough control points
+    if (controlPoints.size() >= 2) {
+        bezierCurve.setControlPoints(controlPoints);
+        bezierCurve.generateCurvePoints(interpolationPoints);
+        bezierCurve.draw();
+    }
+
+    glFlush();
 }
+
+void OpenGLWidget::clearControlPoints() {
+    controlPoints.clear();
+    update(); // Redraw the scene
+}
+
 // Method to load and draw a shape from an OBJ file
 void OpenGLWidget::loadAndDrawShape(const QString &objFilePath) {
     vertices.clear();
@@ -83,21 +96,89 @@ void OpenGLWidget::loadAndDrawShape(const QString &objFilePath) {
     update(); // Trigger a repaint
 }
 
+void OpenGLWidget::setTotalControlPoints(int totalPoints) {
+    totalControlPoints = totalPoints;
+}
+
+void OpenGLWidget::setInterpolationPoints(int points) {
+    interpolationPoints = points;
+}
+
+void OpenGLWidget::drawBezier(const std::vector<Point3D>& controlPoints, int interpolationPoints) {
+    // Clear any existing data
+    vertices.clear();
+    triangles.clear();
+
+    // Set the control points and generate the Bezier curve
+    bezierCurve.setControlPoints(controlPoints);
+    bezierCurve.generateCurvePoints(interpolationPoints);
+
+    qDebug() << "Bezier curve generated with" << controlPoints.size() << "control points and" << interpolationPoints << "interpolation points.";
+
+    // Render the Bezier curve
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the screen
+    glLoadIdentity(); // Reset transformations
+
+    // Apply transformations for zoom and rotation
+    glTranslatef(0.0f, 0.0f, -10.0f + zoom);
+    glRotatef(rotationX, 1.0f, 0.0f, 0.0f);
+    glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
+
+    update(); // Trigger a repaint
+}
+
 void OpenGLWidget::mousePressEvent(QMouseEvent* event) {
-    lastMousePos = event->position();
+    QPointF mousePos = event->position();
+    float x = (2.0f * mousePos.x() / width()) - 1.0f;
+    float y = 1.0f - (2.0f * mousePos.y() / height());
+
+    if (currentControlPoints < totalControlPoints) {
+        // Add a new control point
+        controlPoints.push_back({x, y, 0.0f});
+        currentControlPoints++;
+        qDebug() << "Control Point Added: X:" << x << "Y:" << y << "Z: 0.0";
+        update();
+    } else {
+        // Check if the click is near any existing control point
+        for (size_t i = 0; i < controlPoints.size(); ++i) {
+            float dx = controlPoints[i].x - x;
+            float dy = controlPoints[i].y - y;
+            if (std::sqrt(dx * dx + dy * dy) < 0.1f) { // Threshold for detecting a click near a point
+                draggedPointIndex = i;
+                qDebug() << "Dragging control point at index:" << i;
+                return;
+            }
+        }
+    }
 }
  
 void OpenGLWidget::mouseMoveEvent(QMouseEvent* event) {
-    QPointF currentPos = event->position();
-    int dx = currentPos.x() - lastMousePos.x();
-    int dy = currentPos.y() - lastMousePos.y();
- 
-    if (event->buttons() & Qt::LeftButton) {
-        rotationX += dy * 0.5f;
-        rotationY += dx * 0.5f;
-        update();
+    if (draggedPointIndex != -1) { // If a control point is being dragged
+        QPointF mousePos = event->position();
+        float x = (2.0f * mousePos.x() / width()) - 1.0f;
+        float y = 1.0f - (2.0f * mousePos.y() / height());
+
+        // Update the position of the dragged control point
+        controlPoints[draggedPointIndex].x = x;
+        controlPoints[draggedPointIndex].y = y;
+
+        qDebug() << "Control Point Dragged: Index:" << draggedPointIndex << "X:" << x << "Y:" << y;
+
+        // Update the curve
+        if (controlPoints.size() >= 2) {
+            bezierCurve.setControlPoints(controlPoints);
+            bezierCurve.generateCurvePoints(interpolationPoints);
+        }
+
+        update(); // Redraw the scene
     }
-    lastMousePos = currentPos;
+}
+
+void OpenGLWidget::mouseReleaseEvent(QMouseEvent* event) {
+    if (event->button() == Qt::LeftButton && draggedPointIndex != -1) {
+        qDebug() << "Stopped dragging control point at index:" << draggedPointIndex;
+        draggedPointIndex = -1; // Reset the dragged point index
+    }
 }
  
 void OpenGLWidget::wheelEvent(QWheelEvent* event) {
@@ -105,3 +186,8 @@ void OpenGLWidget::wheelEvent(QWheelEvent* event) {
     update();
 }
 
+
+int OpenGLWidget::binomialCoefficient(int n, int k) {
+    if (k == 0 || k == n) return 1;
+    return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
+}

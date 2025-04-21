@@ -12,38 +12,33 @@
 
 #define PI 3.141592653589793
 
-Cone::Cone(double r, double h) : radius(r), height(h) {}
+// Add this to your Cone class
+Cone::Cone(double r, double h, double cx, double cy, double cz)
+    : radius(r), height(h), centerX(cx), centerY(cy), centerZ(cz) {}
 
-Cone::Cone() {
-    radius = 10;
-    height = 10;
-}
-
+// Modify draw()
 void Cone::draw() {
     std::string objFilePath = "../geometry/scripts/cone.obj";
 
     std::vector<Vec3> vertices;
     std::vector<Triangle> triangles;
 
-    int slices = 20; // Number of vertical slices
+    int slices = 20;
 
-    // Add the apex of the cone
-    vertices.emplace_back(0.0f, height, 0.0f);
+    vertices.emplace_back(centerX, centerY + height, centerZ);  // Apex
 
-    // Add the base vertices
     for (int i = 0; i <= slices; ++i) {
         float theta = 2 * M_PI * i / slices;
-        float x = radius * cos(theta);
-        float z = radius * sin(theta);
-        vertices.emplace_back(x, 0.0f, z);
+        float x = centerX + radius * cos(theta);
+        float z = centerZ + radius * sin(theta);
+        float y = centerY;
+        vertices.emplace_back(x, y, z);
     }
 
-    // Generate triangles for the cone
     for (int i = 1; i <= slices; ++i) {
-        triangles.emplace_back(0, i, i + 1, vertices); // Apex to base
+        triangles.emplace_back(0, i, i + 1, vertices);
     }
 
-    // Write to OBJ file
     FileHandler fileHandler;
     if (!fileHandler.writeOBJFile(objFilePath, vertices, triangles)) {
         std::cerr << "Error: Failed to write OBJ file for cone!\n";

@@ -108,11 +108,26 @@ CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Conversions\FileHandler.cpp" -o CMakeFiles\geometry.dir\geometry\src\Conversions\FileHandler.cpp.s
 
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj: CMakeFiles/geometry.dir/flags.make
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Beizer.cpp
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Beizer.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Beizer.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Beizer.cpp"
+
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Beizer.cpp" > CMakeFiles\geometry.dir\geometry\src\Shapes\Beizer.cpp.i
+
+CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Beizer.cpp" -o CMakeFiles\geometry.dir\geometry\src\Shapes\Beizer.cpp.s
+
 CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj: CMakeFiles/geometry.dir/flags.make
 CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Circle.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Circle.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Circle.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Circle.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.i: cmake_force
@@ -127,7 +142,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj: CMakeFiles/geometry.di
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cone.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Cone.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Cone.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Cone.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.i: cmake_force
@@ -142,7 +157,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj: CMakeFiles/geometry.
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cuboid.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Cuboid.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Cuboid.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Cuboid.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.i: cmake_force
@@ -157,7 +172,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj: CMakeFiles/geometr
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cylinder.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Cylinder.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Cylinder.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Cylinder.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.i: cmake_force
@@ -172,7 +187,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj: CMakeFiles/geometry.di
 CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Line.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Line.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Line.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Line.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.i: cmake_force
@@ -187,7 +202,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj: CMakeFiles/geometry
 CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Plotter.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Plotter.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Plotter.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Plotter.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.i: cmake_force
@@ -202,7 +217,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj: CMakeFiles/geomet
 CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Rectangle.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Rectangle.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Rectangle.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Rectangle.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.i: cmake_force
@@ -217,7 +232,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj: CMakeFiles/geometry.
 CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Sphere.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Sphere.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Sphere.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Sphere.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.i: cmake_force
@@ -232,7 +247,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj: CMakeFiles/
 CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Transformations.cpp
 CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj -MF CMakeFiles\geometry.dir\geometry\src\Shapes\Transformations.cpp.obj.d -o CMakeFiles\geometry.dir\geometry\src\Shapes\Transformations.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Shapes\Transformations.cpp"
 
 CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.i: cmake_force
@@ -247,6 +262,7 @@ CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.s: cmake_force
 geometry_OBJECTS = \
 "CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj" \
+"CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj" \
 "CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj" \
 "CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj" \
 "CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj" \
@@ -262,6 +278,7 @@ geometry_EXTERNAL_OBJECTS =
 
 libgeometry.dll: CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj
+libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj
@@ -272,13 +289,14 @@ libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj
 libgeometry.dll: CMakeFiles/geometry.dir/build.make
+libgeometry.dll: C:/Qt/6.9.0/mingw_64/lib/libQt6OpenGL.a
 libgeometry.dll: C:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a
 libgeometry.dll: C:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a
 libgeometry.dll: C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a
 libgeometry.dll: CMakeFiles/geometry.dir/linkLibs.rsp
 libgeometry.dll: CMakeFiles/geometry.dir/objects1.rsp
 libgeometry.dll: CMakeFiles/geometry.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libgeometry.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library libgeometry.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\geometry.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

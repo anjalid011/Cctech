@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "geometry_autogen"
   "CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj"
   "CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj.d"
+  "CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj"
+  "CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj.d"
   "CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj"
   "CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj.d"
   "CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj"

@@ -326,6 +326,30 @@ geometry/src/Conversions/FileHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.s
 .PHONY : geometry/src/Conversions/FileHandler.cpp.s
 
+geometry/src/Shapes/Beizer.obj: geometry/src/Shapes/Beizer.cpp.obj
+.PHONY : geometry/src/Shapes/Beizer.obj
+
+# target to build an object file
+geometry/src/Shapes/Beizer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj
+.PHONY : geometry/src/Shapes/Beizer.cpp.obj
+
+geometry/src/Shapes/Beizer.i: geometry/src/Shapes/Beizer.cpp.i
+.PHONY : geometry/src/Shapes/Beizer.i
+
+# target to preprocess a source file
+geometry/src/Shapes/Beizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.i
+.PHONY : geometry/src/Shapes/Beizer.cpp.i
+
+geometry/src/Shapes/Beizer.s: geometry/src/Shapes/Beizer.cpp.s
+.PHONY : geometry/src/Shapes/Beizer.s
+
+# target to generate assembly for a file
+geometry/src/Shapes/Beizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\geometry.dir\build.make CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.s
+.PHONY : geometry/src/Shapes/Beizer.cpp.s
+
 geometry/src/Shapes/Circle.obj: geometry/src/Shapes/Circle.cpp.obj
 .PHONY : geometry/src/Shapes/Circle.obj
 
@@ -596,6 +620,9 @@ help:
 	@echo ... geometry/src/Conversions/FileHandler.obj
 	@echo ... geometry/src/Conversions/FileHandler.i
 	@echo ... geometry/src/Conversions/FileHandler.s
+	@echo ... geometry/src/Shapes/Beizer.obj
+	@echo ... geometry/src/Shapes/Beizer.i
+	@echo ... geometry/src/Shapes/Beizer.s
 	@echo ... geometry/src/Shapes/Circle.obj
 	@echo ... geometry/src/Shapes/Circle.i
 	@echo ... geometry/src/Shapes/Circle.s

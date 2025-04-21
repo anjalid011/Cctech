@@ -101,6 +101,7 @@ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/
  C:/Program Files/CMake/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake
  C:/Program Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-C-DetermineCompiler.cmake
  C:/Program Files/CMake/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake
+ C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenGL.cmake
  C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
  C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake
  C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake
@@ -340,6 +341,7 @@ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/
  C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/CMakeFiles/4.0.0/CMakeRCCompiler.cmake
  C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/CMakeFiles/4.0.0/CMakeSystem.cmake
  C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Conversions/FileHandler.cpp
+ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Beizer.cpp
  C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Circle.cpp
  C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cone.cpp
  C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/geometry/src/Shapes/Cuboid.cpp
