@@ -85,12 +85,9 @@ struct Point3D {
 
 class Bezier3D : public Shape {
 public:
-    void inputControlPoints();
     void generateCurvePoints(int resolution);
-    void saveToFile(const std::string& filename) const;
     void draw() override;
-    void setControlPoints(const std::vector<Point3D>& points) {controlPoints = points;}
-    
+    void setControlPoints(const std::vector<Point3D>& points) {controlPoints = points;}  
 
 private:
     std::vector<Point3D> controlPoints;

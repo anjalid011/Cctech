@@ -1,6 +1,6 @@
 set(__QT_DEPLOY_TARGET_geometry_FILE C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/libgeometry.dll)
 set(__QT_DEPLOY_TARGET_geometry_TYPE SHARED_LIBRARY)
-set(__QT_DEPLOY_TARGET_geometry_RUNTIME_DLLS C:/Qt/6.9.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6Core.dll)
+set(__QT_DEPLOY_TARGET_geometry_RUNTIME_DLLS C:/Qt/6.10.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Core.dll)
 set(__QT_DEPLOY_TARGET_GeometryApp_FILE C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp.exe)
 set(__QT_DEPLOY_TARGET_GeometryApp_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_GeometryApp_RUNTIME_DLLS C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/libgeometry.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6OpenGLWidgets.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.9.0/mingw_64/bin/Qt6Core.dll)
+set(__QT_DEPLOY_TARGET_GeometryApp_RUNTIME_DLLS C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/libgeometry.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6OpenGLWidgets.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6OpenGL.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.10.0/mingw_64/bin/Qt6Core.dll)

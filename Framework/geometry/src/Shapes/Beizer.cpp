@@ -28,13 +28,13 @@ Point3D Bezier3D::deCasteljau(double t) const {
     return temp[0];
 }
 
-void Bezier3D::saveToFile(const std::string& filename) const {
-    std::ofstream file(filename);
-    for (const auto& pt : curvePoints) {
-        file << pt.x << " " << pt.y << " " << pt.z << "\n";
-    }
-    file.close();
-}
+// void Bezier3D::saveToFile(const std::string& filename) const {
+//     std::ofstream file(filename);
+//     for (const auto& pt : curvePoints) {
+//         file << pt.x << " " << pt.y << " " << pt.z << "\n";
+//     }
+//     file.close();
+// }
 
 
 void Bezier3D::draw() {

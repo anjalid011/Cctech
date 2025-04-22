@@ -42,8 +42,8 @@ void MainWindow::setupUI() {
     leftPanelLayout->addWidget(shapeList);
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
-    mainLayout->addLayout(leftPanelLayout);
-    mainLayout->addWidget(glWidget);
+    mainLayout->addLayout(leftPanelLayout, 2);
+    mainLayout->addWidget(glWidget, 8);
 
     centralWidget->setLayout(mainLayout);
 }
@@ -69,7 +69,60 @@ void MainWindow::onDrawButtonClicked() {
         } else {
             qDebug() << "Invalid Bezier settings.";
         }
-    } else {
+    } 
+    else if(selectedShape == "Cuboid") {
+        double x = cuboidX->text().toDouble();
+        double y = cuboidY->text().toDouble();
+        double z = cuboidZ->text().toDouble();
+        double width = cuboidWidth->text().toDouble();
+        double height = cuboidHeight->text().toDouble();
+        double depth = cuboidDepth->text().toDouble();
+
+        Cuboid cuboid(x, y, z, width, height, depth);
+        cuboid.draw();
+        glWidget->loadAndDrawShape("../geometry/scripts/cuboid.obj");
+        shapeList->addItem("Cuboid: " + QString::number(x) + ", " + QString::number(y) + ", " + QString::number(z) +
+                           ", " + QString::number(width) + ", " + QString::number(height) + ", " + QString::number(depth));
+    } 
+    else if(selectedShape == "Sphere") {
+        double radius = sphereRadius->text().toDouble();
+        double x = sphereX->text().toDouble();
+        double y = sphereY->text().toDouble();
+        double z = sphereZ->text().toDouble();
+
+        Sphere sphere(radius, x, y, z);
+        sphere.draw();
+        glWidget->loadAndDrawShape("../geometry/scripts/sphere.obj");
+        shapeList->addItem("Sphere: " + QString::number(radius) + ", " + QString::number(x) +
+                           ", " + QString::number(y) + ", " + QString::number(z));
+    } 
+    else if(selectedShape == "Cone") {
+        double radius = coneRadius->text().toDouble();
+        double height = coneHeight->text().toDouble();
+        double x = coneX->text().toDouble();
+        double y = coneY->text().toDouble();
+        double z = coneZ->text().toDouble();
+
+        Cone cone(radius, height, x, y, z);
+        cone.draw();
+        glWidget->loadAndDrawShape("../geometry/scripts/cone.obj");
+        shapeList->addItem("Cone: " + QString::number(radius) + ", " + QString::number(height) +
+                           ", " + QString::number(x) + ", " + QString::number(y) + ", " + QString::number(z));
+    } 
+    else if(selectedShape == "Cylinder") {
+        double radius = cylinderRadius->text().toDouble();
+        double height = cylinderHeight->text().toDouble();
+        double x = cylinderX->text().toDouble();
+        double y = cylinderY->text().toDouble();
+        double z = cylinderZ->text().toDouble();
+
+        Cylinder cylinder(radius, height, x, y, z);
+        cylinder.draw();
+        glWidget->loadAndDrawShape("../geometry/scripts/cylinder.obj");
+        shapeList->addItem("Cylinder: " + QString::number(radius) + ", " + QString::number(height) +
+                           ", " + QString::number(x) + ", " + QString::number(y) + ", " + QString::number(z));
+    }
+    else {
         qDebug() << "Drawing shape:" << selectedShape;
         // Add logic for other shapes if needed
     }

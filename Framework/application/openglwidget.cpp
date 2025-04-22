@@ -57,6 +57,24 @@ void OpenGLWidget::paintGL() {
     glRotatef(rotationX, 1.0f, 0.0f, 0.0f);
     glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
 
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+    // Render the loaded triangles
+    glBegin(GL_TRIANGLES);
+    for (const auto &triangle : triangles) {
+        const Vec3 &v1 = vertices[triangle.v1];
+        const Vec3 &v2 = vertices[triangle.v2];
+        const Vec3 &v3 = vertices[triangle.v3];
+
+        glVertex3f(v1.x, v1.y, v1.z);
+        glVertex3f(v2.x, v2.y, v2.z);
+        glVertex3f(v3.x, v3.y, v3.z);
+    }
+    glEnd();
+
+    // Restore default polygon mode
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
     // Render control points
     glPointSize(10.0f);
     glBegin(GL_POINTS);

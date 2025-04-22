@@ -1,0 +1,38 @@
+# ninja log v6
+51	3580	7670092568420105	CMakeFiles/geometry.dir/geometry/src/Shapes/Cuboid.cpp.obj	f4982df83aeeece0
+47	3431	7670092568380120	CMakeFiles/geometry.dir/geometry/src/Shapes/Cone.cpp.obj	cb1f190db7981e6e
+4275	4797	7670092615775228	libgeometry.dll	e0636b67d5e8bc2c
+302	2926	7670002183494435	CMakeFiles/geometry.dir/geometry/src/Conversions/FileHandler.cpp.obj	28f786228df61593
+30	293	7670002180878878	geometry_autogen/timestamp	44ff744d3ba38ae2
+43	3229	7670092568340274	CMakeFiles/geometry.dir/geometry/src/Shapes/Circle.cpp.obj	de88038613ecfbfe
+115	259	7670098269273835	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_autogen/mocs_compilation.cpp	8d2c1ab0a41f3d99
+327	2109	7670002183841034	CMakeFiles/geometry.dir/geometry/src/Shapes/Plotter.cpp.obj	ae26241b6e5c2553
+55	3512	7670092568470102	CMakeFiles/geometry.dir/geometry/src/Shapes/Cylinder.cpp.obj	9a61e8439ea60a39
+30	293	7670002180878878	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/mocs_compilation.cpp	44ff744d3ba38ae2
+4275	4797	7670092615775228	libgeometry.dll.a	e0636b67d5e8bc2c
+30	293	7670002180878878	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/geometry_autogen/timestamp	44ff744d3ba38ae2
+30	293	7670002180878878	geometry_autogen/mocs_compilation.cpp	44ff744d3ba38ae2
+3643	4108	7670098304545547	GeometryApp.exe	5b36bda65e34b60
+39	114	7670098268513821	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/CMakeFiles/clean_scripts	d7300d78711a0488
+59	3251	7670092568510113	CMakeFiles/geometry.dir/geometry/src/Shapes/Line.cpp.obj	e0030f34bfbf7776
+280	3915	7670093413153099	CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj	7ca43d46138e3605
+5867	10336	7670092626575243	CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.obj	5fd625b8a4bfe30c
+260	3642	7670098270721689	CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj	fa66a81c56f2b9b5
+5870	10182	7670092626605243	CMakeFiles/GeometryApp.dir/application/main.cpp.obj	26142a5a2d4e3d42
+299	771	7670002183494435	CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj	49c1ea6e5250b98f
+115	259	7670098269273835	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_autogen/timestamp	8d2c1ab0a41f3d99
+70	3382	7670092568660120	CMakeFiles/geometry.dir/geometry/src/Shapes/Sphere.cpp.obj	6a7aceda3668fb93
+39	4274	7670092568300006	CMakeFiles/geometry.dir/geometry/src/Shapes/Beizer.cpp.obj	811d6219d0f28910
+2111	4458	7670002201650376	CMakeFiles/geometry.dir/geometry/src/Shapes/Transformations.cpp.obj	d38c61f47da82313
+64	3209	7670092568570113	CMakeFiles/geometry.dir/geometry/src/Shapes/Rectangle.cpp.obj	e609a37c5d0de8bb
+115	259	7670098269273835	GeometryApp_autogen/mocs_compilation.cpp	8d2c1ab0a41f3d99
+39	114	7670098268513821	CMakeFiles/clean_scripts	d7300d78711a0488
+115	259	7670098269273835	GeometryApp_autogen/timestamp	8d2c1ab0a41f3d99
+40	116	7670100375233763	CMakeFiles/clean_scripts	d7300d78711a0488
+40	116	7670100375233763	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/CMakeFiles/clean_scripts	d7300d78711a0488
+116	248	7670100375997185	GeometryApp_autogen/timestamp	8d2c1ab0a41f3d99
+116	248	7670100375997185	GeometryApp_autogen/mocs_compilation.cpp	8d2c1ab0a41f3d99
+116	248	7670100375997185	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_autogen/timestamp	8d2c1ab0a41f3d99
+116	248	7670100375997185	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_autogen/mocs_compilation.cpp	8d2c1ab0a41f3d99
+249	3641	7670100377327191	CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj	fa66a81c56f2b9b5
+3642	4076	7670100411242919	GeometryApp.exe	5b36bda65e34b60
