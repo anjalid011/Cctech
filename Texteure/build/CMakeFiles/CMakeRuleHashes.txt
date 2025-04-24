@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+0721a2465a977229eaceda62fe43f562 geometry_autogen/timestamp
+4f8687b00b9f63fb3110cb823656c781 main_autogen/timestamp

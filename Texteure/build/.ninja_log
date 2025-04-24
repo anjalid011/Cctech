@@ -1,0 +1,31 @@
+# ninja log v6
+3227	3553	7672016514735545	main.exe	71cf832412acedfa
+190	3226	7672016484365704	CMakeFiles/main.dir/src/GLWidget.cpp.obj	fa02e4d312309f25
+923	4507	7672005218230930	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	da1d9eaa213dbd7c
+16	64	7671997460848893	CMakeFiles/clean.additional	cee7e56548ea36fa
+20	197	7671997468418884	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/geometry_autogen/mocs_compilation.cpp	82d194b44d58f2fd
+64	80	7671997461328878	clean	d6542ab91c93f907
+1652	6759	7671997483518892	CMakeFiles/main.dir/src/main.cpp.obj	c86a41fb0a293efc
+258	385	7671997470758900	libgeometry.dll.a	da64b232c6fbadb5
+930	5086	7672005218300951	CMakeFiles/main.dir/src/MainWindow.cpp.obj	e008bba1641f8bbc
+20	197	7671997468418884	geometry_autogen/mocs_compilation.cpp	82d194b44d58f2fd
+20	197	7671997468418884	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/geometry_autogen/timestamp	82d194b44d58f2fd
+204	257	7671997469038887	CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj	93ecb508300fce7a
+37	189	7672016482845559	main_autogen/timestamp	410a9d74fecab3f5
+37	189	7672016482845559	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/main_autogen/mocs_compilation.cpp	410a9d74fecab3f5
+258	385	7671997470758900	libgeometry.dll	da64b232c6fbadb5
+20	197	7671997468418884	geometry_autogen/timestamp	82d194b44d58f2fd
+37	189	7672016482845559	main_autogen/mocs_compilation.cpp	410a9d74fecab3f5
+37	189	7672016482845559	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/main_autogen/timestamp	410a9d74fecab3f5
+38	181	7672016787772724	main_autogen/timestamp	410a9d74fecab3f5
+38	181	7672016787772724	main_autogen/mocs_compilation.cpp	410a9d74fecab3f5
+38	181	7672016787772724	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/main_autogen/timestamp	410a9d74fecab3f5
+38	181	7672016787772724	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/main_autogen/mocs_compilation.cpp	410a9d74fecab3f5
+183	3184	7672016789212217	CMakeFiles/main.dir/src/GLWidget.cpp.obj	fa02e4d312309f25
+3184	3509	7672016819228328	main.exe	71cf832412acedfa
+37	183	7672017232402006	main_autogen/timestamp	410a9d74fecab3f5
+37	183	7672017232402006	main_autogen/mocs_compilation.cpp	410a9d74fecab3f5
+37	183	7672017232402006	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/main_autogen/timestamp	410a9d74fecab3f5
+37	183	7672017232402006	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Texteure/build/main_autogen/mocs_compilation.cpp	410a9d74fecab3f5
+184	3161	7672017233867247	CMakeFiles/main.dir/src/GLWidget.cpp.obj	fa02e4d312309f25
+3162	3489	7672017263647260	main.exe	71cf832412acedfa

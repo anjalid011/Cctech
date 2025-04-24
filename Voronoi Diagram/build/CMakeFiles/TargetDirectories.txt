@@ -1,0 +1,3 @@
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Voronoi Diagram/build/CMakeFiles/VoronoiApp.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Voronoi Diagram/build/CMakeFiles/edit_cache.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Voronoi Diagram/build/CMakeFiles/rebuild_cache.dir
