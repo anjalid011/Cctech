@@ -32,8 +32,8 @@ void Circle::draw() {
     std::string stlFilePath = ".././geometry/scripts/circle.stl";
     std::string datFilePath = ".././geometry/scripts/circle.dat";
 
-    Transformations t;
-    t.performTransformation2D(".././geometry/scripts/circle.dat", ".././geometry/scripts/transformedCircle.dat", "Circle");
+    // Transformations t;
+    // t.performTransformation2D(".././geometry/scripts/circle.dat", ".././geometry/scripts/transformedCircle.dat", "Circle");
 
     Plotter::plot2D("../geometry/scripts/circle.dat", "Circle");
     std::cout << "Circle drawn successfully!\n";

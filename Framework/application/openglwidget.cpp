@@ -7,6 +7,8 @@
 #include <vector>
 #include <cmath>
 #include <cstdlib> 
+// #include <GL/glu.h>
+
 // #include <GL/gl.h>
 // Constructor for OpenGLWidget
 OpenGLWidget::OpenGLWidget(QWidget *parent)
@@ -18,9 +20,27 @@ OpenGLWidget::OpenGLWidget(QWidget *parent)
 
 // Initializes OpenGL settings
 void OpenGLWidget::initializeGL() {
-    initializeOpenGLFunctions(); // Initialize OpenGL functions
+    initializeOpenGLFunctions();
     glEnable(GL_DEPTH_TEST); // Enable depth testing for 3D rendering
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set background color to black
+
+    glEnable(GL_LIGHTING);          // Enable lighting
+    glEnable(GL_LIGHT0);            // Enable light source 0
+    glEnable(GL_COLOR_MATERIAL);    // Use glColor as material property
+
+    // Set light properties
+    GLfloat lightPos[] = { 50.0f, 50.0f, 100.0f, 1.0f }; // Position of light
+    GLfloat lightAmbient[]  = { 0.2f, 0.2f, 0.2f, 1.0f }; // Ambient light color
+    GLfloat lightDiffuse[]  = { 0.8f, 0.8f, 0.8f, 1.0f }; // Diffuse light color
+    GLfloat lightSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f }; // Specular light color
+
+    glLightfv(GL_LIGHT0, GL_POSITION, lightPos);
+    glLightfv(GL_LIGHT0, GL_AMBIENT,  lightAmbient);  // Set ambient light
+    glLightfv(GL_LIGHT0, GL_DIFFUSE,  lightDiffuse);  // Set diffuse light
+    glLightfv(GL_LIGHT0, GL_SPECULAR, lightSpecular); // Set specular light
+
+    glShadeModel(GL_SMOOTH); // Smooth shading
+    glEnable(GL_NORMALIZE);  // Normalize normals for proper lighting
 }
 
 // Handles resizing of the OpenGL viewport
@@ -49,15 +69,42 @@ void OpenGLWidget::resizeGL(int w, int h) {
 
 // Renders the OpenGL scene
 void OpenGLWidget::paintGL() {
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the screen
-    glLoadIdentity(); // Reset transformations
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glLoadIdentity();
+
+    // Position camera
+    // gluLookAt(0, 0, 200, 0, 0, 0, 0, 1, 0);
+
+
+    glPushMatrix();
 
     // Apply transformations for zoom and rotation
     glTranslatef(0.0f, 0.0f, -10.0f + zoom);
     glRotatef(rotationX, 1.0f, 0.0f, 0.0f);
     glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
 
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    // Set material properties
+    GLfloat matAmbient[]  = { 0.2f, 0.2f, 0.2f, 1.0f }; // Ambient color
+    GLfloat matDiffuse[]  = { 0.5f, 0.5f, 0.9f, 1.0f }; // Diffuse color
+    GLfloat matSpecular[] = { 1.0f, 1.0f, 1.0f, 1.0f }; // Specular color
+    GLfloat matShininess[] = { 50.0f };                 // Shininess
+
+    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, matAmbient);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, matDiffuse);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, matSpecular);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, matShininess);
+
+    addAxis();
+
+     // Render the transformed shape
+     const auto& points = transformations.getTransformedPoints();
+     if (!points.empty()) {
+         glBegin(GL_QUADS); // Assuming the shape is a cuboid
+         for (const auto& point : points) {
+             glVertex3f(point[0], point[1], point[2]);
+         }
+         glEnd();
+     }
 
     // Render the loaded triangles
     glBegin(GL_TRIANGLES);
@@ -92,6 +139,28 @@ void OpenGLWidget::paintGL() {
     }
 
     glFlush();
+}
+
+void OpenGLWidget::loadShapePoints(const std::vector<std::vector<double>>& points) {
+    transformations.loadPoints(points);
+    update(); // Trigger a repaint
+}
+
+void OpenGLWidget::translateShape(float dx, float dy, float dz) {
+    transformations.applyTranslation(dx, dy, dz);
+    update(); // Redraw the scene with updated points
+}
+
+void OpenGLWidget::rotateShape(float angleX, float angleY, float angleZ) {
+    if (angleX != 0) transformations.applyRotation(angleX, 'x');
+    if (angleY != 0) transformations.applyRotation(angleY, 'y');
+    if (angleZ != 0) transformations.applyRotation(angleZ, 'z');
+    update(); // Redraw the scene with updated points
+}
+
+void OpenGLWidget::scaleShape(float scaleX, float scaleY, float scaleZ) {
+    transformations.applyScaling(scaleX, scaleY, scaleZ);
+    update(); // Redraw the scene with updated points
 }
 
 void OpenGLWidget::clearControlPoints() {
@@ -168,6 +237,7 @@ void OpenGLWidget::mousePressEvent(QMouseEvent* event) {
             }
         }
     }
+    lastMousePos = event->position();
 }
  
 void OpenGLWidget::mouseMoveEvent(QMouseEvent* event) {
@@ -190,6 +260,16 @@ void OpenGLWidget::mouseMoveEvent(QMouseEvent* event) {
 
         update(); // Redraw the scene
     }
+    QPointF currentPos = event->position();
+     int dx = currentPos.x() - lastMousePos.x();
+     int dy = currentPos.y() - lastMousePos.y();
+  
+     if (event->buttons() & Qt::LeftButton) {
+         rotationX += dy * 0.5f;
+         rotationY += dx * 0.5f;
+         update();
+     }
+     lastMousePos = currentPos;
 }
 
 void OpenGLWidget::mouseReleaseEvent(QMouseEvent* event) {
@@ -209,3 +289,32 @@ int OpenGLWidget::binomialCoefficient(int n, int k) {
     if (k == 0 || k == n) return 1;
     return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
 }
+
+void OpenGLWidget::addAxis() {
+    // Scale the axis length based on the object radius
+    // float axisLength = objectRadius * 1.5f; // Adjust the multiplier as needed
+ 
+    // Draw the axis lines
+    glBegin(GL_LINES);
+ 
+    // X-axis (red)
+    glColor3f(1.0f, 0.0f, 0.0f);
+    glVertex3f(-10.0f, 0.0f, 0.0f);
+    glVertex3f(10.0f, 0.0f, 0.0f);
+ 
+    // Y-axis (green)
+    glColor3f(0.0f, 1.0f, 0.0f);
+    glVertex3f(0.0f, -10.0f, 0.0f);
+    glVertex3f(0.0f, 10.0f, 0.0f);
+ 
+    // Z-axis (blue)
+    glColor3f(0.0f, 0.0f, 1.0f);
+    glVertex3f(0.0f, 0.0f, -10.0f);
+    glVertex3f(0.0f, 0.0f, 10.0f);
+ 
+    glEnd();
+ 
+    // Reset color to white
+    glColor3f(1.0f, 1.0f, 1.0f);
+}
+

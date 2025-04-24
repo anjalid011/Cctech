@@ -7,6 +7,7 @@
 #include <QMouseEvent>
 #include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Conversions\Triangle.h"
 #include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
+#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Transformations.h"
 
 
 class OpenGLWidget : public QOpenGLWidget, protected QOpenGLFunctions {
@@ -20,6 +21,11 @@ public:
     int binomialCoefficient(int n, int k);
     void setTotalControlPoints(int totalPoints);
     void setInterpolationPoints(int points);
+    void addAxis();
+    void translateShape(float dx, float dy, float dz);
+    void rotateShape(float angleX, float angleY, float angleZ);
+    void scaleShape(float scaleX, float scaleY, float scaleZ);
+    void loadShapePoints(const std::vector<std::vector<double>>& points);
 
 protected:
     void initializeGL() override; // Initializes OpenGL settings
@@ -43,6 +49,7 @@ private:
     QPointF lastMousePos;
     Bezier3D bezierCurve;
     QTimer* updateTimer;
+    Transformations transformations;
     float zoom = -5.0f; // Distance from camera
     float aspectRatio = 1.0f; // Aspect ratio for the viewport
     float fov = 45.0f; // Field of view

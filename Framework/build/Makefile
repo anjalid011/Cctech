@@ -230,6 +230,30 @@ GeometryApp_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.s
 .PHONY : GeometryApp_autogen/mocs_compilation.cpp.s
 
+application/Voronoi.obj: application/Voronoi.cpp.obj
+.PHONY : application/Voronoi.obj
+
+# target to build an object file
+application/Voronoi.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj
+.PHONY : application/Voronoi.cpp.obj
+
+application/Voronoi.i: application/Voronoi.cpp.i
+.PHONY : application/Voronoi.i
+
+# target to preprocess a source file
+application/Voronoi.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.i
+.PHONY : application/Voronoi.cpp.i
+
+application/Voronoi.s: application/Voronoi.cpp.s
+.PHONY : application/Voronoi.s
+
+# target to generate assembly for a file
+application/Voronoi.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.s
+.PHONY : application/Voronoi.cpp.s
+
 application/main.obj: application/main.cpp.obj
 .PHONY : application/main.obj
 
@@ -608,6 +632,9 @@ help:
 	@echo ... GeometryApp_autogen/mocs_compilation.obj
 	@echo ... GeometryApp_autogen/mocs_compilation.i
 	@echo ... GeometryApp_autogen/mocs_compilation.s
+	@echo ... application/Voronoi.obj
+	@echo ... application/Voronoi.i
+	@echo ... application/Voronoi.s
 	@echo ... application/main.obj
 	@echo ... application/main.i
 	@echo ... application/main.s

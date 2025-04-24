@@ -13,7 +13,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 # Include directories
+include_directories("C:/Users/Anjali Dongare/Desktop/Project/boost_1_88_0")
 include_directories(${CMAKE_SOURCE_DIR}/geometry/include)
+
 
 # Source files for the geometry shared library
 file(GLOB GEOMETRY_SRC 
@@ -28,6 +30,8 @@ set(APPLICATION_SRC
     ${CMAKE_SOURCE_DIR}/application/mainwindow.h
     ${CMAKE_SOURCE_DIR}/application/openglwidget.cpp
     ${CMAKE_SOURCE_DIR}/application/openglwidget.h
+    ${CMAKE_SOURCE_DIR}/application/Voronoi.h
+    ${CMAKE_SOURCE_DIR}/application/Voronoi.cpp
 )
 
 # Set Qt installation path

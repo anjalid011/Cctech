@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "c:/Qt/Tools/mingw1310_64/bin/gcc.exe")
+set(CMAKE_C_COMPILER "C:/Qt/Tools/mingw1310_64/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.1.0")

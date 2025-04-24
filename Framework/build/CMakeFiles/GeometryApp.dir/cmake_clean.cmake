@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "GeometryApp_autogen"
   "CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.obj"
   "CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj"
+  "CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj.d"
   "CMakeFiles/GeometryApp.dir/application/main.cpp.obj"
   "CMakeFiles/GeometryApp.dir/application/main.cpp.obj.d"
   "CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj"
