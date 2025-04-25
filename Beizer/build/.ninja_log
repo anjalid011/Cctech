@@ -1,0 +1,91 @@
+# ninja log v6
+9	196	7672780931538987	geometry_autogen/timestamp	e1084e4f67d8f12e
+9	196	7672780931538987	geometry_autogen/mocs_compilation.cpp	e1084e4f67d8f12e
+9	196	7672780931538987	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/geometry_autogen/timestamp	e1084e4f67d8f12e
+9	196	7672780931538987	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/geometry_autogen/mocs_compilation.cpp	e1084e4f67d8f12e
+202	263	7672780933377105	CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj	4eda97d64746af91
+263	404	7672780935382585	libgeometry.dll	332e3e013f8b70a
+263	404	7672780935382585	libgeometry.dll.a	332e3e013f8b70a
+405	1589	7672780946719308	main_autogen/timestamp	d6189a66a91c36e4
+405	1589	7672780946719308	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+405	1589	7672780946719308	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+405	1589	7672780946719308	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+39	3231	7672781609393415	CMakeFiles/main.dir/src/Bezier.cpp.obj	6ff653b4bc9c358d
+44	3994	7672781609443705	CMakeFiles/main.dir/src/GLWidget.cpp.obj	46ffae435a4cc6a3
+54	4099	7672781609543745	CMakeFiles/main.dir/src/main.cpp.obj	8b22b0e249e573c6
+48	4225	7672781609483703	CMakeFiles/main.dir/src/MainWindow.cpp.obj	e44cf2702ca4f26c
+33	4533	7672781609333468	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	32b2e5f247c91b87
+4534	4867	7672781654207441	main.exe	b0d8ffb590e949a9
+11	44	7672782862894686	CMakeFiles/clean.additional	cee7e56548ea36fa
+45	61	7672782863230853	clean	d6542ab91c93f907
+27	216	7672782867041412	geometry_autogen/timestamp	e1084e4f67d8f12e
+27	216	7672782867041412	geometry_autogen/mocs_compilation.cpp	e1084e4f67d8f12e
+27	216	7672782867041412	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/geometry_autogen/timestamp	e1084e4f67d8f12e
+27	216	7672782867041412	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/geometry_autogen/mocs_compilation.cpp	e1084e4f67d8f12e
+217	281	7672782867539676	CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj	4eda97d64746af91
+281	447	7672782869746738	libgeometry.dll	332e3e013f8b70a
+281	447	7672782869746738	libgeometry.dll.a	332e3e013f8b70a
+447	1671	7672782881419350	main_autogen/timestamp	d6189a66a91c36e4
+447	1671	7672782881419350	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+447	1671	7672782881419350	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+447	1671	7672782881419350	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+1677	5298	7672782882232408	CMakeFiles/main.dir/src/Bezier.cpp.obj	6ff653b4bc9c358d
+1682	6122	7672782882258360	CMakeFiles/main.dir/src/GLWidget.cpp.obj	46ffae435a4cc6a3
+1694	6285	7672782882399339	CMakeFiles/main.dir/src/main.cpp.obj	8b22b0e249e573c6
+1687	6387	7672782882258360	CMakeFiles/main.dir/src/MainWindow.cpp.obj	e44cf2702ca4f26c
+1671	6686	7672782882062418	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	32b2e5f247c91b87
+6686	7017	7672782932208464	main.exe	b0d8ffb590e949a9
+11	46	7672783114909874	CMakeFiles/clean.additional	cee7e56548ea36fa
+46	63	7672783115266838	clean	d6542ab91c93f907
+27	206	7672783119160859	geometry_autogen/timestamp	e1084e4f67d8f12e
+27	206	7672783119160859	geometry_autogen/mocs_compilation.cpp	e1084e4f67d8f12e
+27	206	7672783119160859	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/geometry_autogen/timestamp	e1084e4f67d8f12e
+27	206	7672783119160859	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/geometry_autogen/mocs_compilation.cpp	e1084e4f67d8f12e
+207	270	7672783119707267	CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj	4eda97d64746af91
+270	438	7672783121876492	libgeometry.dll	332e3e013f8b70a
+270	438	7672783121876492	libgeometry.dll.a	332e3e013f8b70a
+438	1660	7672783133540770	main_autogen/timestamp	d6189a66a91c36e4
+438	1660	7672783133540770	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+438	1660	7672783133540770	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+438	1660	7672783133540770	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+1666	5114	7672783134208632	CMakeFiles/main.dir/src/Bezier.cpp.obj	6ff653b4bc9c358d
+1681	6017	7672783134457075	CMakeFiles/main.dir/src/main.cpp.obj	8b22b0e249e573c6
+1671	6022	7672783134208632	CMakeFiles/main.dir/src/GLWidget.cpp.obj	46ffae435a4cc6a3
+1676	6214	7672783134409856	CMakeFiles/main.dir/src/MainWindow.cpp.obj	e44cf2702ca4f26c
+1661	6451	7672783134208632	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	32b2e5f247c91b87
+6451	6770	7672783182039594	main.exe	b0d8ffb590e949a9
+26	196	7672784873908568	main_autogen/timestamp	d6189a66a91c36e4
+26	196	7672784873908568	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+26	196	7672784873908568	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+26	196	7672784873908568	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+197	2320	7672784875553731	CMakeFiles/main.dir/src/Bezier.cpp.obj	6ff653b4bc9c358d
+2321	2699	7672784896766648	main.exe	b0d8ffb590e949a9
+18	192	7672786272594567	main_autogen/timestamp	d6189a66a91c36e4
+18	192	7672786272594567	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+18	192	7672786272594567	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+18	192	7672786272594567	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+44	211	7672787422049134	main_autogen/timestamp	d6189a66a91c36e4
+44	211	7672787422049134	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+44	211	7672787422049134	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+44	211	7672787422049134	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+212	2911	7672787423728869	CMakeFiles/main.dir/src/GLWidget.cpp.obj	46ffae435a4cc6a3
+2911	3235	7672787450724914	main.exe	b0d8ffb590e949a9
+23	1176	7672791540374785	main_autogen/timestamp	d6189a66a91c36e4
+23	1176	7672791540374785	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+23	1176	7672791540374785	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+23	1176	7672791540374785	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+1182	4756	7672791541004789	CMakeFiles/main.dir/src/Bezier.cpp.obj	6ff653b4bc9c358d
+1188	5679	7672791541064791	CMakeFiles/main.dir/src/GLWidget.cpp.obj	46ffae435a4cc6a3
+1198	5752	7672791541164796	CMakeFiles/main.dir/src/main.cpp.obj	8b22b0e249e573c6
+1193	5898	7672791541104822	CMakeFiles/main.dir/src/MainWindow.cpp.obj	e44cf2702ca4f26c
+1177	6136	7672791540954786	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	32b2e5f247c91b87
+6136	6486	7672791590544791	main.exe	b0d8ffb590e949a9
+24	1453	7672798775902916	main_autogen/timestamp	d6189a66a91c36e4
+24	1453	7672798775902916	main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+24	1453	7672798775902916	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/timestamp	d6189a66a91c36e4
+24	1453	7672798775902916	C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/mocs_compilation.cpp	d6189a66a91c36e4
+1460	5618	7672798776632927	CMakeFiles/main.dir/src/GLWidget.cpp.obj	46ffae435a4cc6a3
+1471	5694	7672798776742968	CMakeFiles/main.dir/src/main.cpp.obj	8b22b0e249e573c6
+1465	5820	7672798776682937	CMakeFiles/main.dir/src/MainWindow.cpp.obj	e44cf2702ca4f26c
+1454	6134	7672798776582928	CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj	32b2e5f247c91b87
+6134	6476	7672798823372923	main.exe	b0d8ffb590e949a9
