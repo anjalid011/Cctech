@@ -41,5 +41,5 @@ add_library(geometry SHARED ${GEOMETRY_SRC})
 target_link_libraries(geometry Qt6::Widgets)
 
 add_executable(main ${APPLICATION_SRC} "src/MainWindow.cpp")
-target_link_libraries(main geometry Qt6::Widgets Qt6::OpenGLWidgets OpenGL::GL)
+target_link_libraries(main PRIVATE geometry Qt6::Widgets Qt6::OpenGLWidgets OpenGL::GL GLU32)
 

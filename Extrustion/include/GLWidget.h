@@ -1,54 +1,33 @@
 #pragma once
-
 #include <QOpenGLWidget>
-#include <QOpenGLFunctions>
-#include <QString>
-#include <QPainter>
-
-#include <QVector3D>
-#include <QVector2D>
-#include <QVector>
-#include <cfloat>
-#include <QMatrix4x4>
-
-
 #include <QMouseEvent>
-#include <QTimer>
+#include <QOpenGLFunctions>
+#include "Structure.h"
 
-
-// include cpp builtin headers
-#include <iostream>
-
-class GLWidget : public QOpenGLWidget, protected QOpenGLFunctions {
+class GLWidget : public QOpenGLWidget {
     Q_OBJECT
 
 public:
-    GLWidget(QWidget *parent = nullptr);
-    ~GLWidget();
+    GLWidget(QWidget* parent = nullptr);
+    void setSolid(Solid* solid);
+    void performExtrusion();
 
 protected:
     void initializeGL() override;
     void resizeGL(int w, int h) override;
     void paintGL() override;
-
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
-    void mouseReleaseEvent(QMouseEvent*) override;
+    void wheelEvent(QWheelEvent *event) override;
+    void mouseDoubleClickEvent(QMouseEvent *event);
+    // void keyPressEvent(QKeyEvent *event) override;
 
 private:
-    QVector<QVector3D> polygonPoints;
-    QVector<QVector3D> extrudedVertices;
-    bool polygonClosed = false;
-    float extrusionHeight = 0.0f;
-    QVector3D polygonNormal;
-
-    float rotationX = 0.0f; // Rotation angle around the X-axis
-    float rotationY = 0.0f; // Rotation angle around the Y-axis
-    bool rightMousePressed = false; // Track if the right mouse button is pressed
-    QPoint lastMousePos; // To track the last mouse position for rotation
-
-    QVector3D screenToWorld(const QPoint &pos);
-    bool isCloseToFirstPoint(const QVector3D &p);
-    void updateExtrusion(float height);
-    QVector3D computePolygonNormal(const QVector<QVector3D> &points);
+    Solid* currentSolid;
+    float xRot = 0.0f;
+    float yRot = 0.0f;
+    float zoom = -5.0f;
+    QPoint lastMousePos;
+    bool inputMode = true;            // Enable/disable point input mode
+    std::vector<QVector3D> profilePoints;  // stores clicked points
 };

@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion"
+CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build"
+CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/geometry.dir/depend.make
@@ -71,9 +71,9 @@ include CMakeFiles/geometry.dir/flags.make
 geometry_autogen/timestamp: C:/Qt/6.9.0/mingw_64/bin/moc.exe
 geometry_autogen/timestamp: C:/Qt/6.9.0/mingw_64/bin/uic.exe
 geometry_autogen/timestamp: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target geometry"
-	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/CMakeFiles/geometry_autogen.dir/AutogenInfo.json" ""
-	"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/geometry_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target geometry"
+	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/Ext/build/CMakeFiles/geometry_autogen.dir/AutogenInfo.json" ""
+	"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/Ext/build/geometry_autogen/timestamp"
 
 CMakeFiles/geometry.dir/codegen:
 .PHONY : CMakeFiles/geometry.dir/codegen
@@ -82,16 +82,16 @@ CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj: CMakeFiles/ge
 CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj: CMakeFiles/geometry.dir/includes_CXX.rsp
 CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj: geometry_autogen/mocs_compilation.cpp
 CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj: CMakeFiles/geometry.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\geometry_autogen\mocs_compilation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\geometry_autogen\mocs_compilation.cpp"
 
 CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\geometry_autogen\mocs_compilation.cpp" > CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\geometry_autogen\mocs_compilation.cpp" > CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/geometry.dir/geometry_autogen/mocs_compilation.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\geometry_autogen\mocs_compilation.cpp" -o CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\geometry_autogen\mocs_compilation.cpp" -o CMakeFiles\geometry.dir\geometry_autogen\mocs_compilation.cpp.s
 
 # Object files for target geometry
 geometry_OBJECTS = \
@@ -108,7 +108,7 @@ libgeometry.dll: C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a
 libgeometry.dll: CMakeFiles/geometry.dir/linkLibs.rsp
 libgeometry.dll: CMakeFiles/geometry.dir/objects1.rsp
 libgeometry.dll: CMakeFiles/geometry.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgeometry.dll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libgeometry.dll"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\geometry.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -120,6 +120,6 @@ CMakeFiles/geometry.dir/clean:
 .PHONY : CMakeFiles/geometry.dir/clean
 
 CMakeFiles/geometry.dir/depend: geometry_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles\geometry.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles\geometry.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/geometry.dir/depend
 

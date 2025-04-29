@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion"
+CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build"
+CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build"
 
 # Utility rule file for geometry_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/geometry_autogen: geometry_autogen/timestamp
 geometry_autogen/timestamp: C:/Qt/6.9.0/mingw_64/bin/moc.exe
 geometry_autogen/timestamp: C:/Qt/6.9.0/mingw_64/bin/uic.exe
 geometry_autogen/timestamp: CMakeFiles/geometry_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target geometry"
-	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/CMakeFiles/geometry_autogen.dir/AutogenInfo.json" ""
-	"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/geometry_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target geometry"
+	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/Ext/build/CMakeFiles/geometry_autogen.dir/AutogenInfo.json" ""
+	"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/Ext/build/geometry_autogen/timestamp"
 
 CMakeFiles/geometry_autogen.dir/codegen:
 .PHONY : CMakeFiles/geometry_autogen.dir/codegen
@@ -91,6 +91,6 @@ CMakeFiles/geometry_autogen.dir/clean:
 .PHONY : CMakeFiles/geometry_autogen.dir/clean
 
 CMakeFiles/geometry_autogen.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles\geometry_autogen.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles\geometry_autogen.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/geometry_autogen.dir/depend
 

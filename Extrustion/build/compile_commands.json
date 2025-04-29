@@ -13,20 +13,32 @@
 },
 {
   "directory": "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/include\" -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/include\" -isystem C:/Qt/6.10.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.0/mingw_64/include -isystem C:/Qt/6.10.0/mingw_64/include/QtCore -isystem C:/Qt/6.10.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.0/mingw_64/include/QtGui -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGLWidgets -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGL -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Extrusion.cpp.obj -c \"C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\Extrusion.cpp\"",
+  "file": "C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\Extrusion.cpp",
+  "output": "CMakeFiles\\main.dir\\src\\Extrusion.cpp.obj"
+},
+{
+  "directory": "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build",
   "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/include\" -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/include\" -isystem C:/Qt/6.10.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.0/mingw_64/include -isystem C:/Qt/6.10.0/mingw_64/include/QtCore -isystem C:/Qt/6.10.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.0/mingw_64/include/QtGui -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGLWidgets -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGL -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\GLWidget.cpp.obj -c \"C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\GLWidget.cpp\"",
   "file": "C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\GLWidget.cpp",
   "output": "CMakeFiles\\main.dir\\src\\GLWidget.cpp.obj"
 },
 {
   "directory": "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build",
-  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/include\" -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/include\" -isystem C:/Qt/6.10.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.0/mingw_64/include -isystem C:/Qt/6.10.0/mingw_64/include/QtCore -isystem C:/Qt/6.10.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.0/mingw_64/include/QtGui -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGLWidgets -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGL -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\MainWindow.cpp.obj -c \"C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\MainWindow.cpp\"",
-  "file": "C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\MainWindow.cpp",
-  "output": "CMakeFiles\\main.dir\\src\\MainWindow.cpp.obj"
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/include\" -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/include\" -isystem C:/Qt/6.10.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.0/mingw_64/include -isystem C:/Qt/6.10.0/mingw_64/include/QtCore -isystem C:/Qt/6.10.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.0/mingw_64/include/QtGui -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGLWidgets -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGL -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\Structure.cpp.obj -c \"C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\Structure.cpp\"",
+  "file": "C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\Structure.cpp",
+  "output": "CMakeFiles\\main.dir\\src\\Structure.cpp.obj"
 },
 {
   "directory": "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build",
   "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/include\" -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/include\" -isystem C:/Qt/6.10.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.0/mingw_64/include -isystem C:/Qt/6.10.0/mingw_64/include/QtCore -isystem C:/Qt/6.10.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.0/mingw_64/include/QtGui -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGLWidgets -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGL -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c \"C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\main.cpp\"",
   "file": "C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\main.cpp",
   "output": "CMakeFiles\\main.dir\\src\\main.cpp.obj"
+},
+{
+  "directory": "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build",
+  "command": "c:\\Qt\\Tools\\mingw1310_64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_OPENGLWIDGETS_LIB -DQT_OPENGL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64 -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/include\" -I\"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/include\" -isystem C:/Qt/6.10.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.10.0/mingw_64/include -isystem C:/Qt/6.10.0/mingw_64/include/QtCore -isystem C:/Qt/6.10.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.10.0/mingw_64/include/QtGui -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGLWidgets -isystem C:/Qt/6.10.0/mingw_64/include/QtOpenGL -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\mainwindow.cpp.obj -c \"C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\mainwindow.cpp\"",
+  "file": "C:\\Users\\Anjali Dongare\\Desktop\\Project\\Cctech\\Extrustion\\src\\mainwindow.cpp",
+  "output": "CMakeFiles\\main.dir\\src\\mainwindow.cpp.obj"
 }
 ]

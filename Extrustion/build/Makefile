@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion"
+CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build"
+CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -241,6 +241,30 @@ main_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.s
 .PHONY : main_autogen/mocs_compilation.cpp.s
 
+src/Extrusion.obj: src/Extrusion.cpp.obj
+.PHONY : src/Extrusion.obj
+
+# target to build an object file
+src/Extrusion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Extrusion.cpp.obj
+.PHONY : src/Extrusion.cpp.obj
+
+src/Extrusion.i: src/Extrusion.cpp.i
+.PHONY : src/Extrusion.i
+
+# target to preprocess a source file
+src/Extrusion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Extrusion.cpp.i
+.PHONY : src/Extrusion.cpp.i
+
+src/Extrusion.s: src/Extrusion.cpp.s
+.PHONY : src/Extrusion.s
+
+# target to generate assembly for a file
+src/Extrusion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Extrusion.cpp.s
+.PHONY : src/Extrusion.cpp.s
+
 src/GLWidget.obj: src/GLWidget.cpp.obj
 .PHONY : src/GLWidget.obj
 
@@ -265,29 +289,29 @@ src/GLWidget.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/GLWidget.cpp.s
 .PHONY : src/GLWidget.cpp.s
 
-src/MainWindow.obj: src/MainWindow.cpp.obj
-.PHONY : src/MainWindow.obj
+src/Structure.obj: src/Structure.cpp.obj
+.PHONY : src/Structure.obj
 
 # target to build an object file
-src/MainWindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/MainWindow.cpp.obj
-.PHONY : src/MainWindow.cpp.obj
+src/Structure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Structure.cpp.obj
+.PHONY : src/Structure.cpp.obj
 
-src/MainWindow.i: src/MainWindow.cpp.i
-.PHONY : src/MainWindow.i
+src/Structure.i: src/Structure.cpp.i
+.PHONY : src/Structure.i
 
 # target to preprocess a source file
-src/MainWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/MainWindow.cpp.i
-.PHONY : src/MainWindow.cpp.i
+src/Structure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Structure.cpp.i
+.PHONY : src/Structure.cpp.i
 
-src/MainWindow.s: src/MainWindow.cpp.s
-.PHONY : src/MainWindow.s
+src/Structure.s: src/Structure.cpp.s
+.PHONY : src/Structure.s
 
 # target to generate assembly for a file
-src/MainWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/MainWindow.cpp.s
-.PHONY : src/MainWindow.cpp.s
+src/Structure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/Structure.cpp.s
+.PHONY : src/Structure.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
@@ -313,6 +337,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mainwindow.obj: src/mainwindow.cpp.obj
+.PHONY : src/mainwindow.obj
+
+# target to build an object file
+src/mainwindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/mainwindow.cpp.obj
+.PHONY : src/mainwindow.cpp.obj
+
+src/mainwindow.i: src/mainwindow.cpp.i
+.PHONY : src/mainwindow.i
+
+# target to preprocess a source file
+src/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
+
+src/mainwindow.s: src/mainwindow.cpp.s
+.PHONY : src/mainwindow.s
+
+# target to generate assembly for a file
+src/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -333,15 +381,21 @@ help:
 	@echo ... main_autogen/mocs_compilation.obj
 	@echo ... main_autogen/mocs_compilation.i
 	@echo ... main_autogen/mocs_compilation.s
+	@echo ... src/Extrusion.obj
+	@echo ... src/Extrusion.i
+	@echo ... src/Extrusion.s
 	@echo ... src/GLWidget.obj
 	@echo ... src/GLWidget.i
 	@echo ... src/GLWidget.s
-	@echo ... src/MainWindow.obj
-	@echo ... src/MainWindow.i
-	@echo ... src/MainWindow.s
+	@echo ... src/Structure.obj
+	@echo ... src/Structure.i
+	@echo ... src/Structure.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/mainwindow.obj
+	@echo ... src/mainwindow.i
+	@echo ... src/mainwindow.s
 .PHONY : help
 
 

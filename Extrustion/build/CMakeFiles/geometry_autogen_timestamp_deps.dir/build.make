@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion"
+CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build"
+CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build"
 
 # Utility rule file for geometry_autogen_timestamp_deps.
 
@@ -80,6 +80,6 @@ CMakeFiles/geometry_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/geometry_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/geometry_autogen_timestamp_deps.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles\geometry_autogen_timestamp_deps.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles\geometry_autogen_timestamp_deps.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/geometry_autogen_timestamp_deps.dir/depend
 

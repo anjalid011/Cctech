@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion"
+CMAKE_SOURCE_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build"
+CMAKE_BINARY_DIR = "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -71,9 +71,9 @@ include CMakeFiles/main.dir/flags.make
 main_autogen/timestamp: C:/Qt/6.9.0/mingw_64/bin/moc.exe
 main_autogen/timestamp: C:/Qt/6.9.0/mingw_64/bin/uic.exe
 main_autogen/timestamp: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target main"
-	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/CMakeFiles/main_autogen.dir/AutogenInfo.json" ""
-	"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/build/main_autogen/timestamp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target main"
+	"C:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/Ext/build/CMakeFiles/main_autogen.dir/AutogenInfo.json" ""
+	"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Anjali Dongare/Desktop/Project/Cctech/Extrustion/Ext/build/main_autogen/timestamp"
 
 CMakeFiles/main.dir/codegen:
 .PHONY : CMakeFiles/main.dir/codegen
@@ -82,76 +82,110 @@ CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj: CMakeFiles/main.dir/f
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj: main_autogen/mocs_compilation.cpp
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\main_autogen\mocs_compilation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\main_autogen\mocs_compilation.cpp"
 
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\main_autogen\mocs_compilation.cpp" > CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\main_autogen\mocs_compilation.cpp" > CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\main_autogen\mocs_compilation.cpp" -o CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\main_autogen\mocs_compilation.cpp" -o CMakeFiles\main.dir\main_autogen\mocs_compilation.cpp.s
+
+CMakeFiles/main.dir/src/Extrusion.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Extrusion.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/Extrusion.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/Ext/src/Extrusion.cpp
+CMakeFiles/main.dir/src/Extrusion.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/Extrusion.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/Extrusion.cpp.obj -MF CMakeFiles\main.dir\src\Extrusion.cpp.obj.d -o CMakeFiles\main.dir\src\Extrusion.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\Extrusion.cpp"
+
+CMakeFiles/main.dir/src/Extrusion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Extrusion.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\Extrusion.cpp" > CMakeFiles\main.dir\src\Extrusion.cpp.i
+
+CMakeFiles/main.dir/src/Extrusion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Extrusion.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\Extrusion.cpp" -o CMakeFiles\main.dir\src\Extrusion.cpp.s
 
 CMakeFiles/main.dir/src/GLWidget.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/GLWidget.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/src/GLWidget.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/src/GLWidget.cpp
+CMakeFiles/main.dir/src/GLWidget.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/Ext/src/GLWidget.cpp
 CMakeFiles/main.dir/src/GLWidget.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/GLWidget.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/GLWidget.cpp.obj -MF CMakeFiles\main.dir\src\GLWidget.cpp.obj.d -o CMakeFiles\main.dir\src\GLWidget.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\GLWidget.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/GLWidget.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/GLWidget.cpp.obj -MF CMakeFiles\main.dir\src\GLWidget.cpp.obj.d -o CMakeFiles\main.dir\src\GLWidget.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\GLWidget.cpp"
 
 CMakeFiles/main.dir/src/GLWidget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/GLWidget.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\GLWidget.cpp" > CMakeFiles\main.dir\src\GLWidget.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\GLWidget.cpp" > CMakeFiles\main.dir\src\GLWidget.cpp.i
 
 CMakeFiles/main.dir/src/GLWidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/GLWidget.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\GLWidget.cpp" -o CMakeFiles\main.dir\src\GLWidget.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\GLWidget.cpp" -o CMakeFiles\main.dir\src\GLWidget.cpp.s
 
-CMakeFiles/main.dir/src/MainWindow.cpp.obj: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/MainWindow.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/src/MainWindow.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/src/MainWindow.cpp
-CMakeFiles/main.dir/src/MainWindow.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/MainWindow.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/MainWindow.cpp.obj -MF CMakeFiles\main.dir\src\MainWindow.cpp.obj.d -o CMakeFiles\main.dir\src\MainWindow.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\MainWindow.cpp"
+CMakeFiles/main.dir/src/Structure.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Structure.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/Structure.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/Ext/src/Structure.cpp
+CMakeFiles/main.dir/src/Structure.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/Structure.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/Structure.cpp.obj -MF CMakeFiles\main.dir\src\Structure.cpp.obj.d -o CMakeFiles\main.dir\src\Structure.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\Structure.cpp"
 
-CMakeFiles/main.dir/src/MainWindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/MainWindow.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\MainWindow.cpp" > CMakeFiles\main.dir\src\MainWindow.cpp.i
+CMakeFiles/main.dir/src/Structure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Structure.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\Structure.cpp" > CMakeFiles\main.dir\src\Structure.cpp.i
 
-CMakeFiles/main.dir/src/MainWindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/MainWindow.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\MainWindow.cpp" -o CMakeFiles\main.dir\src\MainWindow.cpp.s
+CMakeFiles/main.dir/src/Structure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Structure.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\Structure.cpp" -o CMakeFiles\main.dir\src\Structure.cpp.s
 
 CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
-CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/src/main.cpp
+CMakeFiles/main.dir/src/main.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/Ext/src/main.cpp
 CMakeFiles/main.dir/src/main.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/main.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.obj -MF CMakeFiles\main.dir\src\main.cpp.obj.d -o CMakeFiles\main.dir\src\main.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/main.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/main.cpp.obj -MF CMakeFiles\main.dir\src\main.cpp.obj.d -o CMakeFiles\main.dir\src\main.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\main.cpp"
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\main.cpp" > CMakeFiles\main.dir\src\main.cpp.i
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\main.cpp" > CMakeFiles\main.dir\src\main.cpp.i
 
 CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\src\main.cpp" -o CMakeFiles\main.dir\src\main.cpp.s
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\main.cpp" -o CMakeFiles\main.dir\src\main.cpp.s
+
+CMakeFiles/main.dir/src/mainwindow.cpp.obj: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/mainwindow.cpp.obj: CMakeFiles/main.dir/includes_CXX.rsp
+CMakeFiles/main.dir/src/mainwindow.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Extrustion/Ext/src/mainwindow.cpp
+CMakeFiles/main.dir/src/mainwindow.cpp.obj: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/mainwindow.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/src/mainwindow.cpp.obj -MF CMakeFiles\main.dir\src\mainwindow.cpp.obj.d -o CMakeFiles\main.dir\src\mainwindow.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\mainwindow.cpp"
+
+CMakeFiles/main.dir/src/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/src/mainwindow.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\mainwindow.cpp" > CMakeFiles\main.dir\src\mainwindow.cpp.i
+
+CMakeFiles/main.dir/src/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/mainwindow.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\src\mainwindow.cpp" -o CMakeFiles\main.dir\src\mainwindow.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj" \
+"CMakeFiles/main.dir/src/Extrusion.cpp.obj" \
 "CMakeFiles/main.dir/src/GLWidget.cpp.obj" \
-"CMakeFiles/main.dir/src/MainWindow.cpp.obj" \
-"CMakeFiles/main.dir/src/main.cpp.obj"
+"CMakeFiles/main.dir/src/Structure.cpp.obj" \
+"CMakeFiles/main.dir/src/main.cpp.obj" \
+"CMakeFiles/main.dir/src/mainwindow.cpp.obj"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
 main.exe: CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj
+main.exe: CMakeFiles/main.dir/src/Extrusion.cpp.obj
 main.exe: CMakeFiles/main.dir/src/GLWidget.cpp.obj
-main.exe: CMakeFiles/main.dir/src/MainWindow.cpp.obj
+main.exe: CMakeFiles/main.dir/src/Structure.cpp.obj
 main.exe: CMakeFiles/main.dir/src/main.cpp.obj
+main.exe: CMakeFiles/main.dir/src/mainwindow.cpp.obj
 main.exe: CMakeFiles/main.dir/build.make
 main.exe: libgeometry.dll.a
 main.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6OpenGLWidgets.a
@@ -162,7 +196,7 @@ main.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a
 main.exe: CMakeFiles/main.dir/linkLibs.rsp
 main.exe: CMakeFiles/main.dir/objects1.rsp
 main.exe: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\main.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -174,6 +208,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend: main_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\build\CMakeFiles\main.dir\DependInfo.cmake" "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build" "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Extrustion\Ext\build\CMakeFiles\main.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/main.dir/depend
 
