@@ -148,6 +148,7 @@ C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/6YEA56
   C:/Qt/6.10.0/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.10.0/mingw_64/include/QtGui/QSurfaceFormat \
   C:/Qt/6.10.0/mingw_64/include/QtGui/QTransform \
+  C:/Qt/6.10.0/mingw_64/include/QtGui/QVector3D \
   C:/Qt/6.10.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.10.0/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.10.0/mingw_64/include/QtGui/qbrush.h \

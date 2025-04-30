@@ -13,13 +13,14 @@ public:
     void clear();
     int controlPointCount() const;
     void calculateCurve(int numInterp);
+    QVector<QPointF> getCurvePoints() const;
     void drawControlPolygon(QPainter &painter);
     void drawCurve(QPainter &painter);
 
 private:
     QVector<QPoint> controlPoints;
-    QVector<QPoint> curvePoints;
-    QPoint deCasteljau(double t) const;
+    QVector<QPointF> curvePoints;
+    QPointF deCasteljau(double t) const;
 };
 
 #endif // BEZIER_H

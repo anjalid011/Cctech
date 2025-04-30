@@ -149,6 +149,7 @@ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/GLWidget.h
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QPainter
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QSurfaceFormat
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QTransform
+ mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QVector3D
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/qaction.h
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/qbitmap.h
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/qbrush.h
@@ -417,6 +418,9 @@ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/GLWidget.h
  mdp:C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/build/main_autogen/moc_predefs.h
  mdp:C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/Bezier.h
  mdp:C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/GLWidget.h
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/Bezier.cpp
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/GLWidget.cpp
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/main.cpp
 C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/MainWindow.h
  mmc:Q_OBJECT
  mdp:C:/Qt/6.10.0/mingw_64/include/QtCore/QList
@@ -567,6 +571,7 @@ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/MainWindow.h
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QPainter
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QSurfaceFormat
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QTransform
+ mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/QVector3D
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/qaction.h
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/qbitmap.h
  mdp:C:/Qt/6.10.0/mingw_64/include/QtGui/qbrush.h
@@ -848,7 +853,4 @@ C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/MainWindow.h
  mdp:C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/Bezier.h
  mdp:C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/GLWidget.h
  mdp:C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/include/MainWindow.h
-C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/Bezier.cpp
-C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/GLWidget.cpp
 C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/MainWindow.cpp
-C:/Users/Anjali Dongare/Desktop/Project/Cctech/Beizer/src/main.cpp

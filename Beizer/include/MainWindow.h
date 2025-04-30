@@ -14,11 +14,13 @@ public:
 
 private slots:
     void onDrawClicked();
+    void onShow3DClicked();
 
 private:
     QLineEdit *controlPointsEdit;
     QLineEdit *interpPointsEdit;
     QPushButton *drawButton;
+    QPushButton *show3DButton;
     GLWidget *glWidget;
 };
 

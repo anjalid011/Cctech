@@ -33,6 +33,10 @@ void Bezier::calculateCurve(int numInterp) {
     }
 }
 
+QVector<QPointF> Bezier::getCurvePoints() const {
+    return curvePoints;
+}
+
 void Bezier::drawControlPolygon(QPainter &painter) {
     if (controlPoints.size() < 2) return;
     painter.setPen(Qt::gray);
@@ -53,7 +57,7 @@ void Bezier::drawCurve(QPainter &painter) {
     }
 }
 
-QPoint Bezier::deCasteljau(double t) const {
+QPointF Bezier::deCasteljau(double t) const {
     QVector<QPointF> pts;
     for (const QPoint &pt : controlPoints)
         pts.append(QPointF(pt));
@@ -63,5 +67,5 @@ QPoint Bezier::deCasteljau(double t) const {
             pts[i] = (1 - t) * pts[i] + t * pts[i + 1];
         }
     }
-    return pts[0].toPoint();
+    return pts[0];
 }
