@@ -454,7 +454,6 @@ CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/./Conversions/Triangle.h \
- C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Transformations.h \
  C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\src\Conversions\FileHandler.cpp \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/FileHandler.h \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/Conversions/Triangle.h \

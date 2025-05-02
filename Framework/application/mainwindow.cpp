@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\application\Voronoi.h"
+#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\extrusionWindow.h"
+#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\include\bezierWindow.h"
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QFormLayout>
-
+#include <QFileDialog>
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     setupUI();
 }
@@ -19,7 +20,7 @@ void MainWindow::setupUI() {
     glWidget->setMinimumSize(600, 400);
 
     shapeComboBox = new QComboBox(this);
-    shapeComboBox->addItems({"Cuboid", "Sphere", "Cone", "Cylinder", "Bezier", "Voronoi Diagram"});
+    shapeComboBox->addItems({"Cuboid", "Sphere", "Cone", "Cylinder", "Bezier"});
     connect(shapeComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MainWindow::onShapeChanged);
 
     drawButton = new QPushButton("Draw Shape", this);
@@ -33,83 +34,57 @@ void MainWindow::setupUI() {
     formStack->addWidget(createConeForm());
     formStack->addWidget(createCylinderForm());
     formStack->addWidget(createBezierForm());
-    formStack->addWidget(createVoronoiForm());
-
-
-    // Add sliders for transformations
-    translateXSlider = new QSlider(Qt::Horizontal, this);
-    translateYSlider = new QSlider(Qt::Horizontal, this);
-    translateZSlider = new QSlider(Qt::Horizontal, this);
- 
-    rotateXSlider = new QSlider(Qt::Horizontal, this);
-    rotateYSlider = new QSlider(Qt::Horizontal, this);
-    rotateZSlider = new QSlider(Qt::Horizontal, this);
- 
-    scaleXSlider = new QSlider(Qt::Horizontal, this);
-    scaleYSlider = new QSlider(Qt::Horizontal, this);
-    scaleZSlider = new QSlider(Qt::Horizontal, this);
- 
-    // Set slider ranges
-    translateXSlider->setRange(-100, 100);
-    translateYSlider->setRange(-100, 100);
-    translateZSlider->setRange(-100, 100);
- 
-    rotateXSlider->setRange(0, 360);
-    rotateYSlider->setRange(0, 360);
-    rotateZSlider->setRange(0, 360);
- 
-    scaleXSlider->setRange(1, 200);
-    scaleYSlider->setRange(1, 200);
-    scaleZSlider->setRange(1, 200);
- 
-    // Connect sliders to slots
-    connect(translateXSlider, &QSlider::valueChanged, this, &MainWindow::onTranslateXChanged);
-    connect(translateYSlider, &QSlider::valueChanged, this, &MainWindow::onTranslateYChanged);
-    connect(translateZSlider, &QSlider::valueChanged, this, &MainWindow::onTranslateZChanged);
- 
-    connect(rotateXSlider, &QSlider::valueChanged, this, &MainWindow::onRotateXChanged);
-    connect(rotateYSlider, &QSlider::valueChanged, this, &MainWindow::onRotateYChanged);
-    connect(rotateZSlider, &QSlider::valueChanged, this, &MainWindow::onRotateZChanged);
- 
-    connect(scaleXSlider, &QSlider::valueChanged, this, &MainWindow::onScaleXChanged);
-    connect(scaleYSlider, &QSlider::valueChanged, this, &MainWindow::onScaleYChanged);
-    connect(scaleZSlider, &QSlider::valueChanged, this, &MainWindow::onScaleZChanged);
 
     QVBoxLayout *leftPanelLayout = new QVBoxLayout;
     leftPanelLayout->addWidget(new QLabel("Choose A Shape To Draw"));
     leftPanelLayout->addWidget(shapeComboBox);
     leftPanelLayout->addWidget(formStack);
     leftPanelLayout->addWidget(drawButton);
-    leftPanelLayout->addWidget(new QLabel("List Of Shapes On the screen"));
-    leftPanelLayout->addWidget(shapeList);
-
-    // Add sliders to the layout
-    leftPanelLayout->addWidget(new QLabel("Translate X:"));
-    leftPanelLayout->addWidget(translateXSlider);
-    leftPanelLayout->addWidget(new QLabel("Translate Y:"));
-    leftPanelLayout->addWidget(translateYSlider);
-    leftPanelLayout->addWidget(new QLabel("Translate Z:"));
-    leftPanelLayout->addWidget(translateZSlider);
-
-    leftPanelLayout->addWidget(new QLabel("Rotate X:"));
-    leftPanelLayout->addWidget(rotateXSlider);
-    leftPanelLayout->addWidget(new QLabel("Rotate Y:"));
-    leftPanelLayout->addWidget(rotateYSlider);
-    leftPanelLayout->addWidget(new QLabel("Rotate Z:"));
-    leftPanelLayout->addWidget(rotateZSlider);
-
-    leftPanelLayout->addWidget(new QLabel("Scale X:"));
-    leftPanelLayout->addWidget(scaleXSlider);
-    leftPanelLayout->addWidget(new QLabel("Scale Y:"));
-    leftPanelLayout->addWidget(scaleYSlider);
-    leftPanelLayout->addWidget(new QLabel("Scale Z:"));
-    leftPanelLayout->addWidget(scaleZSlider);
+    shapeList->setVisible(false);
+    // leftPanelLayout->addWidget(new QLabel("List Of Shapes On the screen"));
+    // leftPanelLayout->addWidget(shapeList);
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
     mainLayout->addLayout(leftPanelLayout, 2);
     mainLayout->addWidget(glWidget, 8);
 
+    QPushButton *openExtrusionButton = new QPushButton("Open Extrusion", this);
+    connect(openExtrusionButton, &QPushButton::clicked, this, &MainWindow::openExtrusionWindow);
+    leftPanelLayout->addWidget(openExtrusionButton);
+
+    QPushButton *openBezierButton = new QPushButton("Bezier Revolve", this);
+    connect(openBezierButton, &QPushButton::clicked, this, &MainWindow::openBezierWindow);
+    leftPanelLayout->addWidget(openBezierButton);
+
+    QPushButton *openFileButton = new QPushButton("Open File", this);
+    connect(openFileButton, &QPushButton::clicked, this, &MainWindow::openFile);
+    leftPanelLayout->addWidget(openFileButton);
+
     centralWidget->setLayout(mainLayout);
+}
+
+void MainWindow::openExtrusionWindow() {
+    ExtrusionWindow *extrusionWindow = new ExtrusionWindow(this); // Correct: Create an ExtrusionWindow
+    extrusionWindow->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
+    extrusionWindow->show();
+}
+
+void MainWindow::openBezierWindow() {
+    BezierWindow *bezierWindow = new BezierWindow(this); // Correct: Create an ExtrusionWindow
+    bezierWindow->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
+    bezierWindow->show();
+}
+
+void MainWindow::openFile() {
+    // Open a file dialog to select an .stl or .obj file
+    QString filePath = QFileDialog::getOpenFileName(this, "Open File", "", "3D Files (*.stl *.obj);;All Files (*)");
+
+    if (!filePath.isEmpty()) {
+        qDebug() << "Selected file:" << filePath;
+        glWidget->loadAndDrawShape(filePath); // Load and draw the selected file
+    } else {
+        qDebug() << "No file selected.";
+    }
 }
 
 void MainWindow::onShapeChanged(int index) {
@@ -145,7 +120,6 @@ void MainWindow::onDrawButtonClicked() {
         Cuboid cuboid(x, y, z, width, height, depth);
         cuboid.draw();
         glWidget->loadAndDrawShape("../geometry/scripts/cuboid.obj");
-
         shapeList->addItem("Cuboid: " + QString::number(x) + ", " + QString::number(y) + ", " + QString::number(z) +
                            ", " + QString::number(width) + ", " + QString::number(height) + ", " + QString::number(depth));
     } 
@@ -266,62 +240,3 @@ QWidget* MainWindow::createBezierForm() {
 
     return form;
 }
-
-QWidget* MainWindow::createVoronoiForm() {
-    QWidget *form = new QWidget;
-    QVBoxLayout *layout = new QVBoxLayout(form);
-
-    QPushButton *addSeedsButton = new QPushButton("Add Seeds", form);
-    layout->addWidget(addSeedsButton);
-
-    connect(addSeedsButton, &QPushButton::clicked, this, &MainWindow::openVoronoiWindow);
-
-    form->setLayout(layout);
-    return form;
-}
-
-void MainWindow::openVoronoiWindow() {
-    Voronoi dlg(this);
-    if (dlg.exec() == QDialog::Accepted) {
-        QVector<QPointF> seeds = dlg.getSeeds();
-        // Pass seeds to your Voronoi diagram logic and render
-    }
-}
-
-// Slots for transformations
-void MainWindow::onTranslateXChanged(int value) {
-    glWidget->translateShape(value, 0, 0);
-}
-
-void MainWindow::onTranslateYChanged(int value) {
-    glWidget->translateShape(0, value, 0);
-}
-
-void MainWindow::onTranslateZChanged(int value) {
-    glWidget->translateShape(0, 0, value);
-}
-
-void MainWindow::onRotateXChanged(int value) {
-    glWidget->rotateShape(value, 0, 0);
-}
-
-void MainWindow::onRotateYChanged(int value) {
-    glWidget->rotateShape(0, value, 0);
-}
-
-void MainWindow::onRotateZChanged(int value) {
-    glWidget->rotateShape(0, 0, value);
-}
-
-void MainWindow::onScaleXChanged(int value) {
-    glWidget->scaleShape(value / 100.0f, 1.0f, 1.0f);
-}
-
-void MainWindow::onScaleYChanged(int value) {
-    glWidget->scaleShape(1.0f, value / 100.0f, 1.0f);
-}
-
-void MainWindow::onScaleZChanged(int value) {
-    glWidget->scaleShape(1.0f, 1.0f, value / 100.0f);
-}
-

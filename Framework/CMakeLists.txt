@@ -30,8 +30,20 @@ set(APPLICATION_SRC
     ${CMAKE_SOURCE_DIR}/application/mainwindow.h
     ${CMAKE_SOURCE_DIR}/application/openglwidget.cpp
     ${CMAKE_SOURCE_DIR}/application/openglwidget.h
-    ${CMAKE_SOURCE_DIR}/application/Voronoi.h
-    ${CMAKE_SOURCE_DIR}/application/Voronoi.cpp
+    ${CMAKE_SOURCE_DIR}/Extrusion/include/Extrusion.h
+    ${CMAKE_SOURCE_DIR}/Extrusion/src/Extrusion.cpp
+    ${CMAKE_SOURCE_DIR}/Extrusion/include/Structure.h
+    ${CMAKE_SOURCE_DIR}/Extrusion/src/Structure.cpp
+    ${CMAKE_SOURCE_DIR}/Extrusion/include/extrusionWindow.h
+    ${CMAKE_SOURCE_DIR}/Extrusion/src/extrusionWindow.cpp
+    ${CMAKE_SOURCE_DIR}/Extrusion/include/ExtWidget.h
+    ${CMAKE_SOURCE_DIR}/Extrusion/src/ExtWidget.cpp
+    ${CMAKE_SOURCE_DIR}/Bezier/include/Bezier.h
+    ${CMAKE_SOURCE_DIR}/Bezier/src/Bezier.cpp
+    ${CMAKE_SOURCE_DIR}/Bezier/include/BezierWidget.h
+    ${CMAKE_SOURCE_DIR}/Bezier/src/BezierWidget.cpp
+    ${CMAKE_SOURCE_DIR}/Bezier/include/bezierWindow.h
+    ${CMAKE_SOURCE_DIR}/Bezier/src/bezierWindow.cpp
 )
 
 # Set Qt installation path

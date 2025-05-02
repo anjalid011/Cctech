@@ -27,8 +27,8 @@ void Rectangle::draw() {
     std::string stlFilePath = ".././geometry/scripts/rectangle.stl";
     std::string datFilePath = ".././geometry/scripts/rectangle.dat";
 
-    // Transformations t;
-    // t.performTransformation2D(".././geometry/scripts/rectangle.dat", ".././geometry/scripts/transformedRectangle.dat", "Rectangle");
+    Transformations t;
+    t.performTransformation2D(".././geometry/scripts/rectangle.dat", ".././geometry/scripts/transformedRectangle.dat", "Rectangle");
     
     Plotter::plot2D("../geometry/scripts/rectangle.dat", "Rectangle");
     std::cout << "Rectangle drawn successfully!\n";

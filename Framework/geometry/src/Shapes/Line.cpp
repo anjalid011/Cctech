@@ -33,8 +33,8 @@ void Line::draw() {
     }
     pointsFile.close();
 
-    // Transformations t;
-    // t.performTransformation2D(".././geometry/scripts/line.dat", ".././geometry/scripts/transformedLine.dat", "Line");
+    Transformations t;
+    t.performTransformation2D(".././geometry/scripts/line.dat", ".././geometry/scripts/transformedLine.dat", "Line");
     
     Plotter::plot2D("../geometry/scripts/line.dat", "Line");
     std::cout << (is3D ? "3D" : "2D") << " Line drawn successful!\n";

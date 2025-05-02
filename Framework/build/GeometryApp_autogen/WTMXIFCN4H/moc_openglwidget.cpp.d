@@ -433,5 +433,4 @@ C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/build/GeometryApp_auto
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
   C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/include/Conversions/Triangle.h \
   C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/include/Shapes/Geometry.h \
-  C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/include/Shapes/Shape.h \
-  C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/include/Shapes/Transformations.h
+  C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/geometry/include/Shapes/Shape.h

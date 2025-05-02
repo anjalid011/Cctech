@@ -20,20 +20,9 @@ public:
 private slots:
     void onDrawButtonClicked();
     void onShapeChanged(int index);
-    void openVoronoiWindow();
-
-    // Slots for transformations
-    void onTranslateXChanged(int value);
-    void onTranslateYChanged(int value);
-    void onTranslateZChanged(int value);
-
-    void onRotateXChanged(int value);
-    void onRotateYChanged(int value);
-    void onRotateZChanged(int value);
-
-    void onScaleXChanged(int value);
-    void onScaleYChanged(int value);
-    void onScaleZChanged(int value);
+    void openExtrusionWindow();
+    void openBezierWindow();
+    void openFile();
 
 private:
     void setupUI();
@@ -42,7 +31,6 @@ private:
     QWidget* createConeForm();
     QWidget* createCylinderForm();
     QWidget* createBezierForm();
-    QWidget* createVoronoiForm();
 
     void generateControlPointInputs(); // Method to generate control point input fields
 
@@ -73,11 +61,6 @@ private:
     std::vector<std::array<QLineEdit *, 3>> controlPointEdits; // Stores input fields for control points
     QLineEdit *bezierControlPoints; // Number of control points
     QLineEdit *bezierInterpolationPoints; // Number of interpolation points
-
-    // Sliders for transformations
-    QSlider *translateXSlider, *translateYSlider, *translateZSlider;
-    QSlider *rotateXSlider, *rotateYSlider, *rotateZSlider;
-    QSlider *scaleXSlider, *scaleYSlider, *scaleZSlider;
 };
 
 #endif // MAINWINDOW_H

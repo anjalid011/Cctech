@@ -1,0 +1,8 @@
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/geometry.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/main.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/edit_cache.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/geometry_autogen_timestamp_deps.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/geometry_autogen.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/main_autogen_timestamp_deps.dir
+C:/Users/Anjali Dongare/Desktop/Project/Cctech/Skybox/SkyboxProject/build/CMakeFiles/main_autogen.dir

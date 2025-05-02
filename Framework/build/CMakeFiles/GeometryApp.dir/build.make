@@ -138,20 +138,110 @@ CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.s"
 	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\application\openglwidget.cpp" -o CMakeFiles\GeometryApp.dir\application\openglwidget.cpp.s
 
-CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
-CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
-CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/application/Voronoi.cpp
-CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj -MF CMakeFiles\GeometryApp.dir\application\Voronoi.cpp.obj.d -o CMakeFiles\GeometryApp.dir\application\Voronoi.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\application\Voronoi.cpp"
+CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/Extrusion.cpp
+CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj -MF CMakeFiles\GeometryApp.dir\Extrusion\src\Extrusion.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Extrusion\src\Extrusion.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\Extrusion.cpp"
 
-CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.i"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\application\Voronoi.cpp" > CMakeFiles\GeometryApp.dir\application\Voronoi.cpp.i
+CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\Extrusion.cpp" > CMakeFiles\GeometryApp.dir\Extrusion\src\Extrusion.cpp.i
 
-CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.s"
-	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\application\Voronoi.cpp" -o CMakeFiles\GeometryApp.dir\application\Voronoi.cpp.s
+CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\Extrusion.cpp" -o CMakeFiles\GeometryApp.dir\Extrusion\src\Extrusion.cpp.s
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/Structure.cpp
+CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj -MF CMakeFiles\GeometryApp.dir\Extrusion\src\Structure.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Extrusion\src\Structure.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\Structure.cpp"
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\Structure.cpp" > CMakeFiles\GeometryApp.dir\Extrusion\src\Structure.cpp.i
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\Structure.cpp" -o CMakeFiles\GeometryApp.dir\Extrusion\src\Structure.cpp.s
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/extrusionWindow.cpp
+CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj -MF CMakeFiles\GeometryApp.dir\Extrusion\src\extrusionWindow.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Extrusion\src\extrusionWindow.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\extrusionWindow.cpp"
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\extrusionWindow.cpp" > CMakeFiles\GeometryApp.dir\Extrusion\src\extrusionWindow.cpp.i
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\extrusionWindow.cpp" -o CMakeFiles\GeometryApp.dir\Extrusion\src\extrusionWindow.cpp.s
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/ExtWidget.cpp
+CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj -MF CMakeFiles\GeometryApp.dir\Extrusion\src\ExtWidget.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Extrusion\src\ExtWidget.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\ExtWidget.cpp"
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\ExtWidget.cpp" > CMakeFiles\GeometryApp.dir\Extrusion\src\ExtWidget.cpp.i
+
+CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\src\ExtWidget.cpp" -o CMakeFiles\GeometryApp.dir\Extrusion\src\ExtWidget.cpp.s
+
+CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Bezier/src/Bezier.cpp
+CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj -MF CMakeFiles\GeometryApp.dir\Bezier\src\Bezier.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Bezier\src\Bezier.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\Bezier.cpp"
+
+CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\Bezier.cpp" > CMakeFiles\GeometryApp.dir\Bezier\src\Bezier.cpp.i
+
+CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\Bezier.cpp" -o CMakeFiles\GeometryApp.dir\Bezier\src\Bezier.cpp.s
+
+CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Bezier/src/BezierWidget.cpp
+CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj -MF CMakeFiles\GeometryApp.dir\Bezier\src\BezierWidget.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Bezier\src\BezierWidget.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\BezierWidget.cpp"
+
+CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\BezierWidget.cpp" > CMakeFiles\GeometryApp.dir\Bezier\src\BezierWidget.cpp.i
+
+CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\BezierWidget.cpp" -o CMakeFiles\GeometryApp.dir\Bezier\src\BezierWidget.cpp.s
+
+CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj: CMakeFiles/GeometryApp.dir/flags.make
+CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj: CMakeFiles/GeometryApp.dir/includes_CXX.rsp
+CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj: C:/Users/Anjali\ Dongare/Desktop/Project/Cctech/Framework/Bezier/src/bezierWindow.cpp
+CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj: CMakeFiles/GeometryApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj -MF CMakeFiles\GeometryApp.dir\Bezier\src\bezierWindow.cpp.obj.d -o CMakeFiles\GeometryApp.dir\Bezier\src\bezierWindow.cpp.obj -c "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\bezierWindow.cpp"
+
+CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.i"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\bezierWindow.cpp" > CMakeFiles\GeometryApp.dir\Bezier\src\bezierWindow.cpp.i
+
+CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.s"
+	C:\Qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\src\bezierWindow.cpp" -o CMakeFiles\GeometryApp.dir\Bezier\src\bezierWindow.cpp.s
 
 # Object files for target GeometryApp
 GeometryApp_OBJECTS = \
@@ -159,7 +249,13 @@ GeometryApp_OBJECTS = \
 "CMakeFiles/GeometryApp.dir/application/main.cpp.obj" \
 "CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj" \
 "CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj" \
-"CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj"
+"CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj" \
+"CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj" \
+"CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj" \
+"CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj" \
+"CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj" \
+"CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj" \
+"CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj"
 
 # External object files for target GeometryApp
 GeometryApp_EXTERNAL_OBJECTS =
@@ -168,7 +264,13 @@ GeometryApp.exe: CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/application/main.cpp.obj
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/application/openglwidget.cpp.obj
-GeometryApp.exe: CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj
+GeometryApp.exe: CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/build.make
 GeometryApp.exe: libgeometry.dll.a
 GeometryApp.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6OpenGLWidgets.a
@@ -179,7 +281,7 @@ GeometryApp.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/linkLibs.rsp
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/objects1.rsp
 GeometryApp.exe: CMakeFiles/GeometryApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable GeometryApp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable GeometryApp.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GeometryApp.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

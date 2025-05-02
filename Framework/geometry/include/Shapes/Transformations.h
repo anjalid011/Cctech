@@ -1,32 +1,31 @@
 #ifndef TRANSFORMATIONS_H
 #define TRANSFORMATIONS_H
-
-#include <vector>
 #include <string>
-#include <cmath>
-
+#include <vector>
+#include <iostream>
+#include <fstream>
 class Transformations {
 public:
     // Constructor
-    Transformations();
+    Transformations(const std::string& inputFile);
+    Transformations() = default;    
 
-    // Load points into the class
-    void loadPoints(const std::vector<std::vector<double>>& points);
+    // Apply user-defined transformation
+    void applyTransformation(const std::vector<std::vector<double>>& matrix, const std::string& outputFile);
+    void applyTranslation(double tx, double ty, double tz, const std::string& outputFile, const std::string& shapeName);
+    void applyScaling(double sx, double sy, double sz, const std::string& outputFile, const std::string& shapeName);
+    void applyRotation(double angle, char axis, const std::string& outputFile, const std::string& shapeName);
+    void applyTranslation2D(double tx, double ty, const std::string& outputFile, const std::string& shapeName);
+    void applyScaling2D(double sx, double sy, const std::string& outputFile, const std::string& shapeName);
+    void applyRotation2D(double angle, const std::string& outputFile, const std::string& shapeName);
+    void performTransformation(const std::string& inputFile, const std::string& outputFile, const std::string& shapeName);
+    void performTransformation2D(const std::string& inputFile, const std::string& outputFile, const std::string& shapeName);
 
-    // Apply transformations
-    void applyTranslation(double tx, double ty, double tz);
-    void applyScaling(double sx, double sy, double sz);
-    void applyRotation(double angle, char axis);
-
-    // Get the transformed points
-    std::vector<std::vector<double>> getTransformedPoints() const;
 
 private:
-    std::vector<std::vector<double>> points; // Stores the points of the shape
-
-    // Helper methods
-    std::vector<std::vector<double>> createRotationMatrix(double angle, char axis);
-    std::vector<double> applyMatrixToPoint(const std::vector<std::vector<double>>& matrix, const std::vector<double>& point);
+    std::vector<std::vector<double>> points;  // Stores the points of the shape
+    void loadPoints(const std::string& inputFile);  // Read points from file
+    void savePoints(const std::string& outputFile); // Save transformed points
 };
 
 #endif // TRANSFORMATIONS_H

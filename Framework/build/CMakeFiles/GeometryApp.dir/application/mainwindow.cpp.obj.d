@@ -499,56 +499,50 @@ CMakeFiles/GeometryApp.dir/application/mainwindow.cpp.obj: \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
  C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
  C:/Users/ANJALI~1/Desktop/Project/Cctech/FRAMEW~1/geometry/include/./Conversions/Triangle.h \
- C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Transformations.h \
- C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\application\Voronoi.h \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/voronoi.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/isotropy.hpp \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/deque \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_deque.h \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/deque.tcc \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/user.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/detail/select_compiler_config.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/compiler/gcc.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/detail/select_stdlib_config.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/stdlib/libstdcpp3.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/detail/select_platform_config.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/platform/win32.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/detail/suffix.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/helper_macros.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/config/detail/cxx_composite.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/point_concept.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/point_traits.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/segment_concept.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/segment_traits.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/rectangle_concept.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/point_data.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/interval_data.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/interval_concept.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/interval_traits.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/rectangle_data.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/rectangle_traits.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/voronoi_builder.hpp \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/queue \
- C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_queue.h \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/detail/voronoi_ctypes.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/cstdint.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/detail/voronoi_predicates.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/detail/voronoi_robust_fpt.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/detail/voronoi_structures.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/voronoi_geometry_type.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/voronoi_geometry_type.hpp \
- C:/Users/ANJALI~1/Desktop/Project/BOOST_~1/boost/polygon/voronoi_diagram.hpp \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/QDialog \
- C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialog.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\extrusionWindow.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\ExtWidget.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\Structure.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\Bezier\include\bezierWindow.h \
+ C:\Users\Anjali\ Dongare\Desktop\Project\Cctech\Framework\Bezier\include\BezierWidget.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/QVector \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qvector.h \
  C:/Qt/6.9.0/mingw_64/include/QtCore/QPointF \
  C:/Qt/6.9.0/mingw_64/include/QtCore/qpoint.h \
- C:/Qt/6.9.0/mingw_64/include/QtGui/QPainterPath \
- C:/Qt/6.9.0/mingw_64/include/QtGui/qpainterpath.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/QMatrix4x4 \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qmatrix4x4.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvector3d.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qvector4d.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qquaternion.h \
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qgenericmatrix.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QLabel \
  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.9.0/mingw_64/include/QtGui/qpicture.h
+ C:/Qt/6.9.0/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/QFileDialog \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qfiledialog.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qdir.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qdirlisting.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qfiledevice.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qcalendar.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qfile.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
+ C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qfileinfo.h \
+ C:/Qt/6.9.0/mingw_64/include/QtCore/qtimezone.h \
+ C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialog.h

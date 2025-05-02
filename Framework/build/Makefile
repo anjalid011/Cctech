@@ -206,6 +206,174 @@ GeometryApp_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp_autogen.dir\build.make CMakeFiles/GeometryApp_autogen.dir/build
 .PHONY : GeometryApp_autogen/fast
 
+Bezier/src/Bezier.obj: Bezier/src/Bezier.cpp.obj
+.PHONY : Bezier/src/Bezier.obj
+
+# target to build an object file
+Bezier/src/Bezier.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.obj
+.PHONY : Bezier/src/Bezier.cpp.obj
+
+Bezier/src/Bezier.i: Bezier/src/Bezier.cpp.i
+.PHONY : Bezier/src/Bezier.i
+
+# target to preprocess a source file
+Bezier/src/Bezier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.i
+.PHONY : Bezier/src/Bezier.cpp.i
+
+Bezier/src/Bezier.s: Bezier/src/Bezier.cpp.s
+.PHONY : Bezier/src/Bezier.s
+
+# target to generate assembly for a file
+Bezier/src/Bezier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/Bezier.cpp.s
+.PHONY : Bezier/src/Bezier.cpp.s
+
+Bezier/src/BezierWidget.obj: Bezier/src/BezierWidget.cpp.obj
+.PHONY : Bezier/src/BezierWidget.obj
+
+# target to build an object file
+Bezier/src/BezierWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.obj
+.PHONY : Bezier/src/BezierWidget.cpp.obj
+
+Bezier/src/BezierWidget.i: Bezier/src/BezierWidget.cpp.i
+.PHONY : Bezier/src/BezierWidget.i
+
+# target to preprocess a source file
+Bezier/src/BezierWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.i
+.PHONY : Bezier/src/BezierWidget.cpp.i
+
+Bezier/src/BezierWidget.s: Bezier/src/BezierWidget.cpp.s
+.PHONY : Bezier/src/BezierWidget.s
+
+# target to generate assembly for a file
+Bezier/src/BezierWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/BezierWidget.cpp.s
+.PHONY : Bezier/src/BezierWidget.cpp.s
+
+Bezier/src/bezierWindow.obj: Bezier/src/bezierWindow.cpp.obj
+.PHONY : Bezier/src/bezierWindow.obj
+
+# target to build an object file
+Bezier/src/bezierWindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.obj
+.PHONY : Bezier/src/bezierWindow.cpp.obj
+
+Bezier/src/bezierWindow.i: Bezier/src/bezierWindow.cpp.i
+.PHONY : Bezier/src/bezierWindow.i
+
+# target to preprocess a source file
+Bezier/src/bezierWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.i
+.PHONY : Bezier/src/bezierWindow.cpp.i
+
+Bezier/src/bezierWindow.s: Bezier/src/bezierWindow.cpp.s
+.PHONY : Bezier/src/bezierWindow.s
+
+# target to generate assembly for a file
+Bezier/src/bezierWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Bezier/src/bezierWindow.cpp.s
+.PHONY : Bezier/src/bezierWindow.cpp.s
+
+Extrusion/src/ExtWidget.obj: Extrusion/src/ExtWidget.cpp.obj
+.PHONY : Extrusion/src/ExtWidget.obj
+
+# target to build an object file
+Extrusion/src/ExtWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.obj
+.PHONY : Extrusion/src/ExtWidget.cpp.obj
+
+Extrusion/src/ExtWidget.i: Extrusion/src/ExtWidget.cpp.i
+.PHONY : Extrusion/src/ExtWidget.i
+
+# target to preprocess a source file
+Extrusion/src/ExtWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.i
+.PHONY : Extrusion/src/ExtWidget.cpp.i
+
+Extrusion/src/ExtWidget.s: Extrusion/src/ExtWidget.cpp.s
+.PHONY : Extrusion/src/ExtWidget.s
+
+# target to generate assembly for a file
+Extrusion/src/ExtWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/ExtWidget.cpp.s
+.PHONY : Extrusion/src/ExtWidget.cpp.s
+
+Extrusion/src/Extrusion.obj: Extrusion/src/Extrusion.cpp.obj
+.PHONY : Extrusion/src/Extrusion.obj
+
+# target to build an object file
+Extrusion/src/Extrusion.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.obj
+.PHONY : Extrusion/src/Extrusion.cpp.obj
+
+Extrusion/src/Extrusion.i: Extrusion/src/Extrusion.cpp.i
+.PHONY : Extrusion/src/Extrusion.i
+
+# target to preprocess a source file
+Extrusion/src/Extrusion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.i
+.PHONY : Extrusion/src/Extrusion.cpp.i
+
+Extrusion/src/Extrusion.s: Extrusion/src/Extrusion.cpp.s
+.PHONY : Extrusion/src/Extrusion.s
+
+# target to generate assembly for a file
+Extrusion/src/Extrusion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/Extrusion.cpp.s
+.PHONY : Extrusion/src/Extrusion.cpp.s
+
+Extrusion/src/Structure.obj: Extrusion/src/Structure.cpp.obj
+.PHONY : Extrusion/src/Structure.obj
+
+# target to build an object file
+Extrusion/src/Structure.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.obj
+.PHONY : Extrusion/src/Structure.cpp.obj
+
+Extrusion/src/Structure.i: Extrusion/src/Structure.cpp.i
+.PHONY : Extrusion/src/Structure.i
+
+# target to preprocess a source file
+Extrusion/src/Structure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.i
+.PHONY : Extrusion/src/Structure.cpp.i
+
+Extrusion/src/Structure.s: Extrusion/src/Structure.cpp.s
+.PHONY : Extrusion/src/Structure.s
+
+# target to generate assembly for a file
+Extrusion/src/Structure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/Structure.cpp.s
+.PHONY : Extrusion/src/Structure.cpp.s
+
+Extrusion/src/extrusionWindow.obj: Extrusion/src/extrusionWindow.cpp.obj
+.PHONY : Extrusion/src/extrusionWindow.obj
+
+# target to build an object file
+Extrusion/src/extrusionWindow.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.obj
+.PHONY : Extrusion/src/extrusionWindow.cpp.obj
+
+Extrusion/src/extrusionWindow.i: Extrusion/src/extrusionWindow.cpp.i
+.PHONY : Extrusion/src/extrusionWindow.i
+
+# target to preprocess a source file
+Extrusion/src/extrusionWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.i
+.PHONY : Extrusion/src/extrusionWindow.cpp.i
+
+Extrusion/src/extrusionWindow.s: Extrusion/src/extrusionWindow.cpp.s
+.PHONY : Extrusion/src/extrusionWindow.s
+
+# target to generate assembly for a file
+Extrusion/src/extrusionWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/Extrusion/src/extrusionWindow.cpp.s
+.PHONY : Extrusion/src/extrusionWindow.cpp.s
+
 GeometryApp_autogen/mocs_compilation.obj: GeometryApp_autogen/mocs_compilation.cpp.obj
 .PHONY : GeometryApp_autogen/mocs_compilation.obj
 
@@ -229,30 +397,6 @@ GeometryApp_autogen/mocs_compilation.s: GeometryApp_autogen/mocs_compilation.cpp
 GeometryApp_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/GeometryApp_autogen/mocs_compilation.cpp.s
 .PHONY : GeometryApp_autogen/mocs_compilation.cpp.s
-
-application/Voronoi.obj: application/Voronoi.cpp.obj
-.PHONY : application/Voronoi.obj
-
-# target to build an object file
-application/Voronoi.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.obj
-.PHONY : application/Voronoi.cpp.obj
-
-application/Voronoi.i: application/Voronoi.cpp.i
-.PHONY : application/Voronoi.i
-
-# target to preprocess a source file
-application/Voronoi.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.i
-.PHONY : application/Voronoi.cpp.i
-
-application/Voronoi.s: application/Voronoi.cpp.s
-.PHONY : application/Voronoi.s
-
-# target to generate assembly for a file
-application/Voronoi.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GeometryApp.dir\build.make CMakeFiles/GeometryApp.dir/application/Voronoi.cpp.s
-.PHONY : application/Voronoi.cpp.s
 
 application/main.obj: application/main.cpp.obj
 .PHONY : application/main.obj
@@ -629,12 +773,30 @@ help:
 	@echo ... geometry_autogen_timestamp_deps
 	@echo ... GeometryApp
 	@echo ... geometry
+	@echo ... Bezier/src/Bezier.obj
+	@echo ... Bezier/src/Bezier.i
+	@echo ... Bezier/src/Bezier.s
+	@echo ... Bezier/src/BezierWidget.obj
+	@echo ... Bezier/src/BezierWidget.i
+	@echo ... Bezier/src/BezierWidget.s
+	@echo ... Bezier/src/bezierWindow.obj
+	@echo ... Bezier/src/bezierWindow.i
+	@echo ... Bezier/src/bezierWindow.s
+	@echo ... Extrusion/src/ExtWidget.obj
+	@echo ... Extrusion/src/ExtWidget.i
+	@echo ... Extrusion/src/ExtWidget.s
+	@echo ... Extrusion/src/Extrusion.obj
+	@echo ... Extrusion/src/Extrusion.i
+	@echo ... Extrusion/src/Extrusion.s
+	@echo ... Extrusion/src/Structure.obj
+	@echo ... Extrusion/src/Structure.i
+	@echo ... Extrusion/src/Structure.s
+	@echo ... Extrusion/src/extrusionWindow.obj
+	@echo ... Extrusion/src/extrusionWindow.i
+	@echo ... Extrusion/src/extrusionWindow.s
 	@echo ... GeometryApp_autogen/mocs_compilation.obj
 	@echo ... GeometryApp_autogen/mocs_compilation.i
 	@echo ... GeometryApp_autogen/mocs_compilation.s
-	@echo ... application/Voronoi.obj
-	@echo ... application/Voronoi.i
-	@echo ... application/Voronoi.s
 	@echo ... application/main.obj
 	@echo ... application/main.i
 	@echo ... application/main.s

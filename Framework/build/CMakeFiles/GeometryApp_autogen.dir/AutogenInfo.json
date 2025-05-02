@@ -490,9 +490,45 @@
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/application/Voronoi.h",
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Bezier/include/Bezier.h",
 			"MU",
-			"WTMXIFCN4H/moc_Voronoi.cpp",
+			"2PQ6JPIWP7/moc_Bezier.cpp",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Bezier/include/BezierWidget.h",
+			"MU",
+			"2PQ6JPIWP7/moc_BezierWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Bezier/include/bezierWindow.h",
+			"MU",
+			"2PQ6JPIWP7/moc_bezierWindow.cpp",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/include/ExtWidget.h",
+			"MU",
+			"C7AHKLVYLL/moc_ExtWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/include/Extrusion.h",
+			"MU",
+			"C7AHKLVYLL/moc_Extrusion.cpp",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/include/Structure.h",
+			"MU",
+			"C7AHKLVYLL/moc_Structure.cpp",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/include/extrusionWindow.h",
+			"MU",
+			"C7AHKLVYLL/moc_extrusionWindow.cpp",
 			null
 		],
 		[
@@ -589,7 +625,37 @@
 	"SOURCES" : 
 	[
 		[
-			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/application/Voronoi.cpp",
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Bezier/src/Bezier.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Bezier/src/BezierWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Bezier/src/bezierWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/ExtWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/Extrusion.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/Structure.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/Anjali Dongare/Desktop/Project/Cctech/Framework/Extrusion/src/extrusionWindow.cpp",
 			"MU",
 			null
 		],
