@@ -13,9 +13,17 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
 # Include directories
-include_directories("C:/Users/Anjali Dongare/Desktop/Project/boost_1_88_0")
-include_directories(${CMAKE_SOURCE_DIR}/geometry/include)
-
+include_directories(
+    "C:/Users/Anjali Dongare/Desktop/Project/boost_1_88_0"
+    ${CMAKE_SOURCE_DIR}/Extrusion/include 
+    ${CMAKE_SOURCE_DIR}/Extrusion/src
+    ${CMAKE_SOURCE_DIR}/geometry/include/Shapes
+    ${CMAKE_SOURCE_DIR}/geometry/src/Shapes
+    ${CMAKE_SOURCE_DIR}/geometry/include/Conversions
+    ${CMAKE_SOURCE_DIR}/geometry/src/Conversions
+    ${CMAKE_SOURCE_DIR}/Bezier/include 
+    ${CMAKE_SOURCE_DIR}/Bezier/src
+)
 
 # Source files for the geometry shared library
 file(GLOB GEOMETRY_SRC 
@@ -45,6 +53,10 @@ set(APPLICATION_SRC
     ${CMAKE_SOURCE_DIR}/Bezier/include/bezierWindow.h
     ${CMAKE_SOURCE_DIR}/Bezier/src/bezierWindow.cpp
 )
+
+# include_directories(
+#     ${PROJECT_SOURCE_DIR}/../
+# )
 
 # Set Qt installation path
 set(CMAKE_PREFIX_PATH "C:/Qt/6.9.0/mingw_64")

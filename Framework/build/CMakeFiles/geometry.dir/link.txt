@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\geometry.dir/objects.a
-C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\geometry.dir/objects.a @CMakeFiles\geometry.dir\objects1.rsp
-C:\Qt\Tools\mingw1310_64\bin\g++.exe -shared -o libgeometry.dll -Wl,--out-implib,libgeometry.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\geometry.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\geometry.dir\linkLibs.rsp

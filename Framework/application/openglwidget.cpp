@@ -1,6 +1,6 @@
 #include "openglwidget.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\src\Conversions\FileHandler.cpp"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
+#include "FileHandler.cpp"
+#include "Geometry.h"
 #include <QOpenGLFunctions>
 #include <QDebug>
 #include <QVector3D>

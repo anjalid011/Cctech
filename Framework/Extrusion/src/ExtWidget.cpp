@@ -1,7 +1,8 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\ExtWidget.h"
+#include "ExtWidget.h"
 #include "Windows.h"
 #include <GL/gl.h>
 #include <GL/glu.h>
+#include "Extrusion.h"
 
 GLWidget::GLWidget(QWidget* parent) : QOpenGLWidget(parent), currentSolid(nullptr) {}
 
@@ -103,7 +104,6 @@ void GLWidget::mouseDoubleClickEvent(QMouseEvent *event) {
         update();
     }
 }
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\Extrusion.h"
 
 void GLWidget::performExtrusion() {
     if (profilePoints.size() < 3) return;  // Need at least 3 points

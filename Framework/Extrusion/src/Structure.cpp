@@ -1,4 +1,4 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\Structure.h"
+#include "Structure.h"
 
 Vertex::Vertex(float x, float y, float z) : x(x), y(y), z(z) {}
 

@@ -1,5 +1,5 @@
-#include "Conversions/FileHandler.h"
-#include "Conversions/Triangle.h"
+#include "FileHandler.h"
+#include "Triangle.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>

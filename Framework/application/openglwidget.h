@@ -5,8 +5,8 @@
 #include <QOpenGLFunctions>
 #include <vector>
 #include <QMouseEvent>
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Conversions\Triangle.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
+#include "Triangle.h"
+#include "Geometry.h"
 
 
 class OpenGLWidget : public QOpenGLWidget, protected QOpenGLFunctions {

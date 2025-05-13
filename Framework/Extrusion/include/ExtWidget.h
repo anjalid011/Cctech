@@ -2,7 +2,7 @@
 #include <QOpenGLWidget>
 #include <QMouseEvent>
 #include <QOpenGLFunctions>
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\Structure.h"
+#include "Structure.h"
 
 class GLWidget : public QOpenGLWidget {
     Q_OBJECT

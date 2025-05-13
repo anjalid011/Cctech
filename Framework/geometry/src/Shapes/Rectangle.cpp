@@ -1,7 +1,7 @@
-#include "Shapes/Geometry.h"
-#include "Shapes/Plotter.h"
-#include "Shapes/Shape.h"
-#include "Shapes/Transformations.h"
+#include "Geometry.h"
+#include "Plotter.h"
+#include "Shape.h"
+#include "Transformations.h"
 #include <iostream>
 #include <fstream>
 

@@ -1,4 +1,4 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\include\BezierWidget.h"
+#include "BezierWidget.h"
 #include <QMouseEvent>
 #include <QOpenGLFunctions>
 #include <QPushButton>
@@ -41,6 +41,8 @@ void BezierWidget::paintGL() {
     // Clears the screen and resets the modelview
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
+
+    drawRevolutionAxis();
 
     // Draws the polyline between control points
     glColor3f(0.7f, 0.7f, 0.7f);

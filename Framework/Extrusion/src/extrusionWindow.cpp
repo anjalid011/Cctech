@@ -1,5 +1,5 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\extrusionWindow.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\Extrusion.h"
+#include "extrusionWindow.h"
+#include "Extrusion.h"
 #include <QVBoxLayout>
 #include <QPushButton>
 

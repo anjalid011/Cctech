@@ -1,8 +1,8 @@
-#include "Shapes/Geometry.h"
-#include "Conversions/FileHandler.h"
-#include "Shapes/Plotter.h"
-#include "Shapes/Transformations.h"
-#include "Conversions/Triangle.h"
+#include "Geometry.h"
+#include "FileHandler.h"
+#include "Plotter.h"
+#include "Transformations.h"
+#include "Triangle.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>

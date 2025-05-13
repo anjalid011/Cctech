@@ -1,5 +1,5 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Transformations.h"
+#include "Geometry.h"
+#include "Transformations.h"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>

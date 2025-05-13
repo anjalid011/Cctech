@@ -1,14 +1,14 @@
 #ifndef GEOMETRY_H
 #define GEOMETRY_H
 
-#include <Shapes/Shape.h>
+#include "Shape.h"
 #include <vector>
 #include <QVector3D>
 #include <iostream>
 #include <fstream>
 #include <cmath>
 #include <unordered_map>
-#include "./Conversions/Triangle.h"
+#include "Triangle.h"
 
 using namespace std;
 typedef std::vector<vector<double>> Matrix;

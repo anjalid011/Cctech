@@ -1,7 +1,7 @@
 #include "mainwindow.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\geometry\include\Shapes\Geometry.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\extrusionWindow.h"
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\include\bezierWindow.h"
+#include "Geometry.h"
+#include "extrusionWindow.h"
+#include "bezierWindow.h"
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QFormLayout>

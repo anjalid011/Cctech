@@ -1,4 +1,4 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\include\bezierWindow.h"
+#include "bezierWindow.h"
 #include <QVBoxLayout>
 #include <QPushButton>
 

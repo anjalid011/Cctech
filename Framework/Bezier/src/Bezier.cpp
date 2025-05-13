@@ -1,4 +1,4 @@
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Bezier\include\Bezier.h"
+#include "Bezier.h"
 
 void Bezier::addControlPoint(const QPoint &pt) {
     controlPoints.append(pt);

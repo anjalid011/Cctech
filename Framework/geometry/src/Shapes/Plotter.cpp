@@ -1,4 +1,4 @@
-#include "Shapes/Plotter.h"
+#include "Plotter.h"
 #include <cmath>
 #include <iostream>
 #include <fstream>

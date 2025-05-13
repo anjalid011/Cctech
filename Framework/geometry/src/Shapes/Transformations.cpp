@@ -1,5 +1,5 @@
-#include "Shapes/Transformations.h"
-#include "Shapes/Plotter.h"
+#include "Transformations.h"
+#include "Plotter.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>

@@ -1,6 +1,6 @@
 #pragma once
 #include <QMainWindow>
-#include "C:\Users\Anjali Dongare\Desktop\Project\Cctech\Framework\Extrusion\include\ExtWidget.h"
+#include "ExtWidget.h"
 
 class ExtrusionWindow : public QMainWindow {
     Q_OBJECT

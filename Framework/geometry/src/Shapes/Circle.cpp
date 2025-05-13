@@ -1,6 +1,6 @@
-#include "Shapes/Geometry.h"
-#include "Shapes/Transformations.h"
-#include "Shapes/Plotter.h"
+#include "Geometry.h"
+#include "Transformations.h"
+#include "Plotter.h"
 #include <iostream>
 #include <fstream>
 #include <cmath>
