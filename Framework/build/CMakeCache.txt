@@ -290,7 +290,7 @@ CMAKE_STRIP:FILEPATH=C:/Qt/Tools/mingw1310_64/bin/strip.exe
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
 //The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=c:/Qt/6.10.0/mingw_64/lib/cmake/Qt6/qt.toolchain.cmake
+CMAKE_TOOLCHAIN_FILE:FILEPATH=c:/Qt/6.9.0/mingw_64/lib/cmake/Qt6/qt.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -325,38 +325,53 @@ QT_QMAKE_TARGET_MKSPEC:STRING=win32-g++
 //No help, variable specified on the command line.
 QT_QML_GENERATE_QMLLS_INI:STRING=ON
 
+//The directory containing a CMake configuration file for Qt6CorePrivate.
+Qt6CorePrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6CorePrivate
+
 //The directory containing a CMake configuration file for Qt6CoreTools.
-Qt6CoreTools_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6CoreTools
+Qt6CoreTools_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6CoreTools
 
 //The directory containing a CMake configuration file for Qt6Core.
-Qt6Core_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Core
+Qt6Core_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core
 
 //The directory containing a CMake configuration file for Qt6EntryPointPrivate.
-Qt6EntryPointPrivate_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6EntryPointPrivate
+Qt6EntryPointPrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6EntryPointPrivate
+
+//The directory containing a CMake configuration file for Qt6GuiPrivate.
+Qt6GuiPrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiPrivate
 
 //The directory containing a CMake configuration file for Qt6GuiTools.
-Qt6GuiTools_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6GuiTools
+Qt6GuiTools_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiTools
 
 //The directory containing a CMake configuration file for Qt6Gui.
-Qt6Gui_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Gui
+Qt6Gui_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Gui
+
+//The directory containing a CMake configuration file for Qt6OpenGLPrivate.
+Qt6OpenGLPrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6OpenGLPrivate
+
+//The directory containing a CMake configuration file for Qt6OpenGLWidgetsPrivate.
+Qt6OpenGLWidgetsPrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6OpenGLWidgetsPrivate
 
 //The directory containing a CMake configuration file for Qt6OpenGLWidgets.
-Qt6OpenGLWidgets_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6OpenGLWidgets
+Qt6OpenGLWidgets_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6OpenGLWidgets
 
 //The directory containing a CMake configuration file for Qt6OpenGL.
-Qt6OpenGL_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6OpenGL
+Qt6OpenGL_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6OpenGL
+
+//The directory containing a CMake configuration file for Qt6WidgetsPrivate.
+Qt6WidgetsPrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6WidgetsPrivate
 
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
-Qt6WidgetsTools_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6WidgetsTools
+Qt6WidgetsTools_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6WidgetsTools
 
 //The directory containing a CMake configuration file for Qt6Widgets.
-Qt6Widgets_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6Widgets
+Qt6Widgets_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Widgets
 
 //The directory containing a CMake configuration file for Qt6ZlibPrivate.
-Qt6ZlibPrivate_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6ZlibPrivate
+Qt6ZlibPrivate_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6ZlibPrivate
 
 //The directory containing a CMake configuration file for Qt6.
-Qt6_DIR:PATH=C:/Qt/6.10.0/mingw_64/lib/cmake/Qt6
+Qt6_DIR:PATH=C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6
 
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-NOTFOUND
@@ -371,7 +386,7 @@ Vulkan_INCLUDE_DIR:PATH=Vulkan_INCLUDE_DIR-NOTFOUND
 Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a program.
-WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.10.0/mingw_64/bin/windeployqt.exe
+WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.9.0/mingw_64/bin/windeployqt.exe
 
 //Dependencies for the target
 geometry_LIB_DEPENDS:STATIC=general;Qt6::OpenGL;general;Qt6::Widgets;general;Qt6::Gui;general;Qt6::Core;
@@ -675,8 +690,6 @@ QT_FEATURE_concatenatetablesproxymodel:INTERNAL=ON
 QT_FEATURE_concurrent:INTERNAL=ON
 //Qt feature: contextmenu (from target Qt6::Widgets)
 QT_FEATURE_contextmenu:INTERNAL=ON
-//Qt feature: copy_file_range (from target Qt6::Core)
-QT_FEATURE_copy_file_range:INTERNAL=OFF
 //Qt feature: cpp_winrt (from target Qt6::Core)
 QT_FEATURE_cpp_winrt:INTERNAL=OFF
 //Qt feature: cross_compile (from target Qt6::Core)
@@ -693,8 +706,6 @@ QT_FEATURE_cxx11_future:INTERNAL=ON
 QT_FEATURE_cxx17_filesystem:INTERNAL=ON
 //Qt feature: cxx20 (from target Qt6::Core)
 QT_FEATURE_cxx20:INTERNAL=OFF
-//Qt feature: cxx20_format (from target Qt6::Core)
-QT_FEATURE_cxx20_format:INTERNAL=ON
 //Qt feature: cxx23_stacktrace (from target Qt6::Core)
 QT_FEATURE_cxx23_stacktrace:INTERNAL=OFF
 //Qt feature: cxx2a (from target Qt6::Core)
@@ -911,8 +922,6 @@ QT_FEATURE_itemmodel:INTERNAL=ON
 QT_FEATURE_itemviews:INTERNAL=ON
 //Qt feature: jalalicalendar (from target Qt6::Core)
 QT_FEATURE_jalalicalendar:INTERNAL=ON
-//Qt feature: jemalloc (from target Qt6::Core)
-QT_FEATURE_jemalloc:INTERNAL=OFF
 //Qt feature: journald (from target Qt6::Core)
 QT_FEATURE_journald:INTERNAL=OFF
 //Qt feature: jpeg (from target Qt6::Gui)
@@ -1051,6 +1060,8 @@ QT_FEATURE_posix_fallocate:INTERNAL=OFF
 QT_FEATURE_posix_sem:INTERNAL=ON
 //Qt feature: posix_shm (from target Qt6::Core)
 QT_FEATURE_posix_shm:INTERNAL=OFF
+//Qt feature: precompile_header (from target Qt6::Core)
+QT_FEATURE_precompile_header:INTERNAL=ON
 //Qt feature: printsupport (from target Qt6::Core)
 QT_FEATURE_printsupport:INTERNAL=ON
 //Qt feature: private_tests (from target Qt6::Core)
@@ -1335,8 +1346,6 @@ QT_FEATURE_wheelevent:INTERNAL=ON
 QT_FEATURE_widgets:INTERNAL=ON
 //Qt feature: widgettextcontrol (from target Qt6::Widgets)
 QT_FEATURE_widgettextcontrol:INTERNAL=ON
-//Qt feature: winsdkicu (from target Qt6::Core)
-QT_FEATURE_winsdkicu:INTERNAL=OFF
 //Qt feature: wizard (from target Qt6::Widgets)
 QT_FEATURE_wizard:INTERNAL=ON
 //Qt feature: x86intrin (from target Qt6::Core)

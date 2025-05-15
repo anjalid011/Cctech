@@ -28,15 +28,11 @@ void OpenGLWidget::resizeGL(int w, int h) {
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
- 
+
     GLfloat aspect = GLfloat(w) / h;
     GLfloat fovy = 45.0f;
     GLfloat near = 0.1f;
     GLfloat far = 100.0f;
-    // GLfloat top = tan(fovy * M_PI / 360.0f) * near;
-    // GLfloat bottom = -top;
-    // GLfloat right = top * aspect;
-    // GLfloat left = -right;
     GLfloat top = near * tan(fovy * M_PI / 360.0);
     GLfloat bottom = -top;
     GLfloat left = bottom * aspect;
@@ -48,47 +44,109 @@ void OpenGLWidget::resizeGL(int w, int h) {
 }
 
 // Renders the OpenGL scene
+// void OpenGLWidget::paintGL() {
+//     // glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the screen
+//     glLoadIdentity(); // Reset transformations
+
+//     // Apply transformations for zoom and rotation
+//     glTranslatef(0.0f, 0.0f, -10.0f + zoom);
+//     glRotatef(rotationX, 1.0f, 0.0f, 0.0f);
+//     glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
+
+//     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+
+//     // Render the loaded triangles
+//     glBegin(GL_TRIANGLES);
+//     for (const auto &triangle : triangles) {
+//         const Vec3 &v1 = vertices[triangle.v1];
+//         const Vec3 &v2 = vertices[triangle.v2];
+//         const Vec3 &v3 = vertices[triangle.v3];
+
+//         glVertex3f(v1.x, v1.y, v1.z);
+//         glVertex3f(v2.x, v2.y, v2.z);
+//         glVertex3f(v3.x, v3.y, v3.z);
+//     }
+//     glEnd();
+
+//     // Restore default polygon mode
+//     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+//     // Render control points
+//     glPointSize(10.0f);
+//     glBegin(GL_POINTS);
+//     glColor3f(1.0f, 0.0f, 0.0f); // Red for control points
+//     for (const auto& pt : controlPoints) {
+//         glVertex3f(pt.x, pt.y, pt.z);
+//     }
+//     glEnd();
+
+//     // Render the Bezier curve if there are enough control points
+//     if (controlPoints.size() >= 2) {
+//         bezierCurve.setControlPoints(controlPoints);
+//         bezierCurve.generateCurvePoints(interpolationPoints);
+//         bezierCurve.draw();
+//     }
+
+//     glFlush();
+// }
+
+void OpenGLWidget::removeShape(const QString &shapeDetails) {
+    // Find and remove the shape with matching details
+    for (auto it = shapes.begin(); it != shapes.end(); ++it) {
+        if (it->details.trimmed() == shapeDetails.trimmed()) { // Match the shape details
+            shapes.erase(it); // Remove the shape from the list
+            qDebug() << "Shape removed from OpenGL scene:" << shapeDetails;
+            update(); // Trigger a repaint
+            return;
+        }
+    }
+    qDebug() << "Shape not found in OpenGL scene:" << shapeDetails;
+}
+
+void OpenGLWidget::loadAndDrawShape(const QString &objFilePath) {
+    ShapeData shapeData;
+
+    // Read the OBJ file and populate vertices and triangles
+    if (!FileHandler::readOBJFile(objFilePath.toStdString(), shapeData.vertices, shapeData.triangles)) {
+        qDebug() << "Failed to load OBJ file:" << objFilePath;
+        return;
+    }
+
+    qDebug() << "Loaded OBJ file with" << shapeData.vertices.size() << "vertices and" << shapeData.triangles.size() << "triangles.";
+
+    // Store the shape details (use a consistent format)
+    shapeData.details = objFilePath;
+
+    // Add the shape data to the list of shapes
+    shapes.push_back(shapeData);
+
+    update(); // Trigger a repaint
+}
+
 void OpenGLWidget::paintGL() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clear the screen
     glLoadIdentity(); // Reset transformations
 
     // Apply transformations for zoom and rotation
-    glTranslatef(0.0f, 0.0f, -10.0f + zoom);
+    glTranslatef(0.0f, 0.0f, zoom);
     glRotatef(rotationX, 1.0f, 0.0f, 0.0f);
     glRotatef(rotationY, 0.0f, 1.0f, 0.0f);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-    // Render the loaded triangles
-    glBegin(GL_TRIANGLES);
-    for (const auto &triangle : triangles) {
-        const Vec3 &v1 = vertices[triangle.v1];
-        const Vec3 &v2 = vertices[triangle.v2];
-        const Vec3 &v3 = vertices[triangle.v3];
+    // Render all shapes
+    for (const auto &shape : shapes) {
+        glBegin(GL_TRIANGLES);
+        for (const auto &triangle : shape.triangles) {
+            const Vec3 &v1 = shape.vertices[triangle.v1];
+            const Vec3 &v2 = shape.vertices[triangle.v2];
+            const Vec3 &v3 = shape.vertices[triangle.v3];
 
-        glVertex3f(v1.x, v1.y, v1.z);
-        glVertex3f(v2.x, v2.y, v2.z);
-        glVertex3f(v3.x, v3.y, v3.z);
-    }
-    glEnd();
-
-    // Restore default polygon mode
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-
-    // Render control points
-    glPointSize(10.0f);
-    glBegin(GL_POINTS);
-    glColor3f(1.0f, 0.0f, 0.0f); // Red for control points
-    for (const auto& pt : controlPoints) {
-        glVertex3f(pt.x, pt.y, pt.z);
-    }
-    glEnd();
-
-    // Render the Bezier curve if there are enough control points
-    if (controlPoints.size() >= 2) {
-        bezierCurve.setControlPoints(controlPoints);
-        bezierCurve.generateCurvePoints(interpolationPoints);
-        bezierCurve.draw();
+            glVertex3f(v1.x, v1.y, v1.z);
+            glVertex3f(v2.x, v2.y, v2.z);
+            glVertex3f(v3.x, v3.y, v3.z);
+        }
+        glEnd();
     }
 
     glFlush();
@@ -99,20 +157,20 @@ void OpenGLWidget::clearControlPoints() {
     update(); // Redraw the scene
 }
 
-// Method to load and draw a shape from an OBJ file
-void OpenGLWidget::loadAndDrawShape(const QString &objFilePath) {
-    vertices.clear();
-    triangles.clear();
+// // Method to load and draw a shape from an OBJ file
+// void OpenGLWidget::loadAndDrawShape(const QString &objFilePath) {
+//     vertices.clear();
+//     triangles.clear();
 
-    // Read the OBJ file and populate vertices and triangles
-    if (!FileHandler::readOBJFile(objFilePath.toStdString(), vertices, triangles)) {
-        qDebug() << "Failed to load OBJ file:" << objFilePath;
-        return;
-    }
+//     // Read the OBJ file and populate vertices and triangles
+//     if (!FileHandler::readOBJFile(objFilePath.toStdString(), vertices, triangles)) {
+//         qDebug() << "Failed to load OBJ file:" << objFilePath;
+//         return;
+//     }
 
-    qDebug() << "Loaded OBJ file with" << vertices.size() << "vertices and" << triangles.size() << "triangles.";
-    update(); // Trigger a repaint
-}
+//     qDebug() << "Loaded OBJ file with" << vertices.size() << "vertices and" << triangles.size() << "triangles.";
+//     update(); // Trigger a repaint
+// }
 
 void OpenGLWidget::setTotalControlPoints(int totalPoints) {
     totalControlPoints = totalPoints;

@@ -8,6 +8,12 @@
 #include "Triangle.h"
 #include "Geometry.h"
 
+struct ShapeData {
+    QString details; // Store shape details (e.g., type and parameters)
+    std::vector<Vec3> vertices;
+    std::vector<Triangle> triangles;
+};
+
 
 class OpenGLWidget : public QOpenGLWidget, protected QOpenGLFunctions {
     Q_OBJECT
@@ -20,6 +26,8 @@ public:
     int binomialCoefficient(int n, int k);
     void setTotalControlPoints(int totalPoints);
     void setInterpolationPoints(int points);
+    void removeShape(const QString &shapeDetails); // Method to remove a shape
+    // void clearShapes(); // Clear all shapes
 
 protected:
     void initializeGL() override; // Initializes OpenGL settings
@@ -43,6 +51,8 @@ private:
     QPointF lastMousePos;
     Bezier3D bezierCurve;
     QTimer* updateTimer;
+
+    std::vector<ShapeData> shapes;
     float zoom = -5.0f; // Distance from camer
 
     float rotationX= 0.0f; // Rotation angle around the X-axis
@@ -51,4 +61,3 @@ private:
 };
 
 #endif // OPENGLWIDGET_H
-

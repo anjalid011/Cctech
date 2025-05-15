@@ -42,8 +42,6 @@ void BezierWidget::paintGL() {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
 
-    drawRevolutionAxis();
-
     // Draws the polyline between control points
     glColor3f(0.7f, 0.7f, 0.7f);
     glBegin(GL_LINE_STRIP);

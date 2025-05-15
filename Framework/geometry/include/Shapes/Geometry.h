@@ -22,6 +22,7 @@ public:
     Line(double x1, double y1, double x2, double y2);
     Line(double x1, double y1, double z1, double x2, double y2, double z2);
     void draw() override;
+    std::string getType() const override { return "Line"; }
 };
 
 class Rectangle : public Shape {
@@ -31,6 +32,7 @@ private:
 public:
     Rectangle(double x, double y, double width, double height);
     void draw() override;
+    std::string getType() const override { return "Rectangle"; }
 };
 
 class Cuboid : public Shape {
@@ -41,6 +43,7 @@ public:
     Cuboid(double x, double y, double z, double width, double height, double depth);
     void draw() override;
     Cuboid(); // Default constructor
+    std::string getType() const override { return "Cuboid"; }
 };
 
 class Circle : public Shape {
@@ -50,6 +53,7 @@ private:
 public:
     Circle(double r);
     void draw() override;
+    std::string getType() const override { return "Circle"; }
 };
 
 class Sphere : public Shape {
@@ -59,6 +63,7 @@ private:
 public:
     Sphere(double r, double cx, double cy, double cz); // Constructor with center point
     void draw() override;
+    std::string getType() const override { return "Sphere"; }
 };
 
 class Cone : public Shape {
@@ -68,6 +73,7 @@ private:
 public:
     Cone(double r, double h, double cx, double cy, double cz); // Constructor with center point
     void draw() override;
+    std::string getType() const override { return "Cone"; }
 };
 
 class Cylinder : public Shape {
@@ -77,6 +83,7 @@ private:
 public:
     Cylinder(double r, double h, double cx, double cy, double cz); // Constructor with center point
     void draw() override;
+    std::string getType() const override { return "Cylinder"; }
 };
 
 struct Point3D {
@@ -88,6 +95,7 @@ public:
     void generateCurvePoints(int resolution);
     void draw() override;
     void setControlPoints(const std::vector<Point3D>& points) {controlPoints = points;}  
+    std::string getType() const override { return "Bezier"; }
 
 private:
     std::vector<Point3D> controlPoints;

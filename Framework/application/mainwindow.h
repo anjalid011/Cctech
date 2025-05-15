@@ -20,9 +20,11 @@ public:
 private slots:
     void onDrawButtonClicked();
     void onShapeChanged(int index);
+    void deleteShape(); // New method for deleting shapes
     void openExtrusionWindow();
     void openBezierWindow();
     void openFile();
+    void openSketchWindow();
 
 private:
     void setupUI();
@@ -31,13 +33,13 @@ private:
     QWidget* createConeForm();
     QWidget* createCylinderForm();
     QWidget* createBezierForm();
-
-    void generateControlPointInputs(); // Method to generate control point input fields
+    void generateControlPointInputs();
 
     OpenGLWidget *glWidget;
     QPushButton *drawButton;
+    QPushButton *deleteShapeButton; // Button to delete selected shape
     QComboBox *shapeComboBox;
-    QListWidget *shapeList;
+    QListWidget *shapeList; // List of shapes
     QStackedWidget *formStack;
 
     // Cuboid Inputs
@@ -56,11 +58,11 @@ private:
     QLineEdit *cylinderRadius, *cylinderHeight;
     QLineEdit *cylinderX, *cylinderY, *cylinderZ;
 
-    //Beizer Inputs
+    // Bezier Inputs
     QVBoxLayout *controlPointInputs; // Layout for control point input fields
     std::vector<std::array<QLineEdit *, 3>> controlPointEdits; // Stores input fields for control points
-    QLineEdit *bezierControlPoints; // Number of control points
-    QLineEdit *bezierInterpolationPoints; // Number of interpolation points
+    QLineEdit *bezierControlPoints;
+    QLineEdit *bezierInterpolationPoints;
 };
 
 #endif // MAINWINDOW_H

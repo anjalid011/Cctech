@@ -23,6 +23,8 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/geometry/src/Conversions
     ${CMAKE_SOURCE_DIR}/Bezier/include 
     ${CMAKE_SOURCE_DIR}/Bezier/src
+    ${CMAKE_SOURCE_DIR}/Intersection/include 
+    ${CMAKE_SOURCE_DIR}/Intersection/src
 )
 
 # Source files for the geometry shared library
@@ -52,6 +54,18 @@ set(APPLICATION_SRC
     ${CMAKE_SOURCE_DIR}/Bezier/src/BezierWidget.cpp
     ${CMAKE_SOURCE_DIR}/Bezier/include/bezierWindow.h
     ${CMAKE_SOURCE_DIR}/Bezier/src/bezierWindow.cpp
+    ${CMAKE_SOURCE_DIR}/Intersection/include/intersection.h
+    ${CMAKE_SOURCE_DIR}/Intersection/src/intersection.cpp
+    ${CMAKE_SOURCE_DIR}/Intersection/include/intersectionWidget.h
+    ${CMAKE_SOURCE_DIR}/Intersection/src/intersectionWidget.cpp
+    ${CMAKE_SOURCE_DIR}/Intersection/include/intersectionWindow.h
+    ${CMAKE_SOURCE_DIR}/Intersection/src/intersectionWindow.cpp
+    ${CMAKE_SOURCE_DIR}/Intersection/include/polygon_boolean.h
+    ${CMAKE_SOURCE_DIR}/Intersection/src/polygon_boolean.cpp
+    ${CMAKE_SOURCE_DIR}/Intersection/include/SketchGLWidget.h
+    ${CMAKE_SOURCE_DIR}/Intersection/src/SketchGLWidget.cpp
+    ${CMAKE_SOURCE_DIR}/Intersection/include/SketchWindow.h
+    ${CMAKE_SOURCE_DIR}/Intersection/src/SketchWindow.cpp
 )
 
 # include_directories(

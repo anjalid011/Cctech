@@ -2,6 +2,7 @@
 #include "Geometry.h"
 #include "extrusionWindow.h"
 #include "bezierWindow.h"
+#include "SketchWindow.h"
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QFormLayout>
@@ -26,7 +27,10 @@ void MainWindow::setupUI() {
     drawButton = new QPushButton("Draw Shape", this);
     connect(drawButton, &QPushButton::clicked, this, &MainWindow::onDrawButtonClicked);
 
-    shapeList = new QListWidget(this);
+    deleteShapeButton = new QPushButton("Delete Shape", this); // Button to delete shapes
+    connect(deleteShapeButton, &QPushButton::clicked, this, &MainWindow::deleteShape);
+
+    shapeList = new QListWidget(this); // List of shapes
 
     formStack = new QStackedWidget(this);
     formStack->addWidget(createCuboidForm());
@@ -40,9 +44,9 @@ void MainWindow::setupUI() {
     leftPanelLayout->addWidget(shapeComboBox);
     leftPanelLayout->addWidget(formStack);
     leftPanelLayout->addWidget(drawButton);
-    shapeList->setVisible(false);
-    // leftPanelLayout->addWidget(new QLabel("List Of Shapes On the screen"));
-    // leftPanelLayout->addWidget(shapeList);
+    leftPanelLayout->addWidget(new QLabel("List of Shapes on the Screen"));
+    leftPanelLayout->addWidget(shapeList);
+    leftPanelLayout->addWidget(deleteShapeButton);
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
     mainLayout->addLayout(leftPanelLayout, 2);
@@ -60,7 +64,17 @@ void MainWindow::setupUI() {
     connect(openFileButton, &QPushButton::clicked, this, &MainWindow::openFile);
     leftPanelLayout->addWidget(openFileButton);
 
+    QPushButton *openIntersectionButton = new QPushButton("Open Intersection", this);
+    connect(openIntersectionButton, &QPushButton::clicked, this, &MainWindow::openSketchWindow);
+    leftPanelLayout->addWidget(openIntersectionButton);
+
     centralWidget->setLayout(mainLayout);
+}
+
+void MainWindow::openSketchWindow() {
+    SketchWindow *sketchWindow = new SketchWindow(this); // Correct: Create a SketchWindow
+    sketchWindow->setAttribute(Qt::WA_DeleteOnClose); // Automatically delete when closed
+    sketchWindow->show();
 }
 
 void MainWindow::openExtrusionWindow() {
@@ -164,6 +178,20 @@ void MainWindow::onDrawButtonClicked() {
     else {
         qDebug() << "Drawing shape:" << selectedShape;
         // Add logic for other shapes if needed
+    }
+}
+
+void MainWindow::deleteShape() {
+    QListWidgetItem* selectedItem = shapeList->currentItem();
+    if (selectedItem) {
+        QString shapeDetails = selectedItem->text().trimmed(); // Get the shape details from the list
+        delete selectedItem; // Remove the item from the list
+        qDebug() << "Shape deleted from the list.";
+
+        // Inform the OpenGLWidget to remove the shape
+        glWidget->removeShape(shapeDetails);
+    } else {
+        qDebug() << "No shape selected for deletion.";
     }
 }
 
